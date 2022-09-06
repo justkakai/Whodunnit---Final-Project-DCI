@@ -1,32 +1,18 @@
-// import './App.css';
-import clown from './images/scary-clown.png';
+import { IntroPageProvider } from './contexts/IntroPageContext';
+import TopBar from './components/TopBar';
+import GameContainer from './components/GameContainer';
+import BottomBar from './components/BottomBar';
 
 function App() {
+
   return (
-    <div className="App">
-      <div className="top-bar">
-        <button>Jimmy's Email Account</button>
-        <button>Recorded Conversations</button>
-        <button>Addresses already visited</button>
-        <button>CALL POLICE</button>
+    <IntroPageProvider>
+      <div className="App">
+        <TopBar />
+        <GameContainer />
+        <BottomBar />
       </div>
-
-      <div className="game-container">
-        <div className="clown-image-container">
-          <img src={clown} alt="Clown" />
-        </div>
-        <div className="game-name-container">
-          <p className='game-name'>Whodunnit?</p>
-          <p className='game-descriptor'>The ultimate murder mystery game!</p>
-        </div>
-      </div>
-
-      <div className="bottom-bar">
-        <button>VIEW POLICE REPORT</button>
-        <button>VIEW EVIDENCE</button>
-        <button>Search for Anything</button>
-      </div>
-    </div>
+    </IntroPageProvider>
   );
 }
 

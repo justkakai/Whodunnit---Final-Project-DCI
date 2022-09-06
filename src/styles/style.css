@@ -78,6 +78,19 @@ body {
   gap: 3rem;
 }
 
+.game-name-container input {
+  font-size: 2em;
+  outline: none;
+  padding: 0.4em 1em;
+}
+
+.game-name-container button {
+  font-size: 2em;
+  border: none;
+  padding: 0.43em 1em;
+  margin-left: 1em;
+}
+
 .game-name {
   font-size: 8vw;
 }
@@ -85,6 +98,10 @@ body {
 .game-descriptor {
   font-size: 3vw;
   color: white;
+}
+
+.player-greeting {
+  font-size: 2vw;
 }
 
 .top-bar,
