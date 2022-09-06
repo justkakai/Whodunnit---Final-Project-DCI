@@ -1,20 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
 .App {
   height: 100vh;
   width: 100vw;
@@ -26,7 +9,18 @@ body {
   align-items: center;
 }
 
-.game-container {
+.top-bar,
+.bottom-bar {
+  border: 2px solid fuchsia;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.intro-page {
   font-family: "Covered By Your Grace", cursive;
   height: 80%;
   width: 80%;
@@ -45,7 +39,7 @@ body {
   }
 }
 
-.game-name-container {
+.intro-text-container {
   width: 60%;
   display: flex;
   justify-content: center;
@@ -75,20 +69,4 @@ body {
 
 .player-greeting {
   font-size: 2vw;
-}
-
-.top-bar,
-.bottom-bar {
-  border: 2px solid fuchsia;
-  height: 10%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-}
-
-button {
-  padding: 1em;
-  border: none;
 }

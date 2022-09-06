@@ -1,6 +1,6 @@
 import { IntroPageProvider } from './contexts/IntroPageContext';
 import TopBar from './components/TopBar';
-import GameContainer from './components/GameContainer';
+import IntroPage from './components/IntroPage';
 import BottomBar from './components/BottomBar';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <IntroPageProvider>
       <div className="App">
         <TopBar />
-        <GameContainer />
+        <IntroPage />
         <BottomBar />
       </div>
     </IntroPageProvider>

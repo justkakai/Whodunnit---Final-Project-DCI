@@ -15,6 +15,11 @@ body {
   width: 100vw;
 }
 
+button {
+  padding: 1em;
+  border: none;
+}
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -35,7 +40,24 @@ body {
           align-items: center;
 }
 
-.game-container {
+.top-bar,
+.bottom-bar {
+  border: 2px solid fuchsia;
+  height: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2em;
+}
+
+.intro-page {
   font-family: "Covered By Your Grace", cursive;
   height: 80%;
   width: 80%;
@@ -63,7 +85,7 @@ body {
   width: 25vw;
 }
 
-.game-name-container {
+.intro-text-container {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,13 +100,13 @@ body {
   gap: 3rem;
 }
 
-.game-name-container input {
+.intro-text-container input {
   font-size: 2em;
   outline: none;
   padding: 0.4em 1em;
 }
 
-.game-name-container button {
+.intro-text-container button {
   font-size: 2em;
   border: none;
   padding: 0.43em 1em;
@@ -102,27 +124,5 @@ body {
 
 .player-greeting {
   font-size: 2vw;
-}
-
-.top-bar,
-.bottom-bar {
-  border: 2px solid fuchsia;
-  height: 10%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2em;
-}
-
-button {
-  padding: 1em;
-  border: none;
 }
 /*# sourceMappingURL=style.css.map */

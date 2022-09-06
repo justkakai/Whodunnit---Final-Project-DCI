@@ -1,11 +1,16 @@
+import JimmyEmailBtn from './TopBarComponents/JimmyEmailBtn';
+import ConversationsBtn from './TopBarComponents/ConversationsBtn';
+import VisitedAddressesBtn from './TopBarComponents/VisitedAddressesBtn';
+import CallPoliceBtn from './TopBarComponents/CallPoliceBtn';
+
 function TopBar() {
 
     return (
         <section className="top-bar">
-            <button>Jimmy's Email Account</button>
-            <button>Recorded Conversations</button>
-            <button>Addresses already visited</button>
-            <button>CALL POLICE</button>
+            <JimmyEmailBtn />
+            <ConversationsBtn />
+            <VisitedAddressesBtn />
+            <CallPoliceBtn />
         </section>
     )
 }
