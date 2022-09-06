@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +19,66 @@ body {
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background-color: red;
+  background-color: #894747;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-container {
+  font-family: "Covered By Your Grace", cursive;
+  height: 80%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clown-image-container {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clown-image-container img {
+  width: 25vw;
+}
+
+.game-name-container {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.game-name {
+  font-size: 8vw;
+}
+
+.game-descriptor {
+  font-size: 3vw;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
