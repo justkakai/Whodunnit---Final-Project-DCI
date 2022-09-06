@@ -23,6 +23,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -38,6 +42,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 2px solid black;
 }
 
 .clown-image-container {
@@ -80,5 +85,27 @@ body {
 .game-descriptor {
   font-size: 3vw;
   color: white;
+}
+
+.top-bar,
+.bottom-bar {
+  border: 2px solid fuchsia;
+  height: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2em;
+}
+
+button {
+  padding: 1em;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */

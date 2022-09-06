@@ -21,6 +21,7 @@ body {
   text-align: center;
   background-color: #894747;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -30,6 +31,7 @@ body {
   height: 80%;
   width: 80%;
   display: flex;
+  border: 2px solid black;
 }
 
 .clown-image-container {
@@ -58,4 +60,20 @@ body {
 .game-descriptor {
   font-size: 3vw;
   color: white;
+}
+
+.top-bar,
+.bottom-bar {
+  border: 2px solid fuchsia;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+button {
+  padding: 1em;
+  border: none;
 }
