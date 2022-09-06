@@ -6,7 +6,7 @@ function PlayerGreeting() {
     const { playerName } = useContext(IntroPageContext);
 
     return (
-        <p className='player-greeting'>Hello {playerName}!</p>
+        <p className='player-greeting'>Hello Detective {playerName === "" ? "Stranger" : playerName}!</p>
     )
 }
 

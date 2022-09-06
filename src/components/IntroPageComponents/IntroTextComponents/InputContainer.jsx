@@ -7,7 +7,7 @@ function InputContainer() {
 
     return (
         <div>
-            <input type="text" onChange={(e) => setPlayerName(e.target.value)} value={playerName} />
+            <input type="text" onChange={(e) => setPlayerName(e.target.value)} value={playerName} placeholder="Enter your name" />
             <button onClick={() => setDisplayInputAndButton(false)}>Start!</button>
         </div>
     )

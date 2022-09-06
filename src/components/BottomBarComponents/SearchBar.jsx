@@ -1,7 +1,7 @@
 function SearchBar() {
 
     return (
-        <button>Search for Anything</button>
+        <input className="search-bar" type="text" placeholder="Search for anything!" />
     )
 }
 

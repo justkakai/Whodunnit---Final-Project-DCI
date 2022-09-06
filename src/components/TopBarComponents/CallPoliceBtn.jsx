@@ -1,7 +1,7 @@
 function CallPoliceBtn() {
 
     return (
-        <button>CALL POLICE</button>
+        <button className="call-police-btn">CALL POLICE</button>
     )
 }
 
