@@ -1,16 +1,16 @@
 import { IntroPageProvider } from './contexts/IntroPageContext';
-import TopBar from './components/TopBar';
+import LeftBar from './components/LeftBar';
 import IntroPage from './components/IntroPage';
-import BottomBar from './components/BottomBar';
+import RightBar from './components/RightBar';
 
 function App() {
 
   return (
     <IntroPageProvider>
       <div className="App">
-        <TopBar />
+        <LeftBar />
         <IntroPage />
-        <BottomBar />
+        <RightBar />
       </div>
     </IntroPageProvider>
   );

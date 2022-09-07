@@ -4,8 +4,8 @@ function ClownImageContainer() {
 
     return (
         <div className="clown-image-container">
-                <img src={clown} alt="Clown" />
-            </div>
+            <img src={clown} alt="Clown" />
+        </div>
     )
 }
 

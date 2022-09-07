@@ -1,7 +1,7 @@
 function VisitedAddressesBtn() {
 
     return (
-        <button>Addresses already visited</button>
+        <button className="visited-addresses-btn">Visited Addresses</button>
     )
 }
 

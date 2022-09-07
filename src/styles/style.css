@@ -21,13 +21,11 @@ body {
   text-align: center;
   background-color: #894747;
   /* background-color: #8D7471; */
+  /* background-color: rgb(0, 204, 255); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  /* flex-direction: column; */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -36,39 +34,58 @@ body {
           align-items: center;
 }
 
-.top-bar,
-.bottom-bar {
-  padding: 0 5em;
-  height: 10%;
-  width: 100%;
+.left-bar,
+.right-bar {
+  padding: 1em 5em 0 5em;
+  height: 100%;
+  width: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 2em;
+  /* border: 2px solid red; */
 }
 
-.top-bar button,
-.bottom-bar button {
-  padding: 1.2em 2em;
+.left-bar button,
+.right-bar button {
   border: none;
   background: none;
   color: wheat;
   font-size: 0.9vw;
+  border-radius: 50%;
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  /* background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    &:hover {
+      background: rgba(0, 0, 0, 0.3);
+    } */
 }
 
-.top-bar button:hover,
-.bottom-bar button:hover {
+.left-bar button {
+  width: 9vw;
+  padding: 1em 2em;
+  /* text-align: center; */
+  /* box-shadow: 0px 0px 2px #dedede, 0px 0px 2px #e2e2e2; */
+  /* From https://css.glass */
+  background: black;
+  border-radius: 2px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.left-bar button:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -79,7 +96,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid #643a3a;
+  /* border: 2px solid rgb(100, 58, 58); */
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .clown-image-container {
@@ -146,16 +164,45 @@ body {
   font-size: 2vw;
 }
 
-.call-police-btn {
+/* .call-police-btn {
   margin-left: auto;
-}
-
-.search-bar {
-  margin-left: auto;
+} */
+/* .search-bar {
   font-size: 1.2vw;
   outline: none;
   border: none;
   padding: 0.6em 1em;
   border-radius: 5px;
+  align-self: center;
+  border: 2px solid black;
+} */
+.call-police-btn,
+.police-report-btn,
+.view-evidence-btn,
+.search-btn {
+  width: 5vw;
+  height: 10vh;
+  overflow: hidden;
+  background-color: #231f20;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.call-police-btn:hover,
+.police-report-btn:hover,
+.view-evidence-btn:hover,
+.search-btn:hover {
+  width: 6vw;
+  height: 11vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.call-police-btn img,
+.police-report-btn img,
+.view-evidence-btn img,
+.search-btn img {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
