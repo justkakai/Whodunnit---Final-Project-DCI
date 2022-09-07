@@ -1,124 +1,3 @@
-/*------------------------------DESKTOP VIEW------------------------------*/
-
-/* .App {
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  background-color: #894747;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-bar,
-.right-bar {
-  padding: 1em 5em 0 5em;
-  height: 100%;
-  width: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2em;
-  button {
-    border: none;
-    background: none;
-    color: wheat;
-    font-size: 0.9vw;
-    border-radius: 50%;
-  }
-}
-
-.left-bar {
-  button {
-    width: 9vw;
-    padding: 1em 2em;
-    background: rgba(0, 0, 0, 1);
-    border-radius: 2px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    &:hover {
-      background: rgba(0, 0, 0, 0.3);
-    }
-  }
-}
-
-.intro-page {
-  font-family: "Covered By Your Grace", cursive;
-  height: 80%;
-  width: 80%;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.clown-image-container {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 25vw;
-  }
-}
-
-.intro-text-container {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 3rem;
-  input {
-    font-size: 1.5vw;
-    outline: none;
-    border: none;
-    padding: 0.4em 1em;
-    border-radius: 5px;
-  }
-  button {
-    font-size: 1.5vw;
-    border: none;
-    padding: 0.43em 1em;
-    margin-left: 1em;
-    background-color: black;
-    color: wheat;
-    border-radius: 5px;
-  }
-}
-
-.game-name {
-  font-size: 8vw;
-}
-
-.game-descriptor {
-  font-size: 3vw;
-  color: wheat;
-}
-
-.player-greeting {
-  font-size: 2vw;
-}
-
-.call-police-btn,
-.police-report-btn,
-.view-evidence-btn,
-.search-btn {
-  width: 5vw;
-  height: 10vh;
-  overflow: hidden;
-  background-color: #231f20;
-  transition: all 0.5s;
-  &:hover {
-    width: 6vw;
-    height: 11vh;
-    transition: all 0.5s;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-} */
-
 /*------------------------------MOBILE VIEW------------------------------*/
 
 .App {
@@ -145,7 +24,6 @@
 .burger-menu-btn {
   border: none;
   background: none;
-  /* font-size: 0.9vw; */
   border-radius: 50%;
   width: 75px;
   height: 8vh;
@@ -173,6 +51,7 @@
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  padding: 0 3em;
 }
 
 .clown-image-container {
@@ -238,6 +117,33 @@
 
 /*------------------------------MEDIA QUERIES------------------------------*/
 
+/*-----------WIDTH-----------*/
+
+@media (min-width: 435px) {
+  .clown-image-container {
+    img {
+      width: 16em;
+    }
+  }
+
+  .intro-text-container {
+    input {
+      font-size: 1.5em;
+    }
+    button {
+      font-size: 1.5em;
+    }
+  }
+
+  .game-name {
+    font-size: 5em;
+  }
+
+  .game-descriptor {
+    font-size: 3em;
+  }
+}
+
 @media (min-width: 1180px) {
   .App {
     flex-direction: row;
@@ -246,6 +152,7 @@
   .recorded-conversations-btn,
   .visited-addresses-btn {
     display: initial;
+    font-family: "Covered By Your Grace", cursive;
   }
 
   .burger-menu-btn {
@@ -277,10 +184,11 @@
 
   .left-bar {
     button {
+      font-size: 1.2vw;
       width: 9vw;
       padding: 1em 2em;
-      background: rgba(0, 0, 0, 1);
-      border-radius: 2px;
+      background: rgba(35, 31, 32, 1);
+      border-radius: 50%;
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
       &:hover {
@@ -342,6 +250,39 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+/*-----------HEIGHT-----------*/
+
+@media (max-height: 800px) {
+  .intro-text-container {
+    gap: 1rem;
+  }
+}
+
+@media (max-height: 660px) {
+  .game-name {
+    font-size: 12vh;
+  }
+
+  .game-descriptor {
+    font-size: 5vh;
+  }
+
+  .clown-image-container {
+    img {
+      width: 30vh;
+    }
+  }
+
+  .intro-text-container {
+    input {
+      font-size: 4vh;
+    }
+    button {
+      font-size: 4vh;
     }
   }
 }
