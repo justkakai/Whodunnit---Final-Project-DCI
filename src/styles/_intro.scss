@@ -11,38 +11,6 @@
   align-items: center;
 }
 
-.left-bar {
-  padding: 0em 5em;
-  height: 10%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 2em;
-}
-
-.burger-menu-btn {
-  border: none;
-  background: none;
-  border-radius: 50%;
-  width: 75px;
-  height: 8vh;
-  overflow: hidden;
-  transition: all 0.5s;
-  /* From https://css.glass */
-  border-radius: 50%;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.right-bar {
-  display: none;
-}
-
 .intro-page {
   font-family: "Covered By Your Grace", cursive;
   height: 90%;
@@ -110,11 +78,6 @@
   font-size: 9vw;
 }
 
-.recorded-conversations-btn,
-.visited-addresses-btn {
-  display: none;
-}
-
 /*------------------------------MEDIA QUERIES------------------------------*/
 
 /*-----------WIDTH-----------*/
@@ -147,54 +110,6 @@
 @media (min-width: 1180px) {
   .App {
     flex-direction: row;
-  }
-
-  .recorded-conversations-btn,
-  .visited-addresses-btn {
-    display: initial;
-    font-family: "Covered By Your Grace", cursive;
-  }
-
-  .burger-menu-btn {
-    display: none;
-  }
-
-  .right-bar {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-    button {
-      border-radius: 50%;
-    }
-  }
-
-  .left-bar,
-  .right-bar {
-    padding: 1em 5em 0 5em;
-    height: 100%;
-    width: 10%;
-    flex-direction: column;
-    justify-content: flex-start;
-    button {
-      border: none;
-      color: wheat;
-      font-size: 0.9vw;
-    }
-  }
-
-  .left-bar {
-    button {
-      font-size: 1.2vw;
-      width: 9vw;
-      padding: 1em 2em;
-      background: rgba(35, 31, 32, 1);
-      border-radius: 50%;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      &:hover {
-        background: rgba(0, 0, 0, 0.3);
-      }
-    }
   }
 
   .intro-page {
@@ -231,26 +146,6 @@
 
   .player-greeting {
     font-size: 2vw;
-  }
-
-  .call-police-btn,
-  .police-report-btn,
-  .view-evidence-btn,
-  .search-btn {
-    width: 5vw;
-    height: 10vh;
-    overflow: hidden;
-    background-color: #231f20;
-    transition: all 0.5s;
-    &:hover {
-      width: 6vw;
-      height: 11vh;
-      transition: all 0.5s;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
 }
 
