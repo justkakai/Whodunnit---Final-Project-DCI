@@ -1,4 +1,4 @@
-import callPolice from '../../images/callPolice.png';
+import callPolice from '../../images/callPolice.svg';
 
 function CallPoliceBtn() {
 

@@ -1,4 +1,4 @@
-import burgerMenuIcon from '../../images/burger-menu-icon.png';
+import burgerMenuIcon from '../../images/burger-menu-icon.svg';
 
 function BurgerMenu() {
 

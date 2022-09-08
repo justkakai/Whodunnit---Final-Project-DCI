@@ -76,6 +76,10 @@ body {
     display: initial;
     font-family: "Covered By Your Grace", cursive;
   }
+  .recorded-conversations-btn:hover,
+  .visited-addresses-btn:hover {
+    cursor: pointer;
+  }
   .burger-menu-btn {
     display: none;
   }
@@ -137,6 +141,8 @@ body {
   .police-report-btn:hover,
   .view-evidence-btn:hover,
   .search-btn:hover {
+    cursor: pointer;
+    background-color: rgba(35, 31, 32, 0.8);
     width: 6vw;
     height: 11vh;
     -webkit-transition: all 0.5s;

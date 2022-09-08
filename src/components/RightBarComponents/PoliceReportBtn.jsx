@@ -1,4 +1,4 @@
-import policeReport from '../../images/policeReport.png';
+import policeReport from '../../images/policeReport.svg';
 
 function PoliceReportBtn() {
 

@@ -1,4 +1,4 @@
-import viewEvidence from '../../images/viewEvidence.png';
+import viewEvidence from '../../images/viewEvidence.svg';
 
 function EvidenceBtn() {
 
