@@ -1,7 +1,7 @@
 import { IntroPageProvider } from './contexts/IntroPageContext';
 import LeftBar from './components/LeftBar';
-import IntroPage from './components/IntroPage';
 import RightBar from './components/RightBar';
+import GameContainer from './components/GameContainer';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <IntroPageProvider>
       <div className="App">
         <LeftBar />
-        <IntroPage />
+        <GameContainer />
         <RightBar />
       </div>
     </IntroPageProvider>

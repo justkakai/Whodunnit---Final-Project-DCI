@@ -178,9 +178,14 @@ body {
           align-items: center;
 }
 
+.game-container {
+  height: 90%;
+  width: 100%;
+}
+
 .intro-page {
   font-family: "Covered By Your Grace", cursive;
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,9 +307,13 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .intro-page {
+  .game-container {
     height: 80%;
     width: 80%;
+  }
+  .intro-page {
+    height: 100%;
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

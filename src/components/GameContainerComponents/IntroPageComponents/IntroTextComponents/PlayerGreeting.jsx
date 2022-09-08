@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { IntroPageContext } from '../../../contexts/IntroPageContext';
+import { IntroPageContext } from '../../../../contexts/IntroPageContext';
 
 function PlayerGreeting() {
 

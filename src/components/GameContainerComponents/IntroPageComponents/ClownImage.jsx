@@ -1,4 +1,4 @@
-import clown from '../../images/scary-clown.png';
+import clown from '../../../images/scary-clown.png';
 
 function ClownImageContainer() {
 
