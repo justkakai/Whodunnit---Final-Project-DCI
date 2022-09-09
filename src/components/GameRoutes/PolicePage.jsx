@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { triggerWords } from '../Algo/Algo';
+import { triggerWords } from '../../Algo/Algo';
 import policeWoman from '../../images/policeWoman.svg';
 import detective from '../../images/detective.svg';
 import { IntroPageContext } from '../../contexts/IntroPageContext';

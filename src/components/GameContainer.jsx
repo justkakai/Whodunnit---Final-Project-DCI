@@ -1,6 +1,6 @@
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import IntroPage from './GameContainerComponents/IntroPage';
-import PolicePage from './GameContainerComponents/PolicePage';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import IntroPage from './GameRoutes/IntroPage';
+import PolicePage from './GameRoutes/PolicePage';
 
 function GameContainer() {
 
