@@ -1,7 +1,7 @@
 import PoliceReportBtn from "./RightBarComponents/PoliceReportBtn";
 import EvidenceBtn from "./RightBarComponents/EvidenceBtn";
 import SearchBar from "./RightBarComponents/SearchBar";
-import CallPoliceBtn from "./LeftBarComponents/CallPoliceBtn";
+import CallPoliceBtn from "./RightBarComponents/CallPoliceBtn";
 
 function RightBar() {
 

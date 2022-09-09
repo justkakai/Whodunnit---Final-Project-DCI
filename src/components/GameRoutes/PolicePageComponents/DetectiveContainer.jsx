@@ -14,7 +14,7 @@ function DetectiveContainer() {
                 </div>
             </div>
             <div className="detective-image-container">
-                <img src={detective} alt="Police woman" />
+                <img src={detective} alt="Detective" />
             </div>
         </div>
     )

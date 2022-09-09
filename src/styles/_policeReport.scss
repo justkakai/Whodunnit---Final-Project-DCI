@@ -1,0 +1,19 @@
+.police-report-page {
+  width: 100%;
+  height: 100%;
+  background-color: $gameContainerBgColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 1em;
+}
+
+.police-report-container {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  img {
+    width: 100%;
+  }
+}

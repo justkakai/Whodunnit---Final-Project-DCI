@@ -1,4 +1,3 @@
-/* import { Routes, Route, Navigate, useLocation } from 'react-router-dom'; */
 import { IntroPageProvider } from './contexts/IntroPageContext';
 import { PolicePageProvider } from './contexts/PolicePageContext';
 import LeftBar from './components/LeftBar';
