@@ -9,6 +9,7 @@ function IntroPageProvider({ children }) {
         "Let's start with your name, shall we?"
     ];
 
+    const [showCallPoliceBtn, setShowCallPoliceBtn] = useState(false);
     const [displayedText, setDisplayedText] = useState(textToDisplay[0]);
     const [displayNameInput, setDisplayNameInput] = useState(false);
     const [playerName, setPlayerName] = useState("");
@@ -20,7 +21,7 @@ function IntroPageProvider({ children }) {
     }, 2000);
 
     return (
-        <IntroPageContext.Provider value={{ displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay }}>
+        <IntroPageContext.Provider value={{ showCallPoliceBtn, setShowCallPoliceBtn, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay }}>
             {children}
         </IntroPageContext.Provider>
     );

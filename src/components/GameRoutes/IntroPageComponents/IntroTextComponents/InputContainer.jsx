@@ -6,9 +6,10 @@ function InputContainer() {
 
     let navigate = useNavigate();
 
-    const { playerName, setPlayerName, setDisplayInputAndButton } = useContext(IntroPageContext);
+    const { setShowCallPoliceBtn, playerName, setPlayerName, setDisplayInputAndButton } = useContext(IntroPageContext);
 
     const handleClick = () => {
+        setShowCallPoliceBtn(true);
         setDisplayInputAndButton(false);
         setTimeout(() => {
             navigate("/call-police");
