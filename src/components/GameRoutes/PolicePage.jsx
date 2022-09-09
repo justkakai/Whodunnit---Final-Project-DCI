@@ -1,10 +1,21 @@
 import { useState, useEffect, useContext } from 'react';
+import { motion } from "framer-motion";
 import { triggerWords } from '../../Algo/Algo';
 import policeWoman from '../../images/policeWoman.svg';
 import detective from '../../images/detective.svg';
 import { IntroPageContext } from '../../contexts/IntroPageContext';
 
 function PolicePage() {
+
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: { delay: 0, duration: 0.5 }
+        },
+    }
 
     const { playerName } = useContext(IntroPageContext);
 
@@ -26,7 +37,12 @@ function PolicePage() {
     };
 
     return (
-        <section className="police-page">
+        <motion.section className='police-page'
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <div className="police-container">
                 <div className="police-image-container">
                     <img src={policeWoman} alt="Police woman" />
@@ -48,7 +64,7 @@ function PolicePage() {
                     <img src={detective} alt="Police woman" />
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
