@@ -155,6 +155,12 @@ body {
     width: 100%;
     height: 100%;
   }
+  .search-btn {
+    background-color: white;
+  }
+  .search-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 /*------------------------------MOBILE VIEW------------------------------*/
@@ -368,6 +374,135 @@ body {
   }
   .intro-text-container button {
     font-size: 4vh;
+  }
+}
+
+/*------------------------------MOBILE VIEW------------------------------*/
+.police-page {
+  font-family: "Covered By Your Grace", cursive;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 1em;
+}
+
+.police-container,
+.detective-container {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.police-image-container,
+.detective-image-container {
+  width: 30%;
+  height: 100%;
+}
+
+.police-image-container img,
+.detective-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.police-dialog-container,
+.detective-dialog-container {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog-box-police,
+.dialog-box-detective {
+  border: 3px solid black;
+  border-radius: 2px;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  background-color: whitesmoke;
+  width: 95%;
+}
+
+.dialog-box-detective input {
+  font-family: "Covered By Your Grace", cursive;
+  border: none;
+  background-color: black;
+  width: 90%;
+  color: white;
+  font-size: 4vw;
+  border-radius: 2px;
+  padding: 1em 0.2em 1em 0.4em;
+}
+
+/*------------------------------MEDIA QUERIES------------------------------*/
+/*-----------WIDTH-----------*/
+@media (min-width: 800px) {
+  .police-container,
+  .detective-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3em;
+  }
+  .dialog-box-police,
+  .dialog-box-detective {
+    padding: 2em;
+    width: 700px;
+    font-size: 30px;
+  }
+  .dialog-box-detective input {
+    padding: 10px;
+    font-size: 30px;
+  }
+  .police-image-container,
+  .detective-image-container {
+    height: 80%;
+  }
+  .police-dialog-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .detective-dialog-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+/*-----------HEIGHT-----------*/
+@media (max-height: 550px) {
+  .dialog-box-police,
+  .dialog-box-detective {
+    padding: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */

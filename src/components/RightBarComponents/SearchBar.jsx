@@ -1,4 +1,4 @@
-import searchAnything from '../../images/searchAnything.png';
+import searchAnything from '../../images/searchAnything.svg';
 
 function SearchBar() {
 

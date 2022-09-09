@@ -1,10 +1,12 @@
-import IntroPage from './GameContainerComponents/IntroPage';
+/* import IntroPage from './GameContainerComponents/IntroPage'; */
+import PolicePage from './GameContainerComponents/PolicePage';
 
 function GameContainer() {
 
     return (
         <section className="game-container">
-            <IntroPage />
+            {/* <IntroPage /> */}
+            <PolicePage />
         </section>
     )
 }
