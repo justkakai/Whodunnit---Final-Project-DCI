@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion } from "framer-motion";
-import { triggerWords } from '../../Algo/Algo';
+import { triggerWords } from '../../algo/Algo';
 import policeWoman from '../../images/policeWoman.svg';
 import detective from '../../images/detective.svg';
 import { IntroPageContext } from '../../contexts/IntroPageContext';

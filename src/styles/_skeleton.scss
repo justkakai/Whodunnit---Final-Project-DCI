@@ -1,3 +1,29 @@
+/*-----------COLORS-----------*/
+$appBgColor: #894747;
+$sidebarIconAndTextColor: wheat;
+$leftBarBtnBgColor: rgba(35, 31, 32, 1);
+$leftBarBtnBgColorHover: rgba(0, 0, 0, 0.3);
+$rightBarBtnBgColor: #231f20;
+$rightBarBtnBgColorHover: rgba(35, 31, 32, 0.8);
+$searchBtnBgColor: white;
+$searchBtnBgColorHover: rgba(255, 255, 255, 0.8);
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: $appBgColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  height: 90%;
+  width: 100%;
+}
+
 .left-bar {
   padding: 0em 5em;
   height: 10%;
@@ -16,7 +42,6 @@
   height: 8vh;
   overflow: hidden;
   transition: all 0.5s;
-  /* From https://css.glass */
   border-radius: 50%;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -45,10 +70,19 @@
 /*-----------WIDTH-----------*/
 
 @media (min-width: 1180px) {
+  .App {
+    flex-direction: row;
+  }
+
+  .game-container {
+    height: 80%;
+    width: 80%;
+  }
+
   .recorded-conversations-btn,
   .visited-addresses-btn {
     display: initial;
-    font-family: "Covered By Your Grace", cursive;
+    font-family: $mainFont;
     &:hover {
       cursor: pointer;
     }
@@ -76,7 +110,7 @@
     justify-content: center;
     button {
       border: none;
-      color: wheat;
+      color: $sidebarIconAndTextColor;
       font-size: 0.9vw;
     }
   }
@@ -86,12 +120,12 @@
       font-size: 1.2vw;
       width: 9vw;
       padding: 1em 2em;
-      background: rgba(35, 31, 32, 1);
+      background: $leftBarBtnBgColor;
       border-radius: 50%;
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
       &:hover {
-        background: rgba(0, 0, 0, 0.3);
+        background: $leftBarBtnBgColorHover;
       }
     }
   }
@@ -103,11 +137,11 @@
     width: 5vw;
     height: 10vh;
     overflow: hidden;
-    background-color: #231f20;
+    background-color: $rightBarBtnBgColor;
     transition: all 0.5s;
     &:hover {
       cursor: pointer;
-      background-color: rgba(35, 31, 32, 0.8);
+      background-color: $rightBarBtnBgColorHover;
       width: 6vw;
       height: 11vh;
       transition: all 0.5s;
@@ -119,9 +153,9 @@
   }
 
   .search-btn {
-    background-color: white;
+    background-color: $searchBtnBgColor;
     &:hover {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: $searchBtnBgColorHover;
     }
   }
 }

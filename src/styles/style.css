@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+/*-----------FONTS-----------*/
+/*-----------COLORS-----------*/
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +15,32 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+}
+
+/*-----------COLORS-----------*/
+.App {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: #894747;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-container {
+  height: 90%;
+  width: 100%;
 }
 
 .left-bar {
@@ -40,7 +68,6 @@ body {
   overflow: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  /* From https://css.glass */
   border-radius: 50%;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -71,6 +98,16 @@ body {
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
 @media (min-width: 1180px) {
+  .App {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .game-container {
+    height: 80%;
+    width: 80%;
+  }
   .recorded-conversations-btn,
   .visited-addresses-btn {
     display: initial;
@@ -163,32 +200,8 @@ body {
   }
 }
 
+/*-----------COLORS-----------*/
 /*------------------------------MOBILE VIEW------------------------------*/
-.App {
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  background-color: #894747;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.game-container {
-  height: 90%;
-  width: 100%;
-}
-
 .intro-page {
   font-family: "Covered By Your Grace", cursive;
   height: 100%;
@@ -307,16 +320,6 @@ body {
 }
 
 @media (min-width: 1180px) {
-  .App {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .game-container {
-    height: 80%;
-    width: 80%;
-  }
   .intro-page {
     height: 100%;
     width: 100%;
@@ -377,6 +380,7 @@ body {
   }
 }
 
+/*-----------COLORS-----------*/
 /*------------------------------MOBILE VIEW------------------------------*/
 .police-page {
   font-family: "Covered By Your Grace", cursive;

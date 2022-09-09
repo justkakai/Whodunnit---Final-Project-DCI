@@ -1,28 +1,17 @@
+/*-----------COLORS-----------*/
+$startBtnBgColor: black;
+$startBtnTextColor: wheat;
+$gameDescriptorTextColor: wheat;
+
 /*------------------------------MOBILE VIEW------------------------------*/
 
-.App {
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  background-color: #894747;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.game-container {
-  height: 90%;
-  width: 100%;
-}
-
 .intro-page {
-  font-family: "Covered By Your Grace", cursive;
+  font-family: $mainFont;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: $gameContainerBgColor;
   overflow: hidden;
   padding: 0 3em;
 }
@@ -56,8 +45,8 @@
     border: none;
     padding: 0.43em 1em;
     margin-left: 1em;
-    background-color: black;
-    color: wheat;
+    background-color: $startBtnBgColor;
+    color: $startBtnTextColor;
     border-radius: 5px;
   }
 }
@@ -76,7 +65,7 @@
 
 .game-descriptor {
   font-size: 10vw;
-  color: wheat;
+  color: $gameDescriptorTextColor;
 }
 
 .player-greeting {
@@ -113,15 +102,6 @@
 }
 
 @media (min-width: 1180px) {
-  .App {
-    flex-direction: row;
-  }
-
-  .game-container {
-    height: 80%;
-    width: 80%;
-  }
-
   .intro-page {
     height: 100%;
     width: 100%;
