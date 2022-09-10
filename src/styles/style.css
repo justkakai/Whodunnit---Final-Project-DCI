@@ -632,18 +632,79 @@ body {
   .evidence-page-container > div {
     height: 60%;
     width: 20%;
+    position: relative;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
   }
   .evidence-page-container > div:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-transition: all 0.7s;
-    transition: all 0.7s;
+    cursor: initial;
+  }
+  .evidence-page-container > div:hover p {
+    z-index: 4;
+    background-color: rgba(199, 127, 127, 0.7);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .evidence-page-container > div:hover button {
+    opacity: 1;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .evidence-page-container > div img {
     -o-object-position: center;
        object-position: center;
+  }
+  .evidence-page-container > div p {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .evidence-page-container > div p button {
+    opacity: 0;
+    font-family: "Covered By Your Grace", cursive;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    width: 50%;
+    padding: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(27, 27, 27, 0.7);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .evidence-page-container > div p button:hover {
+    background-color: #1b1b1b;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .evidence-page-container > div p button span {
+    font-size: 2em;
+    color: white;
   }
 }
 /*# sourceMappingURL=style.css.map */

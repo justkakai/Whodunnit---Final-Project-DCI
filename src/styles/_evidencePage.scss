@@ -55,13 +55,58 @@
     & > div {
       height: 60%;
       width: 20%;
+      position: relative;
       transition: all 0.7s;
       &:hover {
-        transform: scale(1.05);
-        transition: all 0.7s;
+        cursor: initial;
+      }
+      &:hover p {
+        z-index: 4;
+        background-color: rgba(199, 127, 127, 0.7);
+        transition: all 0.4s;
+      }
+      &:hover button {
+        opacity: 1;
+        transition: all 0.4s;
       }
       img {
         object-position: center;
+      }
+      p {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        transition: all 0.4s;
+        button {
+          opacity: 0;
+          font-family: $mainFont;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          width: 50%;
+          padding: 1em;
+          border: none;
+          border-radius: 20px;
+          background-color: rgba(27, 27, 27, 0.7);
+          transition: all 0.4s;
+          &:hover {
+            background-color: rgb(27, 27, 27);
+            transform: scale(1.2);
+            transition: all 0.4s;
+          }
+          span {
+            font-size: 2em;
+            color: white;
+          }
+        }
       }
     }
   }
