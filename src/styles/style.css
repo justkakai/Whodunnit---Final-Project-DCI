@@ -254,9 +254,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  /* justify-content: center; */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -359,9 +357,14 @@ body {
   }
   .game-name {
     font-size: 8vw;
+    margin-top: 0.8em;
   }
   .game-descriptor {
     font-size: 3vw;
+  }
+  .input-container button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .player-greeting {
     font-size: 2vw;

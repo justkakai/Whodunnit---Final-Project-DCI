@@ -12,7 +12,7 @@ function PolicePageProvider({ children }) {
     const [detectiveWords, setDetectiveWords] = useState("");
 
     useEffect(() => {
-        setPoliceWords(`Hello Detective ${playerName}! We've got quite the conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.`)
+        setPoliceWords(`Hi there Detective ${playerName}! We've got quite the conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.`)
     }, [playerName]);
 
     const handleKeyPress = (e) => {

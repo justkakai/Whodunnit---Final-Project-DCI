@@ -12,6 +12,10 @@ function PolicePage() {
             opacity: 1,
             transition: { delay: 0, duration: 0.5 }
         },
+        exit: {
+            x: "-100%",
+            transition: { ease: "easeInOut" }
+        }
     }
 
     return (
