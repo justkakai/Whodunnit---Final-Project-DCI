@@ -1,18 +1,11 @@
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+import framerMotionVariants from "../../functions/containerVariants";
 import callPolice from '../../images/callPolice.svg';
 
 function CallPoliceBtn() {
 
-    const containerVariants = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: { delay: 0, duration: 0.7 }
-        }
-    }
+    const containerVariants = framerMotionVariants(0.7, 0);
 
     let navigate = useNavigate();
 

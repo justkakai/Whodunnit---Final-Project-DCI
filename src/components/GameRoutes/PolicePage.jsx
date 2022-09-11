@@ -1,22 +1,12 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { IntroPageContext } from "../../contexts/IntroPageContext";
 import PoliceContainer from "./PolicePageComponents/PoliceContainer";
 import DetectiveContainer from "./PolicePageComponents/DetectiveContainer";
 
 function PolicePage() {
 
-    const containerVariants = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: { delay: 0, duration: 0.5 }
-        },
-        exit: {
-            x: "-100%",
-            transition: { ease: "easeInOut" }
-        }
-    }
+    const { containerVariants } = useContext(IntroPageContext);
 
     return (
         <motion.section className='police-page'
