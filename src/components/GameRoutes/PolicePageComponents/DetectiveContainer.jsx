@@ -10,7 +10,7 @@ function DetectiveContainer() {
         <div className="detective-container">
             <div className="detective-dialog-container">
                 <div className='dialog-box-detective'>
-                    <input type="text" onChange={(e) => setDetectiveWords(e.target.value)} onKeyDown={handleKeyPress} value={detectiveWords} />
+                    <input type="text" spellcheck="false" onChange={(e) => setDetectiveWords(e.target.value)} onKeyDown={handleKeyPress} value={detectiveWords} />
                 </div>
             </div>
             <div className="detective-image-container">

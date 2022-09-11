@@ -15,7 +15,7 @@ function InputContainer() {
             initial="hidden"
             animate="visible"
         >
-            <input type="text" onChange={(e) => setPlayerName(e.target.value)} value={playerName} placeholder="Enter your name" />
+            <input type="text" spellcheck="false" onChange={(e) => setPlayerName(e.target.value)} value={playerName} placeholder="Enter your name" />
             <button onClick={handleClick}>Start!</button>
         </motion.div>
     )
