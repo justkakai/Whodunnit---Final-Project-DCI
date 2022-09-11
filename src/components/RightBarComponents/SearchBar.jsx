@@ -7,7 +7,7 @@ function SearchBar() {
             <button className="search-btn">
                 <img src={searchAnything} alt="Search button" />
             </button>
-            {/* <input className="search-bar" type="text" placeholder="Search for anything!" /> */}
+            {/* <input className="search-btn" type="text" placeholder="Search for anything!" /> */}
         </>
     )
 }
