@@ -1,17 +1,16 @@
-import { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import PoliceReportBtn from "./RightBarComponents/PoliceReportBtn";
 import EvidenceBtn from "./RightBarComponents/EvidenceBtn";
 import SearchBar from "./RightBarComponents/SearchBar";
 import CallPoliceBtn from "./RightBarComponents/CallPoliceBtn";
-import { IntroPageContext } from '../contexts/IntroPageContext';
 
 function RightBar() {
 
-    const { showCallPoliceBtn } = useContext(IntroPageContext);
+    const location = useLocation();
 
     return (
         <section className="right-bar">
-            {showCallPoliceBtn ? <CallPoliceBtn /> : null}
+            {(location.pathname !== "/") && (location.pathname !== "/call-police") ? <CallPoliceBtn /> : null}
             <PoliceReportBtn />
             <EvidenceBtn />
             <SearchBar />

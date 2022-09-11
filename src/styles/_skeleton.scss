@@ -7,6 +7,10 @@ $rightBarBtnBgColor: #231f20;
 $rightBarBtnBgColorHover: rgba(35, 31, 32, 0.8);
 $searchBtnBgColor: white;
 $searchBtnBgColorHover: rgba(255, 255, 255, 0.8);
+$callPoliceBtnBgColor: wheat;
+$callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
+
+/*------------------------------MOBILE VIEW------------------------------*/
 
 .App {
   height: 100vh;
@@ -149,6 +153,13 @@ $searchBtnBgColorHover: rgba(255, 255, 255, 0.8);
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  .call-police-btn {
+    background-color: $callPoliceBtnBgColor;
+    &:hover {
+      background-color: $callPoliceBtnBgColorHover;
     }
   }
 

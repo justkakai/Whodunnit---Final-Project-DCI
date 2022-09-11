@@ -15,7 +15,6 @@ function IntroPageProvider({ children }) {
         "Let's start with your name, shall we?"
     ];
 
-    const [showCallPoliceBtn, setShowCallPoliceBtn] = useState(false);
     const [displayedText, setDisplayedText] = useState(textToDisplay[0]);
     const [displayNameInput, setDisplayNameInput] = useState(false);
     const [playerName, setPlayerName] = useState("");
@@ -27,7 +26,6 @@ function IntroPageProvider({ children }) {
     }, 2000);
 
     const handleClick = () => {
-        setShowCallPoliceBtn(true);
         setDisplayInputAndButton(false);
         setTimeout(() => {
             navigate("/call-police");
@@ -35,7 +33,7 @@ function IntroPageProvider({ children }) {
     };
 
     return (
-        <IntroPageContext.Provider value={{ containerVariants, showCallPoliceBtn, setShowCallPoliceBtn, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay, handleClick }}>
+        <IntroPageContext.Provider value={{ containerVariants, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay, handleClick }}>
             {children}
         </IntroPageContext.Provider>
     );
