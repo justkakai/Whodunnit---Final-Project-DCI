@@ -2,6 +2,7 @@
 $dialogBoxBorderColor: black;
 $dialogBoxBgColor: whitesmoke;
 $detectiveInputTextColor: white;
+$detectiveInputBgColor: black;
 
 /*------------------------------MOBILE VIEW------------------------------*/
 
@@ -58,7 +59,7 @@ $detectiveInputTextColor: white;
   input {
     font-family: $mainFont;
     border: none;
-    background-color: black;
+    background-color: $detectiveInputBgColor;
     width: 90%;
     color: $detectiveInputTextColor;
     font-size: 4vw;
