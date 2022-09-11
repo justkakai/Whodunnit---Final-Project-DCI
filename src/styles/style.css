@@ -53,6 +53,7 @@ body {
 }
 
 .game-container {
+  /* position: relative; */
   height: 90%;
   width: 100%;
 }
@@ -143,7 +144,8 @@ body {
             align-items: center;
     gap: 5em;
   }
-  .right-bar button {
+  .right-bar button,
+  .right-bar input {
     border-radius: 50%;
   }
   .left-bar,
@@ -213,10 +215,29 @@ body {
     background-color: rgba(245, 222, 179, 0.8);
   }
   .search-btn {
+    position: relative;
+    border: none;
+    outline: none;
     background-color: white;
+    background-image: url("../images/searchAnything.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 1.1em;
   }
   .search-btn:hover {
+    width: 5vw;
+    height: 10vh;
     background-color: rgba(255, 255, 255, 0.8);
+  }
+  .search-btn:focus {
+    cursor: initial;
+    background-image: none;
+    text-indent: 20px;
+    z-index: 15;
+    border-radius: 2px;
+    margin-right: 20vw;
+    width: 25vw;
+    background-color: white;
   }
 }
 

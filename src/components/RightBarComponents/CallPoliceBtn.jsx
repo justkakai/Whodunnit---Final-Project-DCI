@@ -9,7 +9,7 @@ function CallPoliceBtn() {
 
     const { setPoliceWords } = useContext(PolicePageContext);
 
-    const containerVariants = framerMotionVariants(0.5, 0.7, 0);
+    const containerVariants = framerMotionVariants(0.8, 0.4, 0);
 
     let navigate = useNavigate();
 

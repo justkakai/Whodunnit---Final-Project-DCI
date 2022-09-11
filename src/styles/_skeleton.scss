@@ -24,6 +24,7 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
 }
 
 .game-container {
+  /* position: relative; */
   height: 90%;
   width: 100%;
 }
@@ -100,7 +101,8 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
     display: flex;
     align-items: center;
     gap: 5em;
-    button {
+    button,
+    input {
       border-radius: 50%;
     }
   }
@@ -164,9 +166,28 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
   }
 
   .search-btn {
+    position: relative;
+    border: none;
+    outline: none;
     background-color: $searchBtnBgColor;
+    background-image: url("../images/searchAnything.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 1.1em;
     &:hover {
+      width: 5vw;
+      height: 10vh;
       background-color: $searchBtnBgColorHover;
+    }
+    &:focus {
+      cursor: initial;
+      background-image: none;
+      text-indent: 20px;
+      z-index: 15;
+      border-radius: 2px;
+      margin-right: 20vw;
+      width: 25vw;
+      background-color: $searchBtnBgColor;
     }
   }
 }
