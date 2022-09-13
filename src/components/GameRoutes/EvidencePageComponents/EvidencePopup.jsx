@@ -2,15 +2,15 @@ import { useContext } from "react";
 import { EvidencePageContext } from "../../../contexts/EvidenceContext";
 import closeModalX from '../../../images/close-modal-x.svg';
 
-function EvidenceModal() {
+function EvidencePopup() {
 
-    const { displayEvidenceExpanded, setDisplayEvidenceExpanded } = useContext(EvidencePageContext);
+    const { displayEvidencePopup, setDisplayEvidencePopup } = useContext(EvidencePageContext);
 
     return (
         <>
-            {displayEvidenceExpanded ?
+            {displayEvidencePopup ?
                 <section className="evidence-expanded-box">
-                    <div className="close-button-container" onClick={() => setDisplayEvidenceExpanded(false)}>
+                    <div className="close-button-container" onClick={() => setDisplayEvidencePopup(false)}>
                         <img src={closeModalX} alt="close modal x button" />
                     </div>
                 </section>
@@ -20,4 +20,4 @@ function EvidenceModal() {
     )
 }
 
-export default EvidenceModal;
+export default EvidencePopup;

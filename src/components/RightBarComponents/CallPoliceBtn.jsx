@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { PolicePageContext } from "../../contexts/PolicePageContext";
+import { PoliceCallPageContext } from "../../contexts/PoliceCallPageContext";
 import framerMotionVariants from "../../functions/containerVariants";
 import callPolice from '../../images/callPolice.svg';
 
 function CallPoliceBtn() {
 
-    const { setPoliceWords } = useContext(PolicePageContext);
+    const { setPoliceWords } = useContext(PoliceCallPageContext);
 
     const containerVariants = framerMotionVariants(0.8, 0.4, 0);
 

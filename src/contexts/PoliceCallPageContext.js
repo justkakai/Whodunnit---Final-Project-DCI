@@ -2,9 +2,9 @@ import { createContext, useState, useEffect, useContext } from "react";
 import { IntroPageContext } from "./IntroPageContext";
 import { triggerWords } from "../algo/Algo";
 
-const PolicePageContext = createContext(0);
+const PoliceCallPageContext = createContext(0);
 
-function PolicePageProvider({ children }) {
+function PoliceCallPageProvider({ children }) {
 
     const { playerName } = useContext(IntroPageContext);
 
@@ -26,10 +26,10 @@ function PolicePageProvider({ children }) {
     };
 
     return (
-        <PolicePageContext.Provider value={{ policeWords, setPoliceWords, detectiveWords, setDetectiveWords, handleKeyPress }}>
+        <PoliceCallPageContext.Provider value={{ policeWords, setPoliceWords, detectiveWords, setDetectiveWords, handleKeyPress }}>
             {children}
-        </PolicePageContext.Provider>
+        </PoliceCallPageContext.Provider>
     );
 }
 
-export { PolicePageContext, PolicePageProvider };
+export { PoliceCallPageContext, PoliceCallPageProvider };

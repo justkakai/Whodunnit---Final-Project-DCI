@@ -4,10 +4,10 @@ const EvidencePageContext = createContext(0);
 
 function EvidencePageProvider({ children }) {
 
-    const [displayEvidenceExpanded, setDisplayEvidenceExpanded] = useState(false);
+    const [displayEvidencePopup, setDisplayEvidencePopup] = useState(false);
 
     return (
-        <EvidencePageContext.Provider value={{ displayEvidenceExpanded, setDisplayEvidenceExpanded }}>
+        <EvidencePageContext.Provider value={{ displayEvidencePopup, setDisplayEvidencePopup }}>
             {children}
         </EvidencePageContext.Provider>
     );

@@ -5,7 +5,7 @@ import InvoiceContainer from "./EvidencePageComponents/Invoice";
 import BuffyLetterContainer from "./EvidencePageComponents/BuffyLetter";
 import LaurenceContainer from "./EvidencePageComponents/Laurence";
 import CocaineContainer from "./EvidencePageComponents/CocaineBag";
-import EvidenceModal from "./EvidencePageComponents/EvidenceModal";
+import EvidencePopup from "./EvidencePageComponents/EvidencePopup";
 
 function EvidencePage() {
 
@@ -23,7 +23,7 @@ function EvidencePage() {
                 <BuffyLetterContainer />
                 <LaurenceContainer />
                 <CocaineContainer />
-                <EvidenceModal />
+                <EvidencePopup />
             </div>
         </motion.section>
     )

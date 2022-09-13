@@ -1,5 +1,5 @@
 import { IntroPageProvider } from './contexts/IntroPageContext';
-import { PolicePageProvider } from './contexts/PolicePageContext';
+import { PoliceCallPageProvider } from './contexts/PoliceCallPageContext';
 import { EvidencePageProvider } from './contexts/EvidenceContext';
 import LeftBar from './components/LeftBar';
 import RightBar from './components/RightBar';
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <IntroPageProvider>
-      <PolicePageProvider>
+      <PoliceCallPageProvider>
         <EvidencePageProvider>
           <div className="App">
             <LeftBar />
@@ -17,7 +17,7 @@ function App() {
             <RightBar />
           </div>
         </EvidencePageProvider>
-      </PolicePageProvider>
+      </PoliceCallPageProvider>
     </IntroPageProvider>
   );
 }

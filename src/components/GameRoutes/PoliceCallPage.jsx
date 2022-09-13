@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { IntroPageContext } from "../../contexts/IntroPageContext";
-import PoliceContainer from "./PolicePageComponents/PoliceContainer";
-import DetectiveContainer from "./PolicePageComponents/DetectiveContainer";
+import PoliceContainer from "./PoliceCallPageComponents/PoliceContainer";
+import DetectiveContainer from "./PoliceCallPageComponents/DetectiveContainer";
 
 function PolicePage() {
 

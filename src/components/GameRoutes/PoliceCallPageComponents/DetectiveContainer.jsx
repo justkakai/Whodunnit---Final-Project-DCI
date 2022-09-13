@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { PolicePageContext } from '../../../contexts/PolicePageContext';
+import { PoliceCallPageContext } from '../../../contexts/PoliceCallPageContext';
 import detective from '../../../images/detective.svg';
 
 function DetectiveContainer() {
 
-    const { detectiveWords, setDetectiveWords, handleKeyPress } = useContext(PolicePageContext);
+    const { detectiveWords, setDetectiveWords, handleKeyPress } = useContext(PoliceCallPageContext);
 
     return (
         <div className="detective-container">
