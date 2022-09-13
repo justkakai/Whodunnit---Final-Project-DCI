@@ -1,8 +1,13 @@
+import { useContext } from 'react';
+import { SearchSectionContext } from '../../contexts/SearchSectionContext';
+
 function SearchBar() {
+
+    const { searchTerm, setSearchTerm, handleKeyDown } = useContext(SearchSectionContext);
 
     return (
         <>
-            <input className="search-btn" type="text" spellcheck="false" />
+            <input className="search-btn" type="text" spellcheck="false" onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={handleKeyDown} value={searchTerm} />
         </>
     )
 }

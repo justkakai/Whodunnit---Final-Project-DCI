@@ -1,0 +1,30 @@
+/*-----------COLORS-----------*/
+$searchResultsBorderColor: black;
+$searchResultsBgColor: rgb(231, 231, 231);
+
+/*------------------------------MOBILE VIEW------------------------------*/
+
+.search-results-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 12;
+  height: 60%;
+  width: 95%;
+  background-color: $searchResultsBgColor;
+  border: 4px solid $searchResultsBorderColor;
+}
+
+/*------------------------------MEDIA QUERIES------------------------------*/
+
+/*-----------WIDTH-----------*/
+
+@media (min-width: 700px) {
+  .search-results-container {
+    height: 90%;
+    width: 70%;
+  }
+}

@@ -4,6 +4,7 @@ import IntroPage from './GameRoutes/IntroPage';
 import PoliceCallPage from './GameRoutes/PoliceCallPage';
 import PoliceReport from './GameRoutes/PoliceReport';
 import EvidencePage from './GameRoutes/EvidencePage';
+import SearchResultsContainer from './GameRoutes/SearchResults';
 
 function GameContainer() {
 
@@ -19,6 +20,7 @@ function GameContainer() {
                     <Route path="evidence" element={<EvidencePage />} />
                 </Routes>
             </AnimatePresence>
+            <SearchResultsContainer />
         </section>
     )
 }

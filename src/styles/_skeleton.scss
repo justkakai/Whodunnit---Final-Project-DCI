@@ -24,7 +24,7 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
 }
 
 .game-container {
-  /* position: relative; */
+  position: relative;
   height: 90%;
   width: 100%;
 }
@@ -187,6 +187,7 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
       border-radius: 2px;
       margin-right: 20vw;
       width: 25vw;
+      border: 4px solid black;
       background-color: $searchBtnBgColor;
     }
   }
