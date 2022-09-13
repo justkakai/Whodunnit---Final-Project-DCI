@@ -59,7 +59,7 @@ $ExpandBtnTextColor: white;
 .close-button-container {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 1%;
   height: 10%;
   width: 50px;
   background-color: $xContainerBgColor;
@@ -68,6 +68,15 @@ $ExpandBtnTextColor: white;
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.evidence-popup-img-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  img {
+    width: 100%;
   }
 }
 

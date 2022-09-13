@@ -5,13 +5,17 @@ import neesonInvoice from '../../../images/neesonInvoice.jpg';
 
 function InvoiceContainer() {
 
-    const { setDisplayEvidencePopup } = useContext(EvidencePageContext);
+    const { setDisplayEvidencePopup, setActiveImage } = useContext(EvidencePageContext);
 
     return (
         <div>
             <img src={neesonInvoice} alt="Harry Neeson Invoice" />
             <p>
-                <button onClick={() => setDisplayEvidencePopup(true)}>
+                <button onClick={() => {
+                    setDisplayEvidencePopup(true);
+                    setActiveImage(neesonInvoice);
+                }
+                }>
                     <span>Expand</span>
                     <BsArrowUpRight style={{ fontSize: "1.45em", color: "white" }} />
                 </button>

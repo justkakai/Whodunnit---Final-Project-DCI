@@ -5,13 +5,17 @@ import laurence from '../../../images/laurence.jpg';
 
 function LaurenceContainer() {
 
-    const { setDisplayEvidencePopup } = useContext(EvidencePageContext);
+    const { setDisplayEvidencePopup, setActiveImage } = useContext(EvidencePageContext);
 
     return (
         <div>
             <img src={laurence} alt="Laurence the clown-hating religious guy" />
             <p>
-                <button onClick={() => setDisplayEvidencePopup(true)}>
+                <button onClick={() => {
+                    setDisplayEvidencePopup(true);
+                    setActiveImage(laurence);
+                }
+                }>
                     <span>Expand</span>
                     <BsArrowUpRight style={{ fontSize: "1.45em", color: "white" }} />
                 </button>
