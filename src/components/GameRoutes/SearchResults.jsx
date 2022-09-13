@@ -20,7 +20,7 @@ function SearchResultsContainer() {
 
         </>
     )
-}//jjj
+}
 export default SearchResultsContainer;
 
 
