@@ -47,7 +47,7 @@
     color: white;
     border-top: 2px solid rgb(211, 199, 177);
     &:hover {
-        background-color: rgb(43, 43, 43);
+      background-color: rgb(43, 43, 43);
     }
   }
 }
@@ -56,8 +56,20 @@
 
 /*-----------WIDTH-----------*/
 
+@media (max-width: 300px) {
+  .burger-menu-dropdown {
+    width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .burger-menu-container {
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 1180px) {
-  .burger-menu-btn {
+  .burger-menu-container {
     display: none;
   }
 }

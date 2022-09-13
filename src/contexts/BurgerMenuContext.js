@@ -22,12 +22,12 @@ function BurgerMenuProvider({ children }) {
     ];
 
     function handleClick(route) {
-        navigate(route);
-        setDisplayBurgerDropdown(false);
         if (location.pathname === "/call-police") {
             setPoliceWords("How can I help you detective?");
             setDetectiveWords("");
         };
+        navigate(route);
+        setDisplayBurgerDropdown(false);
     };
 
     return (

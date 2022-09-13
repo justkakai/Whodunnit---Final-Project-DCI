@@ -89,6 +89,12 @@ li {
 
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
+@media (max-width: 700px) {
+  .left-bar {
+    padding: 0em 1em;
+  }
+}
+
 @media (min-width: 1180px) {
   .App {
     -webkit-box-orient: horizontal;
@@ -483,6 +489,21 @@ li {
 
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
+/* @media (max-width: 500px) {
+  .police-container,
+  .detective-container {
+    flex-direction: column;
+    align-items: center;
+  }
+} */
+@media (max-width: 800px) {
+  .police-container,
+  .detective-container {
+    height: 40%;
+    /* border: 2px solid red; */
+  }
+}
+
 @media (min-width: 800px) {
   .police-container,
   .detective-container {
@@ -842,8 +863,20 @@ li {
 
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
+@media (max-width: 300px) {
+  .burger-menu-dropdown {
+    width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .burger-menu-container {
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 1180px) {
-  .burger-menu-btn {
+  .burger-menu-container {
     display: none;
   }
 }
