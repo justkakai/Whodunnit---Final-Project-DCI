@@ -5,13 +5,17 @@ import cocaine from '../../../images/cocaine.jpg';
 
 function CocaineContainer() {
 
-    const { setDisplayEvidencePopup } = useContext(EvidencePageContext);
+    const { setDisplayEvidencePopup, setActiveImage } = useContext(EvidencePageContext);
 
     return (
         <div>
             <img src={cocaine} alt="A bag of cocaine" />
             <p>
-                <button onClick={() => setDisplayEvidencePopup(true)}>
+            <button onClick={() => {
+                    setDisplayEvidencePopup(true);
+                    setActiveImage(cocaine);
+                }
+                }>
                     <span>Expand</span>
                     <BsArrowUpRight style={{ fontSize: "1.45em", color: "white" }} />
                 </button>

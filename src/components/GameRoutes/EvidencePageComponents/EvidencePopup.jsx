@@ -4,7 +4,7 @@ import closeModalX from '../../../images/close-modal-x.svg';
 
 function EvidencePopup() {
 
-    const { displayEvidencePopup, setDisplayEvidencePopup } = useContext(EvidencePageContext);
+    const { displayEvidencePopup, setDisplayEvidencePopup, activeImage } = useContext(EvidencePageContext);
 
     return (
         <>
@@ -12,6 +12,9 @@ function EvidencePopup() {
                 <section className="evidence-expanded-box">
                     <div className="close-button-container" onClick={() => setDisplayEvidencePopup(false)}>
                         <img src={closeModalX} alt="close modal x button" />
+                    </div>
+                    <div className="evidence-popup-img-container">
+                        <img src={activeImage} alt="evidence piece enlargened" />
                     </div>
                 </section>
                 :
