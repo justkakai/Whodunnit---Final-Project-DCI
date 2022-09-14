@@ -28,7 +28,7 @@ function IntroPageProvider({ children }) {
     const handleClick = () => {
         setDisplayInputAndButton(false);
         setTimeout(() => {
-            navigate("/call-police");
+            navigate("/police-first-conversation");
         }, 2000);
     };
 
