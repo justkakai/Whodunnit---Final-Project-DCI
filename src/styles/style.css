@@ -63,6 +63,7 @@ li {
 }
 
 .left-bar {
+  position: relative;
   padding: 0em 5em;
   height: 10%;
   width: 100%;
@@ -800,6 +801,7 @@ li {
 /*------------------------------MOBILE VIEW------------------------------*/
 .burger-menu-container {
   position: relative;
+  margin-left: auto;
 }
 
 .burger-menu-btn {
@@ -861,6 +863,69 @@ li {
   background-color: #2b2b2b;
 }
 
+.search-bar-mobile {
+  position: relative;
+  width: 50px;
+  height: 7vh;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  background-color: white;
+  background-image: url("../images/searchAnything.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.search-bar-mobile:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.search-bar-mobile:focus {
+  cursor: initial;
+  background-image: none;
+  text-indent: 20px;
+  border-radius: 2px;
+  width: 35vw;
+  height: 4.5vh;
+  border: 2px solid #464646;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* .search-bar-mobile {
+  font-family: $mainFont;
+  position: absolute;
+  bottom: 3vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  background-color: $searchBtnBgColor;
+  font-size: 3.5vw;
+  width: 60vw;
+  height: 40px;
+  padding: 0 0.8em;
+  border: 1px solid #555555;
+  border-radius: 2px;
+  &:hover {
+    background-color: $searchBtnBgColorHover;
+  }
+  &:focus {
+    cursor: initial;
+    background-color: $searchBtnBgColor;
+  }
+} */
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
 @media (max-width: 300px) {
@@ -869,14 +934,11 @@ li {
   }
 }
 
-@media (max-width: 700px) {
-  .burger-menu-container {
-    margin-left: auto;
-  }
-}
-
 @media (min-width: 1180px) {
   .burger-menu-container {
+    display: none;
+  }
+  .search-bar-mobile {
     display: none;
   }
 }
