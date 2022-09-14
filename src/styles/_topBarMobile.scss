@@ -1,0 +1,131 @@
+/*------------------------------MOBILE VIEW------------------------------*/
+
+.burger-menu-container {
+  position: relative;
+  margin-left: auto;
+}
+
+.burger-menu-btn {
+  border: none;
+  background: none;
+  border-radius: 50%;
+  width: 75px;
+  height: 8vh;
+  overflow: hidden;
+  transition: all 0.5s;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.burger-menu-dropdown {
+  width: 270px;
+  position: absolute;
+  transform: rotateX(180deg);
+  transform: rotateY(360deg);
+  right: 0;
+  z-index: 16;
+  overflow: hidden;
+  transition: height 0.5s;
+  border-radius: 2px;
+  li {
+    height: 10vh;
+  }
+  button {
+    font-family: $mainFont;
+    font-size: 22px;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+    color: white;
+    border-top: 2px solid rgb(211, 199, 177);
+    &:hover {
+      background-color: rgb(43, 43, 43);
+    }
+  }
+}
+
+.search-bar-mobile {
+  position: relative;
+  width: 50px;
+  height: 7vh;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  background-color: $searchBtnBgColor;
+  background-image: url("../images/searchAnything.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  &:hover {
+    cursor: grab;
+    background-color: $searchBtnBgColorHover;
+    transition: all 0.5s;
+  }
+  &:focus {
+    cursor: initial;
+    background-image: none;
+    text-indent: 20px;
+    border-radius: 2px;
+    width: 35vw;
+    height: 4.5vh;
+    border: 2px solid rgb(70, 70, 70);
+    background-color: $searchBtnBgColor;
+    transition: all 0.5s;
+  }
+}
+
+/* .search-bar-mobile {
+  font-family: $mainFont;
+  position: absolute;
+  bottom: 3vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  background-color: $searchBtnBgColor;
+  font-size: 3.5vw;
+  width: 60vw;
+  height: 40px;
+  padding: 0 0.8em;
+  border: 1px solid #555555;
+  border-radius: 2px;
+  &:hover {
+    background-color: $searchBtnBgColorHover;
+  }
+  &:focus {
+    cursor: initial;
+    background-color: $searchBtnBgColor;
+  }
+} */
+
+/*------------------------------MEDIA QUERIES------------------------------*/
+
+/*-----------WIDTH-----------*/
+
+@media (max-width: 300px) {
+  .burger-menu-dropdown {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .burger-menu-container {
+    display: none;
+  }
+  .search-bar-mobile {
+    display: none;
+  }
+}
