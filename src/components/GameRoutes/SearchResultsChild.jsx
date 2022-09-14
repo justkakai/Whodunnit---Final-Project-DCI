@@ -44,7 +44,7 @@ const basicSearchValues = [
 ];
 
 function SearchResultsChild() {
-  const { searchTermFinal, searchTerm } = useContext(SearchSectionContext);
+  const { searchTermFinal } = useContext(SearchSectionContext); //searchTerm context variable
   const [characterName, setCharacterName] = useState("");
   const [characterAdress, setCharacterAdress] = useState("");
   const [website, setWebsite] = useState("");
