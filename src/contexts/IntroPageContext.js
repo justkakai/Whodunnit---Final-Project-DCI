@@ -32,8 +32,17 @@ function IntroPageProvider({ children }) {
         }, 2000);
     };
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            setDisplayInputAndButton(false);
+            setTimeout(() => {
+                navigate("/call-police");
+            }, 2000);
+        };
+    }
+
     return (
-        <IntroPageContext.Provider value={{ containerVariants, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay, handleClick }}>
+        <IntroPageContext.Provider value={{ containerVariants, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay, handleClick, handleKeyPress }}>
             {children}
         </IntroPageContext.Provider>
     );
