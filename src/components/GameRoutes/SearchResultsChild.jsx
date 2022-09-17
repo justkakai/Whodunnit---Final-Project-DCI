@@ -1,3 +1,4 @@
+import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import { useContext, useState, useEffect } from "react";
 import { SearchSectionContext } from "../../contexts/SearchSectionContext";
 
@@ -44,7 +45,7 @@ const basicSearchValues = [
 ];
 
 function SearchResultsChild() {
-  const { searchTermFinal } = useContext(SearchSectionContext); //searchTerm context variable
+  const { searchTermFinal, setSearchTermFinal } = useContext(SearchSectionContext); //searchTerm context variable
   const [characterName, setCharacterName] = useState("");
   const [characterAdress, setCharacterAdress] = useState("");
   const [website, setWebsite] = useState("");
@@ -60,7 +61,7 @@ function SearchResultsChild() {
         //     setCharacterName("")
         //   }, 100);    
           }
-      return null;
+      else {setSearchTermFinal("jj")} // here!
     });
   }, [searchTermFinal]);
 

@@ -24,13 +24,13 @@ const { containerVariants } = useContext(IntroPageContext);
 
 
 return (
-    <motion.section className='intro-page'
+    <motion.section className='police-page'
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
         >
-    {playerName}
+    {/* {playerName} */}
     <PoliceContainer />
             <DetectiveContainer />
 

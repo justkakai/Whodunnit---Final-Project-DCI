@@ -13,7 +13,7 @@ function PoliceCallPageProvider({ children }) {
 
     const init = JSON.parse(localStorage.getItem('policeWords'));
 
-    const [policeWords, setPoliceWords] = useState(location.pathname === "/police-first-conversation" ? `a` : "null");
+    const [policeWords, setPoliceWords] = useState(location.pathname === "/police-first-conversation" ? `aas` : "null");
 
     // const [policeWords, setPoliceWords] = useState(location.pathname === "/" ? `Hi there Detective ${playerName}! We've got quite the conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.` : init);
     const [detectiveWords, setDetectiveWords] = useState("");
