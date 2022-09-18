@@ -5,7 +5,7 @@ import PoliceCallPage from './GameRoutes/PoliceCallPage';
 import PoliceReport from './GameRoutes/PoliceReport';
 import EvidencePage from './GameRoutes/EvidencePage';
 import SearchResultsContainer from './GameRoutes/SearchResults';
-/* import SearchBarMobile from './LeftBarComponents/SearchBarMobile'; */
+import TopBar from './GameRoutes/TopBar';
 
 function GameContainer() {
 
@@ -13,6 +13,7 @@ function GameContainer() {
 
     return (
         <section className="game-container">
+            <TopBar />
             <AnimatePresence exitBeforeEnter>
                 <Routes location={location} key={location.key}>
                     <Route path="/" element={<IntroPage />} />
@@ -22,7 +23,6 @@ function GameContainer() {
                 </Routes>
             </AnimatePresence>
             <SearchResultsContainer />
-            {/* <SearchBarMobile /> */}
         </section>
     )
 }

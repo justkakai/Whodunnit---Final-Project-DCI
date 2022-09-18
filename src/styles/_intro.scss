@@ -136,6 +136,8 @@ $gameDescriptorTextColor: wheat;
   }
 
   .input-container {
+    margin-top: 2em;
+    gap: 2em;
     button {
       &:hover {
         cursor: pointer;
@@ -146,6 +148,7 @@ $gameDescriptorTextColor: wheat;
 
   .player-greeting {
     font-size: 2vw;
+    margin-top: 1em;
   }
 }
 

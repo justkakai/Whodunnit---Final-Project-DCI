@@ -37,6 +37,9 @@ function IntroPageProvider({ children }) {
             setDisplayInputAndButton(false);
             setTimeout(() => {
                 navigate("/call-police");
+            }, 1000);
+            setTimeout(() => {
+                navigate("/call-police");
             }, 2000);
         };
     }
