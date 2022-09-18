@@ -26,12 +26,12 @@ li {
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #1f1f1f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #cc9c9c), to(#723838));
-  background: linear-gradient(90deg, #cc9c9c 1%, #723838 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #b36767), to(#723838));
+  background: linear-gradient(90deg, #b36767 1%, #723838 100%);
 }
 
 /*-----------COLORS-----------*/
@@ -104,8 +104,175 @@ li {
             flex-direction: row;
   }
   .game-container {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     height: 80%;
     width: 80%;
+  }
+  .top-bar {
+    height: 13%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dna-analysis-progress-bar {
+    position: relative;
+    height: 30%;
+    width: 20%;
+    background-color: #181818;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .dna-analysis-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(145, 255, 0); */
+    background-color: wheat;
+    border: none;
+    height: 100%;
+    border-radius: inherit;
+    /******* animation *******/
+    -webkit-animation-name: progress-bar;
+            animation-name: progress-bar;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  @-webkit-keyframes progress-bar {
+    from {
+      width: 0%;
+    }
+    2% {
+      width: 5%;
+    }
+    9% {
+      width: 11%;
+    }
+    14% {
+      width: 19%;
+    }
+    27% {
+      width: 27%;
+    }
+    33% {
+      width: 31%;
+    }
+    39% {
+      width: 43%;
+    }
+    47% {
+      width: 46%;
+    }
+    55% {
+      width: 50%;
+    }
+    61% {
+      width: 60%;
+    }
+    70% {
+      width: 65%;
+    }
+    77% {
+      width: 73%;
+    }
+    88% {
+      width: 85%;
+    }
+    94% {
+      width: 95%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes progress-bar {
+    from {
+      width: 0%;
+    }
+    2% {
+      width: 5%;
+    }
+    9% {
+      width: 11%;
+    }
+    14% {
+      width: 19%;
+    }
+    27% {
+      width: 27%;
+    }
+    33% {
+      width: 31%;
+    }
+    39% {
+      width: 43%;
+    }
+    47% {
+      width: 46%;
+    }
+    55% {
+      width: 50%;
+    }
+    61% {
+      width: 60%;
+    }
+    70% {
+      width: 65%;
+    }
+    77% {
+      width: 73%;
+    }
+    88% {
+      width: 85%;
+    }
+    94% {
+      width: 95%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .dna-analysis-ready-container {
+    position: relative;
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 1.2em;
+    border: none;
+    height: 40%;
+    width: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: wheat;
+    background-color: #181818;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  .dna-analysis-ready-container:hover {
+    color: whitesmoke;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
   }
   .recorded-conversations-btn,
   .visited-addresses-btn {
@@ -163,52 +330,79 @@ li {
   .call-police-btn,
   .police-report-btn,
   .view-evidence-btn,
+  .call-police-btn-active,
+  .police-report-btn-active,
+  .view-evidence-btn-active,
   .search-btn {
     width: 5vw;
     height: 10vh;
     overflow: hidden;
     background-color: #231f20;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
   }
   .call-police-btn:hover,
   .police-report-btn:hover,
   .view-evidence-btn:hover,
+  .call-police-btn-active:hover,
+  .police-report-btn-active:hover,
+  .view-evidence-btn-active:hover,
   .search-btn:hover {
     cursor: pointer;
     background-color: rgba(35, 31, 32, 0.8);
-    width: 6vw;
-    height: 11vh;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    width: 5.5vw;
+    height: 10.5vh;
+    -webkit-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
   }
   .call-police-btn img,
   .police-report-btn img,
   .view-evidence-btn img,
+  .call-police-btn-active img,
+  .police-report-btn-active img,
+  .view-evidence-btn-active img,
   .search-btn img {
     width: 100%;
     height: 100%;
   }
+  /*   
   .call-police-btn {
-    background-color: wheat;
+    background-color: $callPoliceBtnBgColor;
+    &:hover {
+      background-color: $callPoliceBtnBgColorHover;
+    }
+  } 
+
+  .call-police-btn-active {
+    @extend .call-police-btn;
+    box-shadow: 0 0 10px 1px #fff, 0 0 10px 1px #f5deb3,
+      0 0 10px 1px rgb(255, 255, 255);
   }
-  .call-police-btn:hover {
-    background-color: rgba(245, 222, 179, 0.8);
+  */
+  .call-police-btn-active,
+  .police-report-btn-active,
+  .view-evidence-btn-active {
+    -webkit-box-shadow: 0 0 10px 1px #cfcfcf, 0 0 10px 1px #f5deb3, 0 0 10px 1px white;
+            box-shadow: 0 0 10px 1px #cfcfcf, 0 0 10px 1px #f5deb3, 0 0 10px 1px white;
   }
   .search-btn {
     position: relative;
     border: none;
     outline: none;
-    background-color: white;
+    background-color: wheat;
     background-image: url("../images/searchAnything.svg");
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 1.1em;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .search-btn:hover {
     width: 5vw;
     height: 10vh;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: wheat;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .search-btn:focus {
     cursor: initial;
@@ -218,8 +412,9 @@ li {
     border-radius: 2px;
     margin-right: 20vw;
     width: 25vw;
-    border: 2px solid #464646;
-    background-color: white;
+    background-color: whitesmoke;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
 
@@ -371,12 +566,17 @@ li {
   .game-descriptor {
     font-size: 3vw;
   }
+  .input-container {
+    margin-top: 2em;
+    gap: 2em;
+  }
   .input-container button:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.6);
   }
   .player-greeting {
     font-size: 2vw;
+    margin-top: 1em;
   }
 }
 
@@ -623,7 +823,6 @@ li {
   width: 70%;
   overflow: hidden;
   border-radius: 5px;
-  /* border: 2px solid $imgContainerBorderColor; */
 }
 
 .evidence-page-container > div:hover {
@@ -643,7 +842,7 @@ li {
   position: absolute;
   z-index: 10;
   background-color: whitesmoke;
-  border: 4px solid black;
+  /* border: 4px solid $modalBorderColor; */
 }
 
 .close-button-container {
@@ -872,7 +1071,7 @@ li {
   border: none;
   outline: none;
   font-size: 0.8em;
-  background-color: white;
+  background-color: wheat;
   background-image: url("../images/searchAnything.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -883,7 +1082,7 @@ li {
 .search-bar-mobile:hover {
   cursor: -webkit-grab;
   cursor: grab;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: wheat;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -896,7 +1095,7 @@ li {
   width: 35vw;
   height: 4.5vh;
   border: 2px solid #464646;
-  background-color: white;
+  background-color: wheat;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

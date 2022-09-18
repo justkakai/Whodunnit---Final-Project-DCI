@@ -10,10 +10,10 @@ function RightBar() {
 
     return (
         <section className="right-bar">
-            {(location.pathname !== "/") && (location.pathname !== "/call-police") ? <CallPoliceBtn /> : null}
-            <PoliceReportBtn />
-            <EvidenceBtn />
-            <SearchBar />
+            {(location.pathname !== "/") ? <CallPoliceBtn /> : null}
+            {(location.pathname !== "/") ? <PoliceReportBtn /> : null}
+            {(location.pathname !== "/") ? <EvidenceBtn /> : null}
+            {(location.pathname !== "/") ? <SearchBar /> : null}
         </section>
     )
 }

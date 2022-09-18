@@ -35,7 +35,6 @@ $ExpandBtnTextColor: white;
     width: 70%;
     overflow: hidden;
     border-radius: 5px;
-    /* border: 2px solid $imgContainerBorderColor; */
     &:hover {
       cursor: pointer;
     }
@@ -53,7 +52,7 @@ $ExpandBtnTextColor: white;
   position: absolute;
   z-index: 10;
   background-color: $modalBgColor;
-  border: 4px solid $modalBorderColor;
+  /* border: 4px solid $modalBorderColor; */
 }
 
 .close-button-container {

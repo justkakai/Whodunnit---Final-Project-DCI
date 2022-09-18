@@ -7,7 +7,7 @@ function InputContainer() {
 
     const containerVariants = framerMotionVariants(0.6, 0.7, 0);
 
-    const { playerName, setPlayerName, handleClick } = useContext(IntroPageContext);
+    const { playerName, setPlayerName, handleClick, handleKeyPress } = useContext(IntroPageContext);
 
     return (
         <motion.div className='input-container'
@@ -15,7 +15,7 @@ function InputContainer() {
             initial="hidden"
             animate="visible"
         >
-            <input type="text" spellcheck="false" onChange={(e) => setPlayerName(e.target.value)} value={playerName} placeholder="Enter your name" />
+            <input type="text" spellcheck="false" onChange={(e) => setPlayerName(e.target.value)} onKeyDown={handleKeyPress} value={playerName} placeholder="Enter your name" />
             <button onClick={handleClick}>Start!</button>
         </motion.div>
     )

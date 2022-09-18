@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { PoliceCallPageContext } from "../../contexts/PoliceCallPageContext";
 import framerMotionVariants from "../../functions/containerVariants";
 import callPolice from '../../images/callPolice.svg';
@@ -12,9 +12,10 @@ function CallPoliceBtn() {
     const containerVariants = framerMotionVariants(0.8, 0.4, 0);
 
     let navigate = useNavigate();
+    const location = useLocation();
 
     return (
-        <motion.button className="call-police-btn"
+        <motion.button className={location.pathname === "/call-police" ? "call-police-btn-active" : "call-police-btn"}
             onClick={() => {
                 setDetectiveWords("");
                 setPoliceWords("How can I help you detective?");
