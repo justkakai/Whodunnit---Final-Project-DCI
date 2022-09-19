@@ -25,7 +25,7 @@ function PoliceContainer() {
 
   useEffect(() => {
     if (counterPoliceWords === 0) {
-        setPoliceWords(`Hi there Detective ${playerName}! We've got quite a conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.`)
+        setPoliceWords(`Hi there, Detective ${playerName}! We've got quite a conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.`)
     }
     if (counterPoliceWords === 1) {
         setDetectiveWords(`You have come to the right one!`);
