@@ -36,7 +36,7 @@ function PoliceContainer() {
     if (counterPoliceWords === 3) {
         setDetectiveWords("Will do!");
     }
-    if (counterPoliceWords === 4) {
+    if (counterPoliceWords >= 4) {
          navigate("/evidence");  }
   }, [counterPoliceWords]);
 
@@ -53,7 +53,7 @@ function PoliceContainer() {
     return () => {
       document.removeEventListener("keydown", listener);
     };
-  }, [[], counterPoliceWords]);
+  }, [[], counterPoliceWords]); 
 
   return (
     <div className="police-container">

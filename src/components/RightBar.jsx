@@ -12,12 +12,12 @@ function RightBar() {
       {(location.pathname !== "/" && location.pathname !== "/call-police") ? 
         <CallPoliceBtn /> : null}
       {/* {(location.pathname !== "/") ? <CallPoliceBtn /> : null} */}
-      {location.pathname !== "/" ? <PoliceReportBtn /> : null}
+      {/* {location.pathname !== "/" ? <PoliceReportBtn /> : null}
       {location.pathname !== "/" ? <EvidenceBtn /> : null}
-      {location.pathname !== "/" ? <SearchBar /> : null}
-      {/* <PoliceReportBtn />
+      {location.pathname !== "/" ? <SearchBar /> : null} */}
+      <PoliceReportBtn />
             <EvidenceBtn />
-            <SearchBar /> */}
+            <SearchBar />
     </section>
   );
 }
