@@ -28,7 +28,7 @@ function IntroPageProvider({ children }) {
     const handleClick = () => {
         setDisplayInputAndButton(false);
         setTimeout(() => {
-            navigate("/call-police");
+            navigate("/police-first-conversation");
         }, 2000);
     };
 
@@ -36,16 +36,16 @@ function IntroPageProvider({ children }) {
         if (e.key === 'Enter') {
             setDisplayInputAndButton(false);
             setTimeout(() => {
-                navigate("/call-police");
+                // navigate("/police-first-conversation");
             }, 1000);
             setTimeout(() => {
-                navigate("/call-police");
+                navigate("/police-first-conversation");
             }, 2000);
         };
     }
 
     return (
-        <IntroPageContext.Provider value={{ containerVariants, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay, handleClick, handleKeyPress }}>
+        <IntroPageContext.Provider value={{ containerVariants, displayedText, setDisplayedText, displayNameInput, setDisplayNameInput, playerName, setPlayerName, displayInputAndButton, setDisplayInputAndButton, textToDisplay, handleClick, handleKeyPress}}>
             {children}
         </IntroPageContext.Provider>
     );

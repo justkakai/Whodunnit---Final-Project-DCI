@@ -1,8 +1,28 @@
-import { useContext } from "react";
+import { keyboard } from "@testing-library/user-event/dist/keyboard";
+import { useContext, useState, useEffect } from "react";
 import { SearchSectionContext } from "../../contexts/SearchSectionContext";
 
 function SearchResultsChild() {
-  const { characterName, characterAdress, website } = useContext(SearchSectionContext);
+  // const { characterName, characterAdress, website } = useContext(SearchSectionContext);
+  const { searchTermFinal, setSearchTermFinal, basicSearchValues} = useContext(SearchSectionContext); //searchTerm context variable
+  const [characterName, setCharacterName] = useState("");
+  const [characterAdress, setCharacterAdress] = useState("");
+  const [website, setWebsite] = useState("");
+
+  useEffect(() => {
+    basicSearchValues.map((indexNumber) => {
+      if (indexNumber.name === searchTermFinal || searchTermFinal.includes(indexNumber.street) ) {
+        // const valuesInfo = Object.values(basicSearchValues[indexNumber.id -1]);
+        setCharacterName(basicSearchValues[indexNumber.id - 1].name);
+        setCharacterAdress(basicSearchValues[indexNumber.id - 1].address);
+        setWebsite(basicSearchValues[indexNumber.id - 1].website);
+        // setTimeout(() => {
+        //     setCharacterName("")
+        //   }, 100);    
+          }
+      else {setSearchTermFinal("jj")} // here!
+    });
+  }, [searchTermFinal]);
 
   return (
     <>
