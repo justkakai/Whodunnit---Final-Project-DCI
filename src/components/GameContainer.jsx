@@ -11,7 +11,7 @@ import PoliceFirstConversation from './PoliceFirstConversation';
 function GameContainer() {
 
     const location = useLocation();
-
+ 
     return (
         <section className="game-container">
             <AnimatePresence exitBeforeEnter>

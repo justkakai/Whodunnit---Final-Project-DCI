@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // import { IntroPageContext } from "../contexts/IntroPageContext";
 // import ClownImageContainer from '/IntroPageComponents/ClownImage';
 
-import PoliceContainer from "../components/GameRoutes/PoliceCallPageComponents/PoliceContainer"
+import PoliceContainerFirst from "../components/GameRoutes/PoliceCallPageComponents/PoliceContainerFirst"
 import DetectiveContainer from "../components/GameRoutes/PoliceCallPageComponents/DetectiveContainer"
 
 // import ClownImageContainer from '.././components/GameRoutes/IntroPageComponents/ClownImage';
@@ -30,7 +30,7 @@ return (
             animate="visible"
             exit="exit"
         >
-    <PoliceContainer />
+    <PoliceContainerFirst />
             <DetectiveContainer />
 
     </motion.section>
