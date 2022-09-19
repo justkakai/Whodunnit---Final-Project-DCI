@@ -30,7 +30,6 @@ return (
             animate="visible"
             exit="exit"
         >
-    {/* {playerName} */}
     <PoliceContainer />
             <DetectiveContainer />
 

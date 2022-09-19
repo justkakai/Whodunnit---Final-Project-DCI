@@ -1,3 +1,5 @@
+
+
 import { createContext, useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { IntroPageContext } from "./IntroPageContext";
@@ -7,40 +9,28 @@ const PoliceCallPageContext = createContext(0);
 
 function PoliceCallPageProvider({ children }) {
   const location = useLocation();
-  const [counterPoliceWords, setCounterPoliceWords] = useState(0);
 
   const { playerName } = useContext(IntroPageContext);
+  const [counterPoliceWords, setCounterPoliceWords] = useState(0);
 
   const init = JSON.parse(localStorage.getItem("policeWords"));
 
-  // const [policeWords, setPoliceWords] = useState(location.pathname === "/police-first-conversation" ? `aas` : "dddnull");
-  const [policeWords, setPoliceWords] = useState(`Hi there Detective ${playerName}! We've got quite the conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.`);
-  // if (counterPoliceWords === 0) {
-  //     setPoliceWords("Hello");
-  // }
-  // if (counterPoliceWords === 1) {
-  //     setPoliceWords("11");
-  // }
-
-  // const [policeWords, setPoliceWords] = useState(location.pathname === "/" ? `Hi there Detective ${playerName}! We've got quite the conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.` : init);
+  const [policeWords, setPoliceWords] = useState("");
   const [detectiveWords, setDetectiveWords] = useState("");
 
   useEffect(() => {
     localStorage.setItem("policeWords", JSON.stringify(policeWords));
   }, [policeWords]);
 
-//   const handleKeyPress = (e) => {
-//     if (e.key === "Enter") {
-//       setCounterPoliceWords(1);
-
-//       // for (const object of triggerWords) {
-//       //     if (detectiveWords.toLowerCase().includes(object.question)) {
-//       //         setPoliceWords(object.answer);
-//       //     };
-
-//       // };
-//     }
-//   };
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      for (const object of triggerWords) {
+        if (detectiveWords.toLowerCase().includes(object.question)) {
+          setPoliceWords(object.answer);
+        }
+      }
+    }
+  };
 
   return (
     <PoliceCallPageContext.Provider
@@ -49,7 +39,7 @@ function PoliceCallPageProvider({ children }) {
         setPoliceWords,
         detectiveWords,
         setDetectiveWords,
-        // handleKeyPress,
+        handleKeyPress,
         counterPoliceWords, 
         setCounterPoliceWords
       }}

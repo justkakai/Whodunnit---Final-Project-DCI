@@ -1,9 +1,13 @@
 import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { PoliceCallPageContext } from "../../../contexts/PoliceCallPageContext";
 import policeWoman from "../../../images/policeWoman.svg";
 import { IntroPageContext } from "../../../contexts/IntroPageContext";
 
 function PoliceContainer() {
+    let navigate = useNavigate();
+
+
     const { playerName, setPlayerName } = useContext(IntroPageContext);
 
 
@@ -18,21 +22,22 @@ function PoliceContainer() {
     PoliceCallPageContext
   );
 
-setPlayerName("kkkk0000");
 
   useEffect(() => {
+    if (counterPoliceWords === 0) {
+        setPoliceWords(`Hi there Detective ${playerName}! We've got quite a conundrum on our hands. Jimmy the clown has been found dead, and we are unable to solve his case. We were hoping you could help us.`)
+    }
     if (counterPoliceWords === 1) {
-        setDetectiveWords(`${playerName}`);
+        setDetectiveWords(`You have come to the right one!`);
     }
     if (counterPoliceWords === 2) {
-        setPoliceWords("133332");
+        setPoliceWords("Great! We are lucky! Also, we have prepared the police report for you to read. Don't forget to check out the evidence as well. Whenever you have questions you can call me.");
         setDetectiveWords("");    }
     if (counterPoliceWords === 3) {
-        setDetectiveWords("000");
+        setDetectiveWords("Will do!");
     }
     if (counterPoliceWords === 4) {
-        alert("jjj");
-    }
+         navigate("/evidence");  }
   }, [counterPoliceWords]);
 
   useEffect(() => {
@@ -57,7 +62,7 @@ setPlayerName("kkkk0000");
       </div>
       <div className="police-dialog-container">
         <div className="dialog-box-police">
-          <p>{policeWords} {playerName}</p>
+          <p>{policeWords}</p>
         </div>
       </div>
     </div>

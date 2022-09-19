@@ -36,7 +36,7 @@ function IntroPageProvider({ children }) {
         if (e.key === 'Enter') {
             setDisplayInputAndButton(false);
             setTimeout(() => {
-                navigate("/police-first-conversation");
+                // navigate("/police-first-conversation");
             }, 1000);
             setTimeout(() => {
                 navigate("/police-first-conversation");
