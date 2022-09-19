@@ -81,7 +81,7 @@ function SearchSectionProvider({ children }) {
     }
 
     return (
-        <SearchSectionContext.Provider value={{ searchTerm, setSearchTerm, displaySearchResults, setDisplaySearchResults, searchTermFinal, setSearchTermFinal, characterName, setCharacterName, characterAdress, setCharacterAdress, website, setWebsite, handleKeyDown }}>
+        <SearchSectionContext.Provider value={{ searchTerm, setSearchTerm, displaySearchResults, setDisplaySearchResults, searchTermFinal, setSearchTermFinal, characterName, setCharacterName, characterAdress, setCharacterAdress, website, setWebsite, handleKeyDown, basicSearchValues }}>
             {children}
         </SearchSectionContext.Provider>
     );
