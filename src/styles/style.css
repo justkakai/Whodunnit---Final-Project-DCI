@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
-/*-----------FONTS-----------*/
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap"); /*-----------FONTS-----------*/
 /*-----------COLORS-----------*/
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -26,12 +24,11 @@ li {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f1f1f;
+  background: rgb(31, 31, 31);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #b36767), to(#723838));
-  background: linear-gradient(90deg, #b36767 1%, #723838 100%);
+  background: linear-gradient(90deg, rgb(179, 103, 103) 1%, rgb(114, 56, 56) 100%);
 }
 
 /*-----------COLORS-----------*/
@@ -41,19 +38,10 @@ li {
   width: 100vw;
   text-align: center;
   background-color: #894747;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-container {
@@ -67,15 +55,9 @@ li {
   padding: 0em 5em;
   height: 10%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   gap: 5em;
 }
 
@@ -95,38 +77,27 @@ li {
     padding: 0em 1em;
   }
 }
-
 @media (min-width: 1180px) {
   .App {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .game-container {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
     height: 80%;
     width: 80%;
   }
   .top-bar {
     height: 13%;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: flex-end;
+    align-items: center;
   }
   .dna-analysis-progress-bar {
     position: relative;
     height: 30%;
     width: 20%;
-    background-color: #181818;
+    background-color: rgb(24, 24, 24);
     border-radius: 16px;
     overflow: hidden;
   }
@@ -253,64 +224,47 @@ li {
     border: none;
     height: 40%;
     width: 15%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     color: wheat;
-    background-color: #181818;
+    background-color: rgb(24, 24, 24);
     border-radius: 16px;
     overflow: hidden;
-    -webkit-transition: color 0.3s;
     transition: color 0.3s;
   }
   .dna-analysis-ready-container:hover {
     color: whitesmoke;
-    -webkit-transition: color 0.3s;
     transition: color 0.3s;
   }
   .recorded-conversations-btn,
-  .visited-addresses-btn {
+.visited-addresses-btn {
     display: initial;
     font-family: "Covered By Your Grace", cursive;
   }
   .recorded-conversations-btn:hover,
-  .visited-addresses-btn:hover {
+.visited-addresses-btn:hover {
     cursor: pointer;
   }
   .right-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     gap: 5em;
   }
   .right-bar button,
-  .right-bar input {
+.right-bar input {
     border-radius: 50%;
   }
   .left-bar,
-  .right-bar {
+.right-bar {
     padding: 1em 5em 0 5em;
     height: 100%;
     width: 10%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
   .left-bar button,
-  .right-bar button {
+.right-bar button {
     border: none;
     color: wheat;
     font-size: 0.9vw;
@@ -319,7 +273,7 @@ li {
     font-size: 1.2vw;
     width: 9vw;
     padding: 1em 2em;
-    background: #231f20;
+    background: rgb(35, 31, 32);
     border-radius: 50%;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -328,40 +282,38 @@ li {
     background: rgba(0, 0, 0, 0.3);
   }
   .call-police-btn,
-  .police-report-btn,
-  .view-evidence-btn,
-  .call-police-btn-active,
-  .police-report-btn-active,
-  .view-evidence-btn-active,
-  .search-btn {
+.police-report-btn,
+.view-evidence-btn,
+.call-police-btn-active,
+.police-report-btn-active,
+.view-evidence-btn-active,
+.search-btn {
     width: 5vw;
     height: 10vh;
     overflow: hidden;
     background-color: #231f20;
-    -webkit-transition: width 0.3s, height 0.3s;
     transition: width 0.3s, height 0.3s;
   }
   .call-police-btn:hover,
-  .police-report-btn:hover,
-  .view-evidence-btn:hover,
-  .call-police-btn-active:hover,
-  .police-report-btn-active:hover,
-  .view-evidence-btn-active:hover,
-  .search-btn:hover {
+.police-report-btn:hover,
+.view-evidence-btn:hover,
+.call-police-btn-active:hover,
+.police-report-btn-active:hover,
+.view-evidence-btn-active:hover,
+.search-btn:hover {
     cursor: pointer;
     background-color: rgba(35, 31, 32, 0.8);
     width: 5.5vw;
     height: 10.5vh;
-    -webkit-transition: width 0.3s, height 0.3s;
     transition: width 0.3s, height 0.3s;
   }
   .call-police-btn img,
-  .police-report-btn img,
-  .view-evidence-btn img,
-  .call-police-btn-active img,
-  .police-report-btn-active img,
-  .view-evidence-btn-active img,
-  .search-btn img {
+.police-report-btn img,
+.view-evidence-btn img,
+.call-police-btn-active img,
+.police-report-btn-active img,
+.view-evidence-btn-active img,
+.search-btn img {
     width: 100%;
     height: 100%;
   }
@@ -380,10 +332,9 @@ li {
   }
   */
   .call-police-btn-active,
-  .police-report-btn-active,
-  .view-evidence-btn-active {
-    -webkit-box-shadow: 0 0 10px 1px #cfcfcf, 0 0 10px 1px #f5deb3, 0 0 10px 1px white;
-            box-shadow: 0 0 10px 1px #cfcfcf, 0 0 10px 1px #f5deb3, 0 0 10px 1px white;
+.police-report-btn-active,
+.view-evidence-btn-active {
+    box-shadow: 0 0 10px 1px rgb(207, 207, 207), 0 0 10px 1px #f5deb3, 0 0 10px 1px rgb(255, 255, 255);
   }
   .search-btn {
     position: relative;
@@ -394,14 +345,12 @@ li {
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 1.1em;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
   .search-btn:hover {
     width: 5vw;
     height: 10vh;
     background-color: wheat;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
   .search-btn:focus {
@@ -413,24 +362,17 @@ li {
     margin-right: 20vw;
     width: 25vw;
     background-color: whitesmoke;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
 }
-
 /*-----------COLORS-----------*/
 /*------------------------------MOBILE VIEW------------------------------*/
 .intro-page {
   font-family: "Covered By Your Grace", cursive;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
   overflow: hidden;
   padding: 0 3em;
@@ -439,33 +381,20 @@ li {
 .clown-image-container {
   width: 100%;
   height: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .clown-image-container img {
   width: 60vw;
 }
 
 .intro-text-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 3rem;
 }
-
 .intro-text-container input {
   font-size: 5.5vw;
   outline: none;
@@ -473,7 +402,6 @@ li {
   padding: 0.4em 1em;
   border-radius: 5px;
 }
-
 .intro-text-container button {
   font-size: 5.5vw;
   border: none;
@@ -485,19 +413,10 @@ li {
 }
 
 .input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
 }
 
@@ -533,15 +452,11 @@ li {
     font-size: 3em;
   }
 }
-
 @media (min-width: 1180px) {
   .intro-page {
     height: 100%;
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .clown-image-container {
     width: 40%;
@@ -579,14 +494,12 @@ li {
     margin-top: 1em;
   }
 }
-
 /*-----------HEIGHT-----------*/
 @media (max-height: 800px) {
   .intro-text-container {
     gap: 1rem;
   }
 }
-
 @media (max-height: 660px) {
   .game-name {
     font-size: 12vh;
@@ -604,20 +517,14 @@ li {
     font-size: 4vh;
   }
 }
-
 /*-----------COLORS-----------*/
 /*------------------------------MOBILE VIEW------------------------------*/
 .police-page {
   font-family: "Covered By Your Grace", cursive;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
   overflow: hidden;
   padding: 1em;
@@ -626,8 +533,6 @@ li {
 .police-container,
 .detective-container {
   height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -636,7 +541,6 @@ li {
   width: 30%;
   height: 100%;
 }
-
 .police-image-container img,
 .detective-image-container img {
   width: 100%;
@@ -647,15 +551,9 @@ li {
 .detective-dialog-container {
   width: 70%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .dialog-box-police,
@@ -663,15 +561,9 @@ li {
   border: 3px solid black;
   border-radius: 2px;
   padding: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 4vw;
   background-color: whitesmoke;
   width: 95%;
@@ -699,25 +591,20 @@ li {
 } */
 @media (max-width: 800px) {
   .police-container,
-  .detective-container {
+.detective-container {
     height: 40%;
     /* border: 2px solid red; */
   }
 }
-
 @media (min-width: 800px) {
   .police-container,
-  .detective-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.detective-container {
+    justify-content: center;
+    align-items: center;
     gap: 3em;
   }
   .dialog-box-police,
-  .dialog-box-detective {
+.dialog-box-detective {
     padding: 2em;
     width: 700px;
     font-size: 30px;
@@ -727,43 +614,31 @@ li {
     font-size: 30px;
   }
   .police-image-container,
-  .detective-image-container {
+.detective-image-container {
     height: 80%;
   }
   .police-dialog-container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .detective-dialog-container {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
 }
-
 /*-----------HEIGHT-----------*/
 @media (max-height: 550px) {
   .dialog-box-police,
-  .dialog-box-detective {
+.dialog-box-detective {
     padding: 1em;
   }
 }
-
 /*------------------------------MOBILE VIEW------------------------------*/
 .police-report-page {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
   padding: 1em;
 }
@@ -774,7 +649,6 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .police-report-container img {
   width: 100%;
 }
@@ -785,15 +659,9 @@ li {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
   padding: 1em;
 }
@@ -802,33 +670,21 @@ li {
   width: 100%;
   height: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
 }
-
 .evidence-page-container > div {
   height: 25%;
   width: 70%;
   overflow: hidden;
   border-radius: 5px;
 }
-
 .evidence-page-container > div:hover {
   cursor: pointer;
 }
-
 .evidence-page-container > div img {
   width: 100%;
   height: 100%;
@@ -855,7 +711,6 @@ li {
   padding: 7px;
   cursor: pointer;
 }
-
 .close-button-container img {
   width: 100%;
   height: 100%;
@@ -866,7 +721,6 @@ li {
   width: 100%;
   overflow-y: auto;
 }
-
 .evidence-popup-img-container img {
   width: 100%;
 }
@@ -875,18 +729,13 @@ li {
 /*-----------WIDTH-----------*/
 @media (min-width: 700px) {
   .evidence-page-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .evidence-page-container > div {
     height: 40%;
     width: 48%;
     position: relative;
-    -webkit-transition: all 0.7s;
     transition: all 0.7s;
   }
   .evidence-page-container > div:hover {
@@ -895,12 +744,10 @@ li {
   .evidence-page-container > div:hover p {
     z-index: 4;
     background-color: rgba(199, 127, 127, 0.7);
-    -webkit-transition: all 0.4s;
     transition: all 0.4s;
   }
   .evidence-page-container > div:hover button {
     opacity: 1;
-    -webkit-transition: all 0.4s;
     transition: all 0.4s;
   }
   .evidence-page-container > div img {
@@ -910,49 +757,33 @@ li {
   .evidence-page-container > div p {
     height: 100%;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
-    -webkit-transition: all 0.4s;
     transition: all 0.4s;
   }
   .evidence-page-container > div p button {
     opacity: 0;
     font-family: "Covered By Your Grace", cursive;
     cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 50%;
     padding: 1em;
     border: none;
     border-radius: 20px;
     background-color: rgba(27, 27, 27, 0.7);
-    -webkit-transition: all 0.4s;
     transition: all 0.4s;
   }
   .evidence-page-container > div p button:hover {
-    background-color: #1b1b1b;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transition: all 0.4s;
+    background-color: rgb(27, 27, 27);
+    transform: scale(1.2);
     transition: all 0.4s;
   }
   .evidence-page-container > div p button span {
@@ -960,7 +791,6 @@ li {
     color: white;
   }
 }
-
 @media (min-width: 1180px) {
   .evidence-page-container {
     width: 100%;
@@ -971,7 +801,6 @@ li {
     width: 20%;
   }
 }
-
 /*-----------COLORS-----------*/
 /*------------------------------MOBILE VIEW------------------------------*/
 .search-results-container {
@@ -984,7 +813,7 @@ li {
   z-index: 12;
   height: 60%;
   width: 95%;
-  background-color: #e7e7e7;
+  background-color: rgb(231, 231, 231);
   border: 4px solid black;
 }
 
@@ -996,7 +825,6 @@ li {
     width: 70%;
   }
 }
-
 /*------------------------------MOBILE VIEW------------------------------*/
 .burger-menu-container {
   position: relative;
@@ -1010,19 +838,14 @@ li {
   width: 75px;
   height: 8vh;
   overflow: hidden;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border-radius: 50%;
 }
-
 .burger-menu-btn:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.5s;
+  transform: scale(1.1);
   transition: all 0.5s;
 }
-
 .burger-menu-btn img {
   width: 100%;
   height: 100%;
@@ -1031,22 +854,17 @@ li {
 .burger-menu-dropdown {
   width: 270px;
   position: absolute;
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
+  transform: rotateX(180deg);
+  transform: rotateY(360deg);
   right: 0;
   z-index: 16;
   overflow: hidden;
-  -webkit-transition: height 0.5s;
   transition: height 0.5s;
   border-radius: 2px;
 }
-
 .burger-menu-dropdown li {
   height: 10vh;
 }
-
 .burger-menu-dropdown button {
   font-family: "Covered By Your Grace", cursive;
   font-size: 22px;
@@ -1055,11 +873,10 @@ li {
   background-color: rgba(0, 0, 0, 0.9);
   border: none;
   color: white;
-  border-top: 2px solid #d3c7b1;
+  border-top: 2px solid rgb(211, 199, 177);
 }
-
 .burger-menu-dropdown button:hover {
-  background-color: #2b2b2b;
+  background-color: rgb(43, 43, 43);
 }
 
 .search-bar-mobile {
@@ -1075,18 +892,14 @@ li {
   background-image: url("../images/searchAnything.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .search-bar-mobile:hover {
   cursor: -webkit-grab;
   cursor: grab;
   background-color: wheat;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .search-bar-mobile:focus {
   cursor: initial;
   background-image: none;
@@ -1094,9 +907,8 @@ li {
   border-radius: 2px;
   width: 35vw;
   height: 4.5vh;
-  border: 2px solid #464646;
+  border: 2px solid rgb(70, 70, 70);
   background-color: wheat;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1132,7 +944,6 @@ li {
     width: 200px;
   }
 }
-
 @media (min-width: 1180px) {
   .burger-menu-container {
     display: none;
@@ -1141,4 +952,138 @@ li {
     display: none;
   }
 }
-/*# sourceMappingURL=style.css.map */
+.interrogation-page {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.interrogation-page .interrogation-top-bar {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: left;
+}
+.interrogation-page .interrogation-top-bar .top-bar-content {
+  position: relative;
+  background-color: red;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 100px 0 105px;
+  display: inline-block;
+}
+.interrogation-page .interrogation-top-bar .top-bar-content::after {
+  position: absolute;
+  right: -50px;
+  content: "";
+  border-bottom: 25px solid red;
+  border-left: 25px solid red;
+  border-top: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+.interrogation-page .main-frames-conta {
+  width: 100%;
+  height: 95%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/interrogationRoom.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.interrogation-page .main-frames-conta .dialogue-btn-conta {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.interrogation-page .main-frames-conta .dialogue-btn-conta .start-btn {
+  width: 150px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 0;
+  background-color: black;
+  color: rgb(169, 165, 165);
+  outline: 2.5px solid rgb(169, 165, 165);
+  font-size: 16px;
+  font-weight: bold;
+}
+.interrogation-page .main-frames-conta .frames-conta {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  z-index: 0;
+}
+.interrogation-page .main-frames-conta .frames-conta .bubbles-conta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.interrogation-page .main-frames-conta .frames-conta .leftFrame {
+  -webkit-clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+  width: 50%;
+  height: 50%;
+  margin-left: 1rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: top center;
+}
+.interrogation-page .main-frames-conta .frames-conta .rightFrame {
+  -webkit-clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: 1rem;
+  position: relative;
+  transform: translateY(-5%);
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: top center;
+}
+
+@media (min-width: 700px) {
+  .interrogation-page .main-frames-conta .frames-conta {
+    display: flex;
+    justify-content: center;
+  }
+  .interrogation-page .main-frames-conta .frames-conta .bubbles-conta {
+    max-width: 350px;
+  }
+  .interrogation-page .main-frames-conta .frames-conta .leftFrame {
+    margin-left: 0;
+    max-width: 350px;
+    height: 95%;
+    background-size: cover;
+  }
+  .interrogation-page .main-frames-conta .frames-conta .rightFrame {
+    margin-left: 0;
+    transform: translateY(0);
+    margin-right: 0;
+    max-width: 350px;
+    height: 95%;
+    background-size: cover;
+  }
+}
+@media (min-width: 1180px) {
+  .interrogation-page .main-frames-conta .frames-conta .bubbles-conta {
+    max-width: 400px;
+  }
+  .interrogation-page .main-frames-conta .frames-conta .leftFrame {
+    max-width: 400px;
+  }
+  .interrogation-page .main-frames-conta .frames-conta .rightFrame {
+    max-width: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */

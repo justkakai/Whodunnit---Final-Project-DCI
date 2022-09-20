@@ -8,6 +8,7 @@ import SearchResultsContainer from './GameRoutes/SearchResults';
 import TopBar from './GameRoutes/TopBar';
 import PoliceFirstConversation from './PoliceFirstConversation';
 /* import SearchBarMobile from './LeftBarComponents/SearchBarMobile'; */
+import InterrogationBox from './GameRoutes/InterrogationBox';
 
 function GameContainer() {
 
@@ -23,6 +24,7 @@ function GameContainer() {
                     <Route path="call-police" element={<PoliceCallPage />} />
                     <Route path="police-report" element={<PoliceReport />} />
                     <Route path="evidence" element={<EvidencePage />} />
+                    <Route path='interrogation' element={<InterrogationBox />} />
                 </Routes>
             </AnimatePresence>
             <SearchResultsContainer />

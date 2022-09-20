@@ -1,6 +1,7 @@
 import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import { useContext, useState, useEffect } from "react";
 import { SearchSectionContext } from "../../contexts/SearchSectionContext";
+import { useNavigate } from "react-router-dom";
 
 function SearchResultsChild() {
   // const { characterName, characterAdress, website } = useContext(SearchSectionContext);
@@ -8,6 +9,8 @@ function SearchResultsChild() {
   const [characterName, setCharacterName] = useState("");
   const [characterAdress, setCharacterAdress] = useState("");
   const [website, setWebsite] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     basicSearchValues.map((indexNumber) => {
@@ -36,7 +39,7 @@ function SearchResultsChild() {
           <div>Adress: {characterAdress}</div>
           {website !== "" ? <div>Website: <a href="{website}" target="_blank">{website}</a></div> : null}
           <br />
-          {characterAdress !== "unknown" ? <button>Visit address</button> : null}
+          {characterAdress !== "unknown" ? <button onClick={() => navigate("/interrogation")}>Visit address</button> : null}
         </div>}
     </>
   );
