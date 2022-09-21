@@ -4,6 +4,7 @@ import IntroPage from './GameRoutes/IntroPage';
 import LandingPage from './GameRoutes/LandingPage';
 import PoliceCallPage from './GameRoutes/PoliceCallPage';
 import PoliceReport from './GameRoutes/PoliceReport';
+import DnaResults from './GameRoutes/DnaResults';
 import EvidencePage from './GameRoutes/EvidencePage';
 import SearchResultsContainer from './GameRoutes/SearchResults';
 import TopBar from './GameRoutes/TopBar';
@@ -26,6 +27,7 @@ function GameContainer() {
                     <Route path="landing-page" element={<LandingPage />} />
                     <Route path="call-police" element={<PoliceCallPage />} />
                     <Route path="police-report" element={<PoliceReport />} />
+                    <Route path="dna-report" element={<DnaResults />} />
                     <Route path="evidence" element={<EvidencePage />} />
                     <Route path='interrogation' element={<InterrogationBox />} />
                 </Routes>

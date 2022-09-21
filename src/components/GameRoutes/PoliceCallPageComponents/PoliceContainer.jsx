@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function PoliceContainer() {
 
-    const { policeWords, interaction, navigationInteraction } = useContext(PoliceCallPageContext);
+    const { policeWords, interaction, navigationInteraction, requestDnaResult, setShowDnaResult, setRequestDnaResult } = useContext(PoliceCallPageContext);
     let navigate = useNavigate();
 
     return (
@@ -17,6 +17,7 @@ function PoliceContainer() {
                     <div className='dialog-box-police'>
                         <p>{policeWords}</p>
 {interaction ? <button onClick={() => navigate(navigationInteraction)}>Contact</button> : null}
+{requestDnaResult ? <button onClick={() => {setShowDnaResult(true); setRequestDnaResult(false)}}>Order DNA Test</button> : null}
                     </div>
                 </div>
             </div>

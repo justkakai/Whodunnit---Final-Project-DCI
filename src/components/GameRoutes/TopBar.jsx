@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
+import { PoliceCallPageContext } from '../../contexts/PoliceCallPageContext';
+import { useNavigate } from "react-router-dom";
+
 
 function TopBar() {
 
     const location = useLocation();
 
     const [displayDnaProgressBar, setDisplayDnaProgressBar] = useState(true);
+    const { showDnaResult } = useContext(PoliceCallPageContext);
+
+    let navigate = useNavigate();
 
     setTimeout(() => {
         setDisplayDnaProgressBar(false);
@@ -13,12 +19,12 @@ function TopBar() {
 
     return (
         <section className="top-bar">
-            {(location.pathname === "/evidence") ? // !!!! this needs to be changed to a contextvariable
+            {showDnaResult ? 
                 <>                     
                     {displayDnaProgressBar ?
                         <div className="dna-analysis-progress-bar"></div>
                         :
-                        <button className="dna-analysis-ready-container">View DNA Results</button>
+                        <button className="dna-analysis-ready-container" onClick={() => navigate("/dna-report")}>View DNA Results</button>
                     }
                 </>
                 :

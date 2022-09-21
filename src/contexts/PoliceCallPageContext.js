@@ -1,5 +1,3 @@
-
-
 import { createContext, useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { IntroPageContext } from "./IntroPageContext";
@@ -19,7 +17,9 @@ function PoliceCallPageProvider({ children }) {
   const [policeWords, setPoliceWords] = useState("");
   const [detectiveWords, setDetectiveWords] = useState("");
   const [interaction, setInteraction] = useState(false);
-  const [navigationInteraction, setNavigationInteraction] = useState("/evidence");
+  const [navigationInteraction, setNavigationInteraction] = useState("");
+  const [requestDnaResult, setRequestDnaResult] = useState(false);
+  const [showDnaResult, setShowDnaResult] = useState(false);
 
 
   useEffect(() => {
@@ -28,19 +28,27 @@ function PoliceCallPageProvider({ children }) {
 
   const handleKeyPress = (e) => {
     setInteraction(false);
+    setRequestDnaResult(false);
     if (e.key === "Enter") {
       for (const object of triggerWords) {
         if (detectiveWords.toLowerCase().includes(object.question)) {
           setPoliceWords(object.answer);
-if (object.interaction === true) {setInteraction(object.navigation)}
+if (object.interaction === true) {setInteraction(true); setNavigationInteraction(object.navigation)}
+
+if (object.showDnaResult === true) {setRequestDnaResult(true);
+
         }
-      }
+      }}
     }
   };
 
   return (
     <PoliceCallPageContext.Provider
       value={{
+        showDnaResult,
+        setShowDnaResult,
+        requestDnaResult,
+        setRequestDnaResult,
         navigationInteraction,
         setInteraction,
         interaction,

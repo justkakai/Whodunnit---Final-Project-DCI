@@ -172,7 +172,7 @@ li {
   .left-bar {
     padding: 0em 1em;
   }}
-  @media (min-width: 700px) {
+  @media (min-width: 200px) {
   .dna-analysis-progress-bar {
     position: relative;
     height: 1.5em;
