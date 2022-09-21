@@ -13,8 +13,8 @@ function TopBar() {
 
     return (
         <section className="top-bar">
-            {(location.pathname !== "/") ?
-                <>
+            {(location.pathname === "/evidence") ? // !!!! this needs to be changed to a contextvariable
+                <>                     
                     {displayDnaProgressBar ?
                         <div className="dna-analysis-progress-bar"></div>
                         :

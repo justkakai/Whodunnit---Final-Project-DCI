@@ -88,11 +88,167 @@ li {
   display: none;
 }
 
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  2% {
+    width: 5%;
+  }
+  9% {
+    width: 11%;
+  }
+  14% {
+    width: 19%;
+  }
+  27% {
+    width: 27%;
+  }
+  33% {
+    width: 31%;
+  }
+  39% {
+    width: 43%;
+  }
+  47% {
+    width: 46%;
+  }
+  55% {
+    width: 50%;
+  }
+  61% {
+    width: 60%;
+  }
+  70% {
+    width: 65%;
+  }
+  77% {
+    width: 73%;
+  }
+  88% {
+    width: 85%;
+  }
+  94% {
+    width: 95%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* @-webkit-keyframes progress-bar {
+    from {
+      width: 0%;
+    }
+    2% {
+      width: 5%;
+    }
+    9% {
+      width: 11%;
+    }
+    14% {
+      width: 19%;
+    }
+    27% {
+      width: 27%;
+    }
+    33% {
+      width: 31%;
+    }
+    39% {
+      width: 43%;
+    }
+    47% {
+      width: 46%;
+    }
+    55% {
+      width: 50%;
+    }
+    61% {
+      width: 60%;
+    }
+    70% {
+      width: 65%;
+    }
+    77% {
+      width: 73%;
+    }
+    88% {
+      width: 85%;
+    }
+    94% {
+      width: 95%;
+    }
+    100% {
+      width: 100%;
+    }
+  } */
+
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
 @media (max-width: 700px) {
   .left-bar {
     padding: 0em 1em;
+  }}
+  @media (min-width: 700px) {
+  .dna-analysis-progress-bar {
+    position: relative;
+    height: 1.5em;
+    width: 20%;
+    background-color: #181818;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .dna-analysis-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(145, 255, 0); */
+    background-color: wheat;
+    border: none;
+    height: 100%;
+    border-radius: inherit;
+    /******* animation *******/
+    -webkit-animation-name: progress-bar;
+            animation-name: progress-bar;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .dna-analysis-ready-container {
+    position: relative;
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 1.2em;
+    border: none;
+    height: 40%;
+    width: 42vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: wheat;
+    background-color: #181818;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  .dna-analysis-ready-container:hover {
+    color: whitesmoke;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
   }
 }
 
@@ -152,100 +308,8 @@ li {
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
   }
-  @-webkit-keyframes progress-bar {
-    from {
-      width: 0%;
-    }
-    2% {
-      width: 5%;
-    }
-    9% {
-      width: 11%;
-    }
-    14% {
-      width: 19%;
-    }
-    27% {
-      width: 27%;
-    }
-    33% {
-      width: 31%;
-    }
-    39% {
-      width: 43%;
-    }
-    47% {
-      width: 46%;
-    }
-    55% {
-      width: 50%;
-    }
-    61% {
-      width: 60%;
-    }
-    70% {
-      width: 65%;
-    }
-    77% {
-      width: 73%;
-    }
-    88% {
-      width: 85%;
-    }
-    94% {
-      width: 95%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  @keyframes progress-bar {
-    from {
-      width: 0%;
-    }
-    2% {
-      width: 5%;
-    }
-    9% {
-      width: 11%;
-    }
-    14% {
-      width: 19%;
-    }
-    27% {
-      width: 27%;
-    }
-    33% {
-      width: 31%;
-    }
-    39% {
-      width: 43%;
-    }
-    47% {
-      width: 46%;
-    }
-    55% {
-      width: 50%;
-    }
-    61% {
-      width: 60%;
-    }
-    70% {
-      width: 65%;
-    }
-    77% {
-      width: 73%;
-    }
-    88% {
-      width: 85%;
-    }
-    94% {
-      width: 95%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
+  
+ 
   .dna-analysis-ready-container {
     position: relative;
     font-family: "Covered By Your Grace", cursive;
