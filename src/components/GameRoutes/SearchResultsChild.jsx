@@ -44,7 +44,10 @@ function SearchResultsChild() {
           <div>Adress: {characterAdress}</div>
           {website !== "" ? <div>Website: <a href="{website}" target="_blank">{website}</a></div> : null}
           <br />
-          {characterAdress !== "unknown" ? <button onClick={() => goInterrogate()}>Visit address</button> : null}
+           <button onClick={() => goInterrogate()}>
+           {characterAdress !== "unknown" ?
+            'Visit address' : 'Make a Call'}
+            </button>
         </div>}
     </>
   );

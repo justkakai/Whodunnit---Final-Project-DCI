@@ -1029,8 +1029,11 @@ li {
 .interrogation-page .interrogation-top-bar {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
   text-align: left;
+  position: relative;
 }
 .interrogation-page .interrogation-top-bar .top-bar-content {
   position: relative;
@@ -1048,6 +1051,16 @@ li {
   border-left: 25px solid red;
   border-top: 25px solid transparent;
   border-right: 25px solid transparent;
+}
+.interrogation-page .interrogation-top-bar .close-btn {
+  border: 0;
+  background: none;
+  font-size: 22px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.interrogation-page .interrogation-top-bar .close-btn .close-icon {
+  color: wheat;
 }
 .interrogation-page .main-frames-conta {
   width: 100%;

@@ -50,7 +50,7 @@ export const dialogues = [
     {
         // Buffy VS Private Investigator (1st time)
         id: 'Buffy Silvara',
-        leftImg: './images/buffy2.jpg',
+        leftImg: './images/buffy.jpg',
         rightImg: './images/detective.jpg',
         texts: [
             "Hello investigator, thanks for accepting my request to meet outside and not in the office.",
@@ -75,14 +75,14 @@ export const dialogues = [
              "So you were at Harry's place the whole time?",
              "Yes, I spent the night there, but we didn't talk about Jimmy. He just told me to forget it. I think Jimmy had problems with a drug dealer named Piotr and he owed him a lot of money because of drugs, maybe Piotr killed him.",
              "Who is Piotr? What do you know about him?",
-              "Sorry, I have to go. I'm late. But you can find Piotr in Bar 66. That's all I know. I think his name is Piotr.",
+              "Sorry, I have to go. I'm late. But you can find Piotr in Bar 66. That's all I know.",
               "Thanks, Buffy. In case I have more questions later I will call you.",
               "No problem at all, nice to meet you. Bye.",
         ]
     },
     {
         // Piotr Ivanovich VS Private Investigator
-        id: 4,
+        id: 'Bar 66',
         leftImg: './images/detective.jpg',
         rightImg: './images/piotr.jpg',
         texts: [
@@ -125,8 +125,8 @@ export const dialogues = [
         ]
     },
     {
-        id: 6,
-        leftImg: 'iris',
+        id: 'Iris Brandson',
+        leftImg: './images/iris.jpg',
         rightImg: './images/detective.jpg',
         texts: [
             "Hello, who is it?",

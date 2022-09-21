@@ -11,9 +11,11 @@
     .interrogation-top-bar {
         width: 100%;
         height: auto;
+        display: flex;
+        justify-content: space-between;
         overflow: hidden;
-        // padding-top: 20px;
         text-align: left;
+        position: relative;
     
         .top-bar-content {
             position: relative;
@@ -32,6 +34,18 @@
             border-left: 25px solid red;
             border-top: 25px solid transparent;
             border-right: 25px solid transparent;
+        }
+
+        .close-btn {
+            border: 0;
+            background: none;
+            font-size: 22px;
+            margin-right: 0.5rem;
+            cursor: pointer;
+
+            .close-icon {
+                color: wheat;
+            }
         }
     }
 
