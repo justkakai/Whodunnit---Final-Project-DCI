@@ -37,7 +37,7 @@ function PoliceContainer() {
         setDetectiveWords("Will do!");
     }
     if (counterPoliceWords >= 4) {
-         navigate("/evidence");  }
+         navigate("/landing-page");  }
   }, [counterPoliceWords]);
 
   useEffect(() => {
