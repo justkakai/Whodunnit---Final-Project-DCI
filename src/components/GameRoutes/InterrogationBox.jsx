@@ -103,13 +103,13 @@ function InterrogationBox() {
     useEffect(() => {
         setDialogueId(characterName);
         const theRightDialogue = dialogues.filter((e) => e.id === characterName);
-        // console.log(theRightDialogue);
+        console.log(theRightDialogue);
         const leftImage = theRightDialogue[0].leftImg
-        // console.log('left', leftImage);
+        console.log('left', leftImage);
         setImgLeftFrame(leftImage);
-        // const rightImage = theRightDialogue[0].rightImg
-        // console.log('right', rightImage);
-        // setImgRightFrame(rightImage);
+        const rightImage = theRightDialogue[0].rightImg
+        console.log('right', rightImage);
+        setImgRightFrame(rightImage);
     }, [characterName]);
 
     const showDialogue = function(dialogueId) {
@@ -168,8 +168,8 @@ function InterrogationBox() {
                             })
                         }
                 </div>
-                    <div className='leftFrame' style={{backgroundImage: `url(../../images/${imgLeftFrame})`}}></div>
-                    <div className='rightFrame' style={{backgroundImage: `url(${harry})`}}></div>
+                    <div className='leftFrame' style={{backgroundImage: `url(${imgLeftFrame})`}}></div>
+                    <div className='rightFrame' style={{backgroundImage: `url(${imgRightFrame})`}}></div>
                 </div>
             </section>
         </motion.section>

@@ -2,8 +2,8 @@ export const dialogues = [
     {
         // Reverend Laurence VS Private Investigator
         id: 'Reverand Laurence',
-        leftImg: 'laurence',
-        rightImg: 'detective',
+        leftImg: './images/laurence.jpg',
+        rightImg: './images/detective.jpg',
         texts: [
             'Hello dear child of God, here’s Reverand Laurence, how may I help you ??',
             'Hello Reverand Laurence, I’m a private investigator and I am not calling you out of religious reasons.',
@@ -22,8 +22,8 @@ export const dialogues = [
     {
         // Harry Neeson VS Private Investigator
         id: 'Harry Neeson',
-        leftImg: 'detective',
-        rightImg: 'harry',
+        leftImg: './images/detective.jpg',
+        rightImg: './images/harry.jpg',
         texts: [
             "Good day, Mr. Neeson! I’m investigating the murder of Jimmy Brandson and I’d like to ask you a few questions.",
             "Sorry, what did you say?! Jimmy the clown is dead?! How is that possible? He was just here at my kid’s party last month. *rubbing his nose*",
@@ -50,8 +50,8 @@ export const dialogues = [
     {
         // Buffy VS Private Investigator (1st time)
         id: 'Buffy Silvara',
-        leftImg: 'buffy',
-        rightImg: 'detective',
+        leftImg: './images/buffy2.jpg',
+        rightImg: './images/detective.jpg',
         texts: [
             "Hello investigator, thanks for accepting my request to meet outside and not in the office.",
             "Hi Buffy, don't worry. I don't like the walls either.",
@@ -83,8 +83,8 @@ export const dialogues = [
     {
         // Piotr Ivanovich VS Private Investigator
         id: 4,
-        leftImg: 'detective',
-        rightImg: 'piotr',
+        leftImg: './images/detective.jpg',
+        rightImg: './images/piotr.jpg',
         texts: [
             "Excuse me, Piotr Ivanovich?", 
             "Exactly, but who’s asking?",
@@ -127,7 +127,7 @@ export const dialogues = [
     {
         id: 6,
         leftImg: 'iris',
-        rightImg: 'detective',
+        rightImg: './images/detective.jpg',
         texts: [
             "Hello, who is it?",
             ""
