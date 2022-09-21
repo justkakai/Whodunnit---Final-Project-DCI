@@ -13,20 +13,26 @@ function PoliceCallPageProvider({ children }) {
   const { playerName } = useContext(IntroPageContext);
   const [counterPoliceWords, setCounterPoliceWords] = useState(0);
 
+  
   const init = JSON.parse(localStorage.getItem("policeWords"));
 
   const [policeWords, setPoliceWords] = useState("");
   const [detectiveWords, setDetectiveWords] = useState("");
+  const [interaction, setInteraction] = useState(false);
+  const [navigationInteraction, setNavigationInteraction] = useState("/evidence");
+
 
   useEffect(() => {
     localStorage.setItem("policeWords", JSON.stringify(policeWords));
   }, [policeWords]);
 
   const handleKeyPress = (e) => {
+    setInteraction(false);
     if (e.key === "Enter") {
       for (const object of triggerWords) {
         if (detectiveWords.toLowerCase().includes(object.question)) {
           setPoliceWords(object.answer);
+if (object.interaction === true) {setInteraction(true)}
         }
       }
     }
@@ -35,6 +41,9 @@ function PoliceCallPageProvider({ children }) {
   return (
     <PoliceCallPageContext.Provider
       value={{
+        navigationInteraction,
+        setInteraction,
+        interaction,
         policeWords,
         setPoliceWords,
         detectiveWords,

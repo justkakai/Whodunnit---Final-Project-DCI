@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 import { PoliceCallPageContext } from '../../../contexts/PoliceCallPageContext';
 import policeWoman from '../../../images/policeWoman.svg';
+import { useNavigate } from "react-router-dom";
 
 function PoliceContainer() {
 
-    const { policeWords } = useContext(PoliceCallPageContext);
+    const { policeWords, interaction, navigationInteraction } = useContext(PoliceCallPageContext);
+    let navigate = useNavigate();
 
     return (
         <div className="police-container">
@@ -14,6 +16,7 @@ function PoliceContainer() {
                 <div className="police-dialog-container">
                     <div className='dialog-box-police'>
                         <p>{policeWords}</p>
+{interaction ? <button onClick={() => navigate(navigationInteraction)}>Contact</button> : null}
                     </div>
                 </div>
             </div>

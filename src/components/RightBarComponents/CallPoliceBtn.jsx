@@ -7,7 +7,7 @@ import callPolice from '../../images/callPolice.svg';
 
 function CallPoliceBtn() {
 
-    const { setPoliceWords, setDetectiveWords } = useContext(PoliceCallPageContext);
+    const { setPoliceWords, setDetectiveWords, setInteraction } = useContext(PoliceCallPageContext);
 
     const containerVariants = framerMotionVariants(0.8, 0.4, 0);
 
@@ -17,6 +17,7 @@ function CallPoliceBtn() {
     return (
         <motion.button className={location.pathname === "/call-police" ? "call-police-btn-active" : "call-police-btn"}
             onClick={() => {
+                setInteraction(false);
                 setDetectiveWords("");
                 setPoliceWords("How can I help you detective?");
                 navigate("/call-police");
