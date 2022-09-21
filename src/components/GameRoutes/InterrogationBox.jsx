@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { useContext } from "react";
+import React, { useState, useContext, useEffect  } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { dialogues } from './InterrogationBoxComponents/dialoguesData.js';
-import { IntroPageContext } from "../../contexts/IntroPageContext";
+import { IntroPageContext } from '../../contexts/IntroPageContext.js';
+import { SearchSectionContext } from '../../contexts/SearchSectionContext.js'
 
 // Images
-// import laurence from '../../resources/images/laurence2.png';
-// import harry from '../../resources/images/harry.png';
-import buffy from '../../images/buffy1.jpg';
-import piotr from  '../../images/piotr.jpg';
-// import iris from '../../resources/images/iris.png';
+import detective from '../../images/detective.jpg';
+// import laurence from '../../images/laurence2.png';
+import harry from '../../images/harry.jpg';
+// import buffy from '../../images/buffy2.jpg';
+// import piotr from  '../../images/piotr.jpg';
+// import iris from '../../images/iris.png';
 
 // Speech Bubble
 const Bubble = styled.div`
@@ -89,14 +90,27 @@ const Bubble = styled.div`
 `
 
 function InterrogationBox() {
+    const { containerVariants } = useContext(IntroPageContext);
+    const { characterName } = useContext(SearchSectionContext);
+
     const [dialogueId, setDialogueId] = useState(); 
-    // const [imgLeftFrame, setimgLeftFrame] = useState('');
-    // const [imgRightFrame, setImgRightFrame] = useState('');
+    const [imgLeftFrame, setImgLeftFrame] = useState('');
+    const [imgRightFrame, setImgRightFrame] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0); 
     const [textArray, setTextArray] = useState([]); 
     const [isInterrogating, setIsInterrogating] = useState(false);
 
-    const { containerVariants } = useContext(IntroPageContext);
+    useEffect(() => {
+        setDialogueId(characterName);
+        const theRightDialogue = dialogues.filter((e) => e.id === characterName);
+        // console.log(theRightDialogue);
+        const leftImage = theRightDialogue[0].leftImg
+        // console.log('left', leftImage);
+        setImgLeftFrame(leftImage);
+        // const rightImage = theRightDialogue[0].rightImg
+        // console.log('right', rightImage);
+        // setImgRightFrame(rightImage);
+    }, [characterName]);
 
     const showDialogue = function(dialogueId) {
         // change button text
@@ -108,7 +122,7 @@ function InterrogationBox() {
         const texts = dialogue[0].texts;
         // push text in currentIndex from texts to textArray
         setTextArray([...textArray, texts[currentIndex]]);
-        // increment currentIndex value
+        // increment currentIndex valueß
         setCurrentIndex(currentIndex + 1);
 
          // on mobile, only show 2 bubbles
@@ -139,7 +153,7 @@ function InterrogationBox() {
             </div>
             <section className='main-frames-conta'>
                 <div className='dialogue-btn-conta'>
-                    <button onClick={() => showDialogue(2)} className='start-btn'>
+                    <button onClick={() => showDialogue(dialogueId)} className='start-btn'>
                         {isInterrogating ? 'Tap to Continue' : 'Start'}
                     </button>
                 </div>
@@ -154,11 +168,9 @@ function InterrogationBox() {
                             })
                         }
                 </div>
-                    <div className='leftFrame' style={{backgroundImage: `url(${buffy})`}}></div>
-                    <div className='rightFrame' style={{backgroundImage: `url(${piotr})`}}></div>
-                    
+                    <div className='leftFrame' style={{backgroundImage: `url(../../images/${imgLeftFrame})`}}></div>
+                    <div className='rightFrame' style={{backgroundImage: `url(${harry})`}}></div>
                 </div>
-               
             </section>
         </motion.section>
      );

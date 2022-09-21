@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function SearchResultsChild() {
   // const { characterName, characterAdress, website } = useContext(SearchSectionContext);
-  const { searchTermFinal, setSearchTermFinal, basicSearchValues} = useContext(SearchSectionContext); //searchTerm context variable
+  const { searchTermFinal, setSearchTermFinal, setDisplaySearchResults, basicSearchValues} = useContext(SearchSectionContext); //searchTerm context variable
   const [characterName, setCharacterName] = useState("");
   const [characterAdress, setCharacterAdress] = useState("");
   const [website, setWebsite] = useState("");
@@ -14,7 +14,7 @@ function SearchResultsChild() {
 
   useEffect(() => {
     basicSearchValues.map((indexNumber) => {
-      if (indexNumber.name === searchTermFinal || searchTermFinal.includes(indexNumber.street) ) {
+      if (indexNumber.name === searchTermFinal || searchTermFinal.includes(indexNumber.street)) {
         // const valuesInfo = Object.values(basicSearchValues[indexNumber.id -1]);
         setCharacterName(basicSearchValues[indexNumber.id - 1].name);
         setCharacterAdress(basicSearchValues[indexNumber.id - 1].address);
@@ -26,6 +26,11 @@ function SearchResultsChild() {
       else {setSearchTermFinal("jj")} // here!
     });
   }, [searchTermFinal]);
+
+  function goInterrogate() {
+    navigate("/interrogation");
+    setDisplaySearchResults(false);
+  }
 
   return (
     <>
@@ -39,7 +44,7 @@ function SearchResultsChild() {
           <div>Adress: {characterAdress}</div>
           {website !== "" ? <div>Website: <a href="{website}" target="_blank">{website}</a></div> : null}
           <br />
-          {characterAdress !== "unknown" ? <button onClick={() => navigate("/interrogation")}>Visit address</button> : null}
+          {characterAdress !== "unknown" ? <button onClick={() => goInterrogate()}>Visit address</button> : null}
         </div>}
     </>
   );

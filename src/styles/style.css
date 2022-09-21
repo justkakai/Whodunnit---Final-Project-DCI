@@ -1077,13 +1077,7 @@ li {
   }
 }
 @media (min-width: 1180px) {
-  .interrogation-page .main-frames-conta .frames-conta .bubbles-conta {
-    max-width: 400px;
-  }
-  .interrogation-page .main-frames-conta .frames-conta .leftFrame {
-    max-width: 400px;
-  }
-  .interrogation-page .main-frames-conta .frames-conta .rightFrame {
+  .interrogation-page .main-frames-conta .frames-conta .bubbles-conta, .interrogation-page .main-frames-conta .frames-conta .leftFrame, .interrogation-page .main-frames-conta .frames-conta .rightFrame {
     max-width: 400px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,17 +1,18 @@
 export const dialogues = [
     {
         // Reverend Laurence VS Private Investigator
-        id: 1,
-        img: 'Laurence',
+        id: 'Reverand Laurence',
+        leftImg: 'laurence',
+        rightImg: 'detective',
         texts: [
-            'Hello dear child of God, here’s Reverend Laurence, how may I help you ??',
-            'Hello Reverend Laurence, I’m a private investigator and I am not calling you out of religious reasons.',
+            'Hello dear child of God, here’s Reverand Laurence, how may I help you ??',
+            'Hello Reverand Laurence, I’m a private investigator and I am not calling you out of religious reasons.',
             'Don’t worry, my child, I’ll help you anyway. So now tell me, for what reason are you calling me. Do you need some advice ??',
             'Thanks for being kind. Actually, I am currently investigating Jimmy’s case.',
             'Okay, but who’s Jimmy, and what should that mean to me ??',
             ' I think you know him. His name is Jimmy Brandson and he used to work as a clown.',
             'Ah yes, of course. I know this evil. I read about his suicide in the papers. That clown deserves to die and he will face his mistakes in hell. I wish I could have killed him myself instead of him killing himself.',
-            'Wow, how passionately you hate him, Reverend Laurence. Is that enough reason to kill somebody?',
+            'Wow, how passionately you hate him, Reverand Laurence. Is that enough reason to kill somebody?',
             'What do you mean? He was murdered ?! How !!!!????',
             'Yes, and we all know you hate clowns and you just told me that you wished him dead. Where were you on September 29th?',
             'First of all, I’m not a killer so be careful of what you say! Second, I was in Abuja, the capital of Nigeria. You can see the pictures I posted on my homepage, and now I have to end this call. Bye!',
@@ -20,8 +21,9 @@ export const dialogues = [
     },
     {
         // Harry Neeson VS Private Investigator
-        id: 2,
-        img: 'Harry',
+        id: 'Harry Neeson',
+        leftImg: 'detective',
+        rightImg: 'harry',
         texts: [
             "Good day, Mr. Neeson! I’m investigating the murder of Jimmy Brandson and I’d like to ask you a few questions.",
             "Sorry, what did you say?! Jimmy the clown is dead?! How is that possible? He was just here at my kid’s party last month. *rubbing his nose*",
@@ -47,8 +49,9 @@ export const dialogues = [
     },
     {
         // Buffy VS Private Investigator (1st time)
-        id: 3,
-        img: 'Buffy',
+        id: 'Buffy Silvara',
+        leftImg: 'buffy',
+        rightImg: 'detective',
         texts: [
             "Hello investigator, thanks for accepting my request to meet outside and not in the office.",
             "Hi Buffy, don't worry. I don't like the walls either.",
@@ -72,7 +75,7 @@ export const dialogues = [
              "So you were at Harry's place the whole time?",
              "Yes, I spent the night there, but we didn't talk about Jimmy. He just told me to forget it. I think Jimmy had problems with a drug dealer named Piotr and he owed him a lot of money because of drugs, maybe Piotr killed him.",
              "Who is Piotr? What do you know about him?",
-              "Sorry, I have to go. I'm late. But you can find Piotr in Bar 66. That's all I know. I think his name is Piotr Ivanovich.",
+              "Sorry, I have to go. I'm late. But you can find Piotr in Bar 66. That's all I know. I think his name is Piotr.",
               "Thanks, Buffy. In case I have more questions later I will call you.",
               "No problem at all, nice to meet you. Bye.",
         ]
@@ -80,7 +83,8 @@ export const dialogues = [
     {
         // Piotr Ivanovich VS Private Investigator
         id: 4,
-        img:'Piotr',
+        leftImg: 'detective',
+        rightImg: 'piotr',
         texts: [
             "Excuse me, Piotr Ivanovich?", 
             "Exactly, but who’s asking?",
@@ -99,7 +103,8 @@ export const dialogues = [
     {
         // Buffy VS Private Investigator (2nd time)
         id: 5,
-        img: 'Buffy',
+        leftImg: 'buffy',
+        rightImg: 'detective',
         texts: [
            "Hello, nice to see you again, investigator.",
            "Hi Buffy, I hope you are well today!!",
@@ -121,7 +126,8 @@ export const dialogues = [
     },
     {
         id: 6,
-        img: 'Iris',
+        leftImg: 'iris',
+        rightImg: 'detective',
         texts: [
             "Hello, who is it?",
             ""
