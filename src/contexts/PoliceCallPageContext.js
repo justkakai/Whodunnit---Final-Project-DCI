@@ -32,7 +32,7 @@ function PoliceCallPageProvider({ children }) {
       for (const object of triggerWords) {
         if (detectiveWords.toLowerCase().includes(object.question)) {
           setPoliceWords(object.answer);
-if (object.interaction === true) {setInteraction(true)}
+if (object.interaction === true) {setInteraction(object.navigation)}
         }
       }
     }

@@ -6,7 +6,7 @@ const triggerWords = [
     { question: 'piotr', answer: `Do you by any chance have Piotr's last name?` },
     { question: 'piotr ivanovich', answer: "Oh our Piotr! We know him. He has had multiple run-ins with law enforcement and was in jail for a week when Jimmy was murdered. He has an alibi."},
     { question: 'harry', answer: `Do you by any chance have Harry's last name?` },
-    { question: 'harry neeson', answer: `Hm, Harry Neeson seems like an ordinary fellow. Do you want to go and talk to him?`, interaction: true },
+    { question: 'harry neeson', answer: `Hm, Harry Neeson seems like an ordinary fellow. Do you want to go and talk to him?`, interaction: true, navigation: "/interrogation"},
     { question: 'buffy', answer: `Do you by any chance have Buffy's last name?` },
     { question: 'buffy silvara', answer: `We got a result here! Do you want to go speak to her?`, interaction: true },
     { question: 'jacob', answer: `Do you by any chance have Jacob's last name?` },
