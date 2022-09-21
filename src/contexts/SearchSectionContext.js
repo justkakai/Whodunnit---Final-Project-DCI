@@ -35,7 +35,11 @@ const basicSearchValues = [
         website: "",
     },
     {
-        id: 5, name: "Iris Brandson", street: "Oak Lane 2B", address: "Oak Lane 2B, A2-Z89 Swindon", organisationName: "",
+        id: 5, 
+        name: "Iris Brandson", 
+        street: "Oak Lane 2B", 
+        address: "Oak Lane 2B, A2-Z89 Swindon", 
+        organisationName: "",
         website: ""
     },
 ];
