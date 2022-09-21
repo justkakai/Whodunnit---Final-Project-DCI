@@ -1,17 +1,12 @@
-import React, { useState, useContext, useEffect  } from 'react';
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import { dialogues } from './InterrogationBoxComponents/dialoguesData.js';
 import { IntroPageContext } from '../../contexts/IntroPageContext.js';
-import { SearchSectionContext } from '../../contexts/SearchSectionContext.js'
-
-// Images
-import detective from '../../images/detective.jpg';
-// import laurence from '../../images/laurence2.png';
-import harry from '../../images/harry.jpg';
-// import buffy from '../../images/buffy2.jpg';
-// import piotr from  '../../images/piotr.jpg';
-// import iris from '../../images/iris.png';
+import { SearchSectionContext } from '../../contexts/SearchSectionContext.js';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 
 // Speech Bubble
 const Bubble = styled.div`
@@ -100,15 +95,14 @@ function InterrogationBox() {
     const [textArray, setTextArray] = useState([]); 
     const [isInterrogating, setIsInterrogating] = useState(false);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         setDialogueId(characterName);
         const theRightDialogue = dialogues.filter((e) => e.id === characterName);
-        console.log(theRightDialogue);
         const leftImage = theRightDialogue[0].leftImg
-        console.log('left', leftImage);
         setImgLeftFrame(leftImage);
         const rightImage = theRightDialogue[0].rightImg
-        console.log('right', rightImage);
         setImgRightFrame(rightImage);
     }, [characterName]);
 
@@ -150,6 +144,9 @@ function InterrogationBox() {
         >
             <div class="interrogation-top-bar">
                 <div class="top-bar-content">INTERROGATION</div>
+                <button onClick={() => navigate("/landing-page")} className='close-btn'>
+                    <FontAwesomeIcon  icon={faXmarkCircle}  className='close-icon' />
+                </button>
             </div>
             <section className='main-frames-conta'>
                 <div className='dialogue-btn-conta'>
