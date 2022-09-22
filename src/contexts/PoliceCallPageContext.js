@@ -20,6 +20,7 @@ function PoliceCallPageProvider({ children }) {
   const [navigationInteraction, setNavigationInteraction] = useState("");
   const [requestDnaResult, setRequestDnaResult] = useState(false);
   const [showDnaResult, setShowDnaResult] = useState(false);
+  const [showClarkson, setShowClarkson] = useState(false);
 
 
   useEffect(() => {
@@ -36,8 +37,9 @@ function PoliceCallPageProvider({ children }) {
 if (object.interaction === true) {setInteraction(true); setNavigationInteraction(object.navigation)}
 
 if (object.showDnaResult === true) {setRequestDnaResult(true);
-
         }
+if (object.showClarkson === true) {setShowClarkson(true);
+        }     
       }}
     }
   };
@@ -45,6 +47,8 @@ if (object.showDnaResult === true) {setRequestDnaResult(true);
   return (
     <PoliceCallPageContext.Provider
       value={{
+        showClarkson,
+        setShowClarkson,
         showDnaResult,
         setShowDnaResult,
         requestDnaResult,

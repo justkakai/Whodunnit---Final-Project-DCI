@@ -70,6 +70,19 @@ li {
   display: none;
 }
 
+.clarkson-results {
+  border: 2px solid white;
+  width: 70vw;
+  height: 80%;
+  color: beige;
+  font-size: 2em;
+}
+
+.clarkson-results button {
+  margin-top: 2em;
+padding: 0.5em;
+}
+
 @keyframes progress-bar {
   from {
     width: 0%;
