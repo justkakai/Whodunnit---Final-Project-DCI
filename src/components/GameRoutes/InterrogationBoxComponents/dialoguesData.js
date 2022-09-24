@@ -78,7 +78,25 @@ export const dialogues = [
               "Sorry, I have to go. I'm late. But you can find Piotr in Bar 66. That's all I know.",
               "Thanks, Buffy. In case I have more questions later I will call you.",
               "No problem at all, nice to meet you. Bye.",
-        ]
+        ],
+        secondText: [
+            "Hello, nice to see you again, investigator.",
+            "Hi Buffy, I hope you are well today!!",
+            "I’m good, thanks. So you asked to meet me again. Are there any updates on Jimmy’s case?",
+            "Not much, I'm afraid, but I did go to Bar 66 and talked to Piotr. Found out something interesting while I was there. Maybe you can help me figure it out.",
+            "Ha! I was sure he knew something. Well, what did that son of a bitch tell you?",
+            "He mentioned someone called Honey-Bunny. Have you ever heard of that name before?",
+            "Honey-Bunny? No, It doesn't ring a bell. That's a weird name, though. Maybe it's some sort of a code word between them. Did he say something else??",
+            "No, it’s not a code word. Honey-Bunny is a woman. Piotr described her as this hot Asian chick.",
+            "What?! A hot Asian chick??!! I knew it. That bastard was a deceitful cheater.",
+            "Errr.. Sorry that you had to find out this way. I thought maybe you know something about her.",
+            "Don't worry, I don't care about this cheater at all. I'm the one who’s sorry because I don't know anything about this bitch.",
+            "Don't worry about it! We'll continue with the investigation and we won't stop until we get to the perpetrator. Thanks anyway for your time.",
+            "Yeah, sure... Wait a minute, I think you should ask Jimmy's mom, Iris. He really trusted her and visited her constantly. Maybe she knows who this Honey-Bunny is.",
+            "Oh, thanks for the tip! I was already planning to visit her anyway, so now is probably the right time to do it.",
+            "I guess it's time for me to leave. It was nice meeting you again. I hope you keep me updated. Bye!",
+            "Alright, I'll get in touch again if there are any new leads, and in case I need more information. Bye!"
+         ]
     },
     {
         // Piotr Ivanovich VS Private Investigator
@@ -98,30 +116,6 @@ export const dialogues = [
             "No, that’s definitely not her.",
             "Ok. So can you tell me where you were on September 29th?",
             "Well I don’t have to tell you shit, copper. Talk to my lawyer. But, listen, I don’t kill someone who owes me money. I might take a finger or two, sure, but kill? Not until I get my money back. Hahaha… Now get the hell out of my bar and don’t ever show your face around here again!"
-        ]
-    },
-    {
-        // Buffy VS Private Investigator (2nd time)
-        id: 5,
-        leftImg: 'buffy',
-        rightImg: 'detective',
-        texts: [
-           "Hello, nice to see you again, investigator.",
-           "Hi Buffy, I hope you are well today!!",
-           "I’m good, thanks. So you asked to meet me again. Are there any updates on Jimmy’s case?",
-           "Not much, I'm afraid, but I did go to Bar 66 and talked to Piotr. Found out something interesting while I was there. Maybe you can help me figure it out.",
-           "Ha! I was sure he knew something. Well, what did that son of a bitch tell you?",
-           "He mentioned someone called Honey-Bunny. Have you ever heard of that name before?",
-           "Honey-Bunny? No, It doesn't ring a bell. That's a weird name, though. Maybe it's some sort of a code word between them. Did he say something else??",
-           "No, it’s not a code word. Honey-Bunny is a woman. Piotr described her as this hot Asian chick.",
-           "What?! A hot Asian chick??!! I knew it. That bastard was a deceitful cheater.",
-           "Errr.. Sorry that you had to find out this way. I thought maybe you know something about her.",
-           "Don't worry, I don't care about this cheater at all. I'm the one who’s sorry because I don't know anything about this bitch.",
-           "Don't worry about it! We'll continue with the investigation and we won't stop until we get to the perpetrator. Thanks anyway for your time.",
-           "Yeah, sure... Wait a minute, I think you should ask Jimmy's mom, Iris. He really trusted her and visited her constantly. Maybe she knows who this Honey-Bunny is.",
-           "Oh, thanks for the tip! I was already planning to visit her anyway, so now is probably the right time to do it.",
-           "I guess it's time for me to leave. It was nice meeting you again. I hope you keep me updated. Bye!",
-           "Alright, I'll get in touch again if there are any new leads, and in case I need more information. Bye!"
         ]
     },
     {

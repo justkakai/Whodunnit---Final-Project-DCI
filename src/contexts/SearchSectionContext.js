@@ -52,6 +52,8 @@ function SearchSectionProvider({ children }) {
     const [characterName, setCharacterName] = useState("");
     const [characterAdress, setCharacterAdress] = useState("");
     const [website, setWebsite] = useState("");
+    // To keep track pf which Buffy dialogue to show
+    const [interrogatedBuffy, setInterrogatedBuffy] = useState(false);
 
     useEffect(() => {
         basicSearchValues.map((item) => {
@@ -85,7 +87,17 @@ function SearchSectionProvider({ children }) {
     }
 
     return (
-        <SearchSectionContext.Provider value={{ searchTerm, setSearchTerm, displaySearchResults, setDisplaySearchResults, searchTermFinal, setSearchTermFinal, characterName, setCharacterName, characterAdress, setCharacterAdress, website, setWebsite, handleKeyDown, basicSearchValues }}>
+        <SearchSectionContext.Provider value={{ 
+            searchTerm, setSearchTerm, 
+            displaySearchResults, setDisplaySearchResults, 
+            searchTermFinal, setSearchTermFinal, 
+            characterName, setCharacterName, 
+            characterAdress, setCharacterAdress, 
+            website, setWebsite, 
+            handleKeyDown, 
+            basicSearchValues, 
+            interrogatedBuffy, setInterrogatedBuffy
+            }}>
             {children}
         </SearchSectionContext.Provider>
     );
