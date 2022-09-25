@@ -53,7 +53,7 @@ function SearchSectionProvider({ children }) {
     const [characterAdress, setCharacterAdress] = useState("");
     const [website, setWebsite] = useState("");
     // To keep track pf which Buffy dialogue to show
-    const [interrogatedBuffy, setInterrogatedBuffy] = useState(false);
+    const [visitedBuffy, setVisitedBuffy] = useState(true);
 
     useEffect(() => {
         basicSearchValues.map((item) => {
@@ -96,7 +96,7 @@ function SearchSectionProvider({ children }) {
             website, setWebsite, 
             handleKeyDown, 
             basicSearchValues, 
-            interrogatedBuffy, setInterrogatedBuffy
+            visitedBuffy, setVisitedBuffy
             }}>
             {children}
         </SearchSectionContext.Provider>

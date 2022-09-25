@@ -86,7 +86,7 @@ const Bubble = styled.div`
 
 function InterrogationBox() {
     const { containerVariants } = useContext(IntroPageContext);
-    const { characterName, interrogatedBuffy, setInterrogatedBuffy } = useContext(SearchSectionContext);
+    const { characterName, visitedBuffy, setVisitedBuffy } = useContext(SearchSectionContext);
 
     const [dialogueId, setDialogueId] = useState(); 
     const [imgLeftFrame, setImgLeftFrame] = useState('');
@@ -98,32 +98,42 @@ function InterrogationBox() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        console.log('Buffy', visitedBuffy);
+        console.log('characterName', characterName);
         setDialogueId(characterName);
+        console.log('dialogueId', dialogueId);
         const theRightDialogue = dialogues.filter((e) => e.id === characterName);
+        console.log('theRightDialogue', theRightDialogue);
         const leftImage = theRightDialogue[0].leftImg
         setImgLeftFrame(leftImage);
         const rightImage = theRightDialogue[0].rightImg
         setImgRightFrame(rightImage);
+        if (characterName === 'Buffy Silvara') {
+            setVisitedBuffy(prevVisitedBuffy => !prevVisitedBuffy)
+        }
     }, [characterName]);
 
     const showDialogue = function(dialogueId) {
+        console.log('Buffy', visitedBuffy);
+        console.log('dialogueId', dialogueId);
         // change button text
         setIsInterrogating(true);
         // get the right dialogue from data
         const dialogue = dialogues.filter((e) => e.id === dialogueId);
+        console.log('dialogue', dialogue);
         /// filter method returns an array
         // acces texts inside dialogue
         let texts = [];        
-        if (interrogatedBuffy) {
+        if (dialogueId === 'Buffy Silvara' && visitedBuffy) {
            texts.push(dialogue[0].secondText);
         } else  texts.push (dialogue[0].texts);;
-
+        console.log('texts', texts);
         // const texts = dialogue[0].texts;
        
         // push text in currentIndex from texts to textArray
         setTextArray([...textArray, texts[0][currentIndex]]);
         // setTextArray([...textArray, texts[currentIndex]]);
-        // increment currentIndex valueß
+        // increment currentIndex value
         setCurrentIndex(currentIndex + 1);
 
          // on mobile, only show 2 bubbles
@@ -138,7 +148,7 @@ function InterrogationBox() {
        
         // reset button when dialogue ends
         // if(currentIndex > texts.length - 1) {
-         if(currentIndex > texts[0].length - 1) {
+         if (currentIndex > texts[0].length - 1) {
             setTextArray([]);
             setCurrentIndex(0);
             setIsInterrogating(false);
@@ -146,7 +156,10 @@ function InterrogationBox() {
     }
 
     const closeDialogue = function() {
-        setInterrogatedBuffy(prevInterrogatedBuffy => !prevInterrogatedBuffy)
+        console.log('dialogueId', dialogueId);
+        console.log('characterName', characterName);
+        console.log('textArray', textArray);
+        console.log('Buffy', visitedBuffy);
         navigate("/landing-page");
     }
     
