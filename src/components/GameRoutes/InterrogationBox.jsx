@@ -94,74 +94,61 @@ function InterrogationBox() {
     const [currentIndex, setCurrentIndex] = useState(0); 
     const [textArray, setTextArray] = useState([]); 
     const [isInterrogating, setIsInterrogating] = useState(false);
+    const [displayImage, setDisplayImage] = useState(false);
 
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log('Buffy', visitedBuffy);
-        console.log('characterName', characterName);
         setDialogueId(characterName);
-        console.log('dialogueId', dialogueId);
+        // get the right dialogue object
         const theRightDialogue = dialogues.filter((e) => e.id === characterName);
-        console.log('theRightDialogue', theRightDialogue);
+        // set left and right images
         const leftImage = theRightDialogue[0].leftImg
         setImgLeftFrame(leftImage);
         const rightImage = theRightDialogue[0].rightImg
         setImgRightFrame(rightImage);
+        // keep track on buffy's dialogue
         if (characterName === 'Buffy Silvara') {
             setVisitedBuffy(prevVisitedBuffy => !prevVisitedBuffy)
         }
     }, [characterName]);
 
     const showDialogue = function(dialogueId) {
-        console.log('Buffy', visitedBuffy);
-        console.log('dialogueId', dialogueId);
         // change button text
         setIsInterrogating(true);
         // get the right dialogue from data
         const dialogue = dialogues.filter((e) => e.id === dialogueId);
-        console.log('dialogue', dialogue);
         /// filter method returns an array
         // acces texts inside dialogue
         let texts = [];        
         if (dialogueId === 'Buffy Silvara' && visitedBuffy) {
            texts.push(dialogue[0].secondText);
-        } else  texts.push (dialogue[0].texts);;
-        console.log('texts', texts);
-        // const texts = dialogue[0].texts;
-       
+        } else texts.push(dialogue[0].texts);
         // push text in currentIndex from texts to textArray
         setTextArray([...textArray, texts[0][currentIndex]]);
-        // setTextArray([...textArray, texts[currentIndex]]);
         // increment currentIndex value
         setCurrentIndex(currentIndex + 1);
-
          // on mobile, only show 2 bubbles
          // on desktop, show 4 bubbles
         if (window.innerWidth < 700 && textArray.length === 2) { 
             setTextArray([texts[0][currentIndex]]); 
-             // setTextArray([texts[currentIndex]]); 
         } else if (window.innerWidth > 699 && textArray.length === 4) {
             setTextArray([texts[0][currentIndex]]); 
-            // setTextArray([texts[currentIndex]]); 
-        }
-       
+        };
         // reset button when dialogue ends
         // if(currentIndex > texts.length - 1) {
          if (currentIndex > texts[0].length - 1) {
             setTextArray([]);
             setCurrentIndex(0);
             setIsInterrogating(false);
-        }
-    }
+        };
+    };
 
     const closeDialogue = function() {
-        console.log('dialogueId', dialogueId);
-        console.log('characterName', characterName);
-        console.log('textArray', textArray);
-        console.log('Buffy', visitedBuffy);
         navigate("/landing-page");
-    }
+    }; 
+
+
     
     return ( 
         <motion.section className='interrogation-page'
@@ -183,19 +170,35 @@ function InterrogationBox() {
                     </button>
                 </div>
                 <div className='frames-conta'>
-                <div className='bubbles-conta'>
+                    <div className='bubbles-conta'>
+                         
                         {
                             textArray.map((e, i) => {
-                                if (i % 2 === 0) {
+                                // Display encoded password on picture
+                                if (e == "Ugh! Here!") {
+                                    return <Bubble className='right' key={i}>{e}
+                                        <button>Show Messages</button>
+                                    </Bubble>
+                                } 
+                                // Display Buffy's messages
+                                else if (e == "Let me take a picture of it really quick."){
+                                    return <Bubble className='right' key={i}>{e}
+                                        <button>Show Picture</button>
+                                    </Bubble>
+                                } else if (i % 2 === 0) {
                                     return <Bubble className='left' key={i}>{e}</Bubble>
-                                }
-                                return <Bubble className='right' key={i}>{e}</Bubble>
+                                } else return <Bubble className='right' key={i}>{e}</Bubble>
                             })
                         }
-                </div>
+
+                    </div>
                     <div className='leftFrame' style={{backgroundImage: `url(${imgLeftFrame})`}}></div>
                     <div className='rightFrame' style={{backgroundImage: `url(${imgRightFrame})`}}></div>
                 </div>
+                <div className='display-img-conta'>
+                        <img src=""></img>
+                </div>
+
             </section>
         </motion.section>
      );

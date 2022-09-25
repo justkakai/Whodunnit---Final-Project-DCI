@@ -42,7 +42,7 @@ export const dialogues = [
             "Did she tell you what he said?",
             "You know what? I’ll show you her texts if you agree to leave me out of it.  *rubbing his nose*",
             "You don't get to bargain here, Harry! But If the messages are any good, I’ll think about it.",
-            "Ugh! Here! *shows the messages*",
+            "Ugh! Here!",
             "Well, that wasn’t so hard, was it Harry? Now tell me where I can find Buffy and I’ll leave you be. For now. Don’t even think of leaving the city!",
             "*writes down the address on a piece of paper and gives it to you*"
         ]
