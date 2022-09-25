@@ -31,6 +31,28 @@ li {
   background: linear-gradient(90deg, rgb(179, 103, 103) 1%, rgb(114, 56, 56) 100%);
 }
 
+.jimmysreveal {
+  /* border: 2px solid whitesmoke; */
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 2em;
+  background: linear-gradient(90deg, rgb(179, 103, 103) 1%, rgb(114, 56, 56) 100%);
+
+}
+
+.jimmyRevealButton {
+  /* border: 2px solid white; */
+  width: 40vw;
+  height: 15vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.jimmyRevealButton button {
+  width: 45%;
+}
+
 /*-----------COLORS-----------*/
 /*------------------------------MOBILE VIEW------------------------------*/
 .App {
