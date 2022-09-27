@@ -8,7 +8,7 @@ const basicSearchValues = [
         name: "Reverand Laurence",
         address: "unknown",
         organisationName: "",
-        website: "www.jesus-hates-clowns.com",
+        website: "https://reverend-laurence.webflow.io/",
     },
     {
         id: 2,
