@@ -6,7 +6,7 @@ import { SearchSectionContext } from '../../contexts/SearchSectionContext.js';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // Speech Bubble
 const Bubble = styled.div`
@@ -95,6 +95,7 @@ function InterrogationBox() {
     const [textArray, setTextArray] = useState([]); 
     const [isInterrogating, setIsInterrogating] = useState(false);
     const [displayImage, setDisplayImage] = useState(false);
+    // const [displayPassword, setdisplayPassword] = useState(false);
 
     const navigate = useNavigate();
 
@@ -111,6 +112,10 @@ function InterrogationBox() {
         if (characterName === 'Buffy Silvara') {
             setVisitedBuffy(prevVisitedBuffy => !prevVisitedBuffy)
         }
+        // show the right image
+        // if (characterName === 'Iris Brandson') {
+        //     setdisplayPassword(true);
+        // }
     }, [characterName]);
 
     const showDialogue = function(dialogueId) {
@@ -136,7 +141,6 @@ function InterrogationBox() {
             setTextArray([texts[0][currentIndex]]); 
         };
         // reset button when dialogue ends
-        // if(currentIndex > texts.length - 1) {
          if (currentIndex > texts[0].length - 1) {
             setTextArray([]);
             setCurrentIndex(0);
@@ -147,6 +151,15 @@ function InterrogationBox() {
     const closeDialogue = function() {
         navigate("/landing-page");
     }; 
+
+    const displayImg = function() {
+        setDisplayImage(true);
+    }
+
+    const closeImg = function() {
+        setDisplayImage(false);
+        // setdisplayPassword(false);
+    }
 
 
     
@@ -166,38 +179,50 @@ function InterrogationBox() {
             <section className='main-frames-conta'>
                 <div className='dialogue-btn-conta'>
                     <button onClick={() => showDialogue(dialogueId)} className='start-btn'>
-                        {isInterrogating ? 'Tap to Continue' : 'Start'}
+                        { isInterrogating ? 'Tap to Continue' : 'Start' }
                     </button>
                 </div>
+                
                 <div className='frames-conta'>
                     <div className='bubbles-conta'>
-                         
+        
                         {
                             textArray.map((e, i) => {
-                                // Display encoded password on picture
-                                if (e == "Ugh! Here!") {
+                                // Display Buffy's messages 
+                                if (e === "Ugh! Here!") {
                                     return <Bubble className='right' key={i}>{e}
-                                        <button>Show Messages</button>
+                                        <button onClick={() => displayImg()}>Show Messages</button>
                                     </Bubble>
-                                } 
-                                // Display Buffy's messages
+                                }  
+                                // Display encoded password on picture 
                                 else if (e == "Let me take a picture of it really quick."){
-                                    return <Bubble className='right' key={i}>{e}
-                                        <button>Show Picture</button>
-                                    </Bubble>
-                                } else if (i % 2 === 0) {
+                                   return <Bubble className='right' key={i}>{e}
+                                       <button onClick={() => displayImg()}>Show Picture</button>
+                                   </Bubble>
+                                }
+                                else if (i % 2 === 0) {
                                     return <Bubble className='left' key={i}>{e}</Bubble>
                                 } else return <Bubble className='right' key={i}>{e}</Bubble>
                             })
                         }
 
                     </div>
+                    {
+                        displayImage &&
+                        <div className='display-img-conta'>
+                        <div className='overlay'></div>
+                        <div className='img-conta'>
+                            <button onClick={() => closeImg()}  className='close-img-btn'>
+                                <FontAwesomeIcon  icon={faTimes}  className='close-icon' />
+                            </button>
+                            <img src="./images/numbers_photo.jpeg" />
+                         </div>  
+                    </div>
+                    }
                     <div className='leftFrame' style={{backgroundImage: `url(${imgLeftFrame})`}}></div>
                     <div className='rightFrame' style={{backgroundImage: `url(${imgRightFrame})`}}></div>
                 </div>
-                <div className='display-img-conta'>
-                        <img src=""></img>
-                </div>
+              
 
             </section>
         </motion.section>

@@ -57,7 +57,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url('../../public/images/interrogationRoom.jpg');
+        background-image: url('/public/images/interrogationRoom.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -92,7 +92,52 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                z-index: 99;
+                z-index: 1;
+            }
+
+            .display-img-conta {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background:rgba(0,0,0,0.8);
+                    opacity: 0.85;
+                    z-index: 2;
+                }
+                
+                .img-conta {
+                    z-index: 3;
+
+                    .close-img-btn {
+                        border: 0;
+                        background: none;
+                        font-size: 40px;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 2.5%;
+                        top: 0.5%;
+            
+                        .close-icon {
+                            color: wheat;
+                        }
+                    }
+
+                    img {
+                        width: 80%;
+                        height: auto;
+                        opacity: 1;
+                       
+                    }
+                    
+                }
             }
     
             .leftFrame {
@@ -120,12 +165,7 @@
             }
         }
 
-        .display-img-conta {
-            width: 100%;
-            height: 100%;
-            position: absolut;
-            z-index: 100;
-        }
+       
     }
 }
 
