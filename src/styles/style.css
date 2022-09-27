@@ -13,6 +13,8 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+  background: linear-gradient(90deg, rgb(179, 103, 103) 1%, rgb(114, 56, 56) 100%);
+
 }
 
 li {
@@ -29,6 +31,14 @@ li {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(90deg, rgb(179, 103, 103) 1%, rgb(114, 56, 56) 100%);
+}
+
+.creditGithub {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  width: 20%;
+  margin: 0 auto;
 }
 
 .jimmysreveal {

@@ -42,6 +42,14 @@ const basicSearchValues = [
         organisationName: "",
         website: ""
     },
+    {
+        id: 6, 
+        name: "Crowdmail", 
+        street: "Street Corner 5", 
+        address: "digital",
+        organisationName: "",
+        website: "https://gilded-kitsune-b0f958.netlify.app"
+    },
 ];
 
 function SearchSectionProvider({ children }) {
@@ -52,6 +60,7 @@ function SearchSectionProvider({ children }) {
     const [characterName, setCharacterName] = useState("");
     const [characterAdress, setCharacterAdress] = useState("");
     const [website, setWebsite] = useState("");
+
 
     useEffect(() => {
         basicSearchValues.map((item) => {

@@ -9,6 +9,7 @@ import EvidencePage from './GameRoutes/EvidencePage';
 import ClarksonResult from './GameRoutes/ClarksonResult';
 import SearchResultsContainer from './GameRoutes/SearchResults';
 import TopBar from './GameRoutes/TopBar';
+import NextAdventure from './GameRoutes/NextAdventure';
 import JimmysReveal from './GameRoutes/JimmysReveal';
 import PoliceFirstConversation from './PoliceFirstConversation';
 /* import SearchBarMobile from './LeftBarComponents/SearchBarMobile'; */
@@ -34,6 +35,7 @@ function GameContainer() {
                     <Route path="clarkson-result" element={<ClarksonResult />} />
                     <Route path="jimmys-reveal" element={<JimmysReveal />} />
                     <Route path='interrogation' element={<InterrogationBox />} />
+                    <Route path='next-adventure' element={<NextAdventure />} />
                 </Routes>
             </AnimatePresence>
             <SearchResultsContainer />

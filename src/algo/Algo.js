@@ -19,7 +19,8 @@ const triggerWords = [
     { question: 'anna clarkson', answer: "Hmm, does this suspect maybe have a middle name?" },
     { question: 'anna-mae clarkson', answer: "Detective! This seems like the missing puzzle piece. We were able to find a person with that name that is missing and our experts are trying to hack her e-mail account for more information.", showClarkson: true },
     { question: 'bar 66', answer: `Bar 66... we know this bar.`, interaction: true },
-    { question: 'dna', answer: "Would you like to have a DNA test ran on the body of the deceased to assess that the deceased is in fact Jimmy Brandson?", showDnaResult: true}
+    { question: 'dna', answer: "Would you like to have a DNA test ran on the body of the deceased to assess that the deceased is in fact Jimmy Brandson?", showDnaResult: true},
+    { question: 'crowdmail', answer: "You don't know Crowdmail? It is an exclusive E-Mail service.", showCrowdmail: true, crowdmailAdress:"https://gilded-kitsune-b0f958.netlify.app" }
 ]
 
 export { triggerWords };

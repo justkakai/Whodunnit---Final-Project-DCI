@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import { useState, useContext } from "react";
 import { IntroPageContext } from "../../contexts/IntroPageContext";
+import creditPic from "../../images/credits.png";
+import { useNavigate } from "react-router-dom";
 
 function JimmysReveal() {
   const { containerVariants } = useContext(IntroPageContext);
   const [show, setShow] = useState(true);
   const [truthShow, setTruth] = useState(false);
-  //   const [lieShow, setLie] = useState(false);
+  const [showCredits, setShowCredits] = useState(false);
+
+  const navigate = useNavigate();
 
   const truth = () => {
     setShow(false);
@@ -91,23 +95,56 @@ function JimmysReveal() {
           <div>
             Oh no! Jimmy hit you on the head. You fell down and were out for an
             hour. You lost track of Jimmy and return home.
-            <br/>
-            Two weeks later you hear that two UK citizens have been murdered only 50km from Jimmy's hotel in South America. 
-            A woman named Kate Smith and a man named Michael Hollyfield. Was this Jimmy again? 
-            </div>
-            <button>Find out and go on your next murder mystery journey.</button>
-          
+            <br />
+            Two weeks later you hear that two UK citizens have been murdered
+            only 50km from Jimmy's hotel in South America. A woman named Kate
+            Smith and a man named Michael Hollyfield. Was this Jimmy again?
+          </div>
+          <button onClick={() => navigate("/next-adventure")}>Find out and go on your next murder mystery journey.</button>
         </div>
       ) : (
+        <div>
           <div>
-        <div>You feel good because you helped Jimmy to start a new life. <br/>
-        Two weeks later you hear that two UK citizens have been murdered only 50km from Jimmy's hotel in South America. 
-        A woman named Kate Smith and a man named Michael Hollyfield. Was this Jimmy again? 
+            You feel good because you helped Jimmy to start a new life. <br />
+            Two weeks later you hear that two UK citizens have been murdered
+            only 50km from Jimmy's hotel in South America. A woman named Kate
+            Smith and a man named Michael Hollyfield. Was this Jimmy again?
+          </div>
+          <button onClick={() => navigate("/next-adventure")}>
+            Find out and go on your next murder mystery journey.
+          </button>
         </div>
-        <button>Find out and go on your next murder mystery journey.</button>
-      </div>
       )}
-      {show === false ? <button>Credits</button> : null}
+      {show === false ? (
+        <button onClick={() => setShowCredits(true)}>Credits</button>
+      ) : null}
+      {showCredits ? (
+        <div>
+          {" "}
+          <img src={creditPic} />
+          <br />
+          <div className="creditGithub">
+            <a
+              href="https://github.com/Reggie899/Murder-Mystery-Interface/tree/main/src/components/GameRoutes"
+              target="_blank"
+            >
+              Game Interface
+            </a>
+            <a
+              href="https://github.com/Reggie899/frontend_murder_mystery_email"
+              target="_blank"
+            >
+              Email Interface
+            </a>
+            <a
+              href="https://github.com/Reggie899/backend_murder_mystery"
+              target="_blank"
+            >
+              Email Backend
+            </a>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
