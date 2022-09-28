@@ -93,6 +93,18 @@
                 width: 100%;
                 height: 100%;
                 z-index: 1;
+
+                .displayImg-btn {
+                    width: 120px;
+                    padding: 2px 0;
+                    margin-left: 5px;
+                    border-radius: 5px;
+                    border: 0;
+                    background-color: black;
+                    color: rgb(169, 165, 165);
+                    font-size: 12px;
+                    font-weight: bold;
+                }
             }
 
             .display-img-conta {
@@ -114,7 +126,10 @@
                 }
                 
                 .img-conta {
+                    width: 80%;
+                    height: auto;
                     z-index: 3;
+                    // padding: 5rem;
 
                     .close-img-btn {
                         border: 0;
@@ -131,10 +146,12 @@
                     }
 
                     img {
-                        width: 80%;
-                        height: auto;
+                        width: 100%;
+                        height: 100%;
                         opacity: 1;
-                       
+                        overflow-y: scroll;
+                        // scrollbar-color: rebeccapurple green;
+                        scrollbar-width: thin;
                     }
                     
                 }
@@ -180,6 +197,13 @@
 
                 .bubbles-conta {
                     max-width: 350px;
+                }
+
+                .display-img-conta {
+
+                    .img-conta {
+                        max-width: 600px;
+                    }
                 }
         
                 .leftFrame {

@@ -13,12 +13,14 @@ function SearchResultsChild() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    
     basicSearchValues.map((indexNumber) => {
       if (indexNumber.name === searchTermFinal || searchTermFinal.includes(indexNumber.street)) {
         // const valuesInfo = Object.values(basicSearchValues[indexNumber.id -1]);
         setCharacterName(basicSearchValues[indexNumber.id - 1].name);
         setCharacterAdress(basicSearchValues[indexNumber.id - 1].address);
         setWebsite(basicSearchValues[indexNumber.id - 1].website);
+        
         // setTimeout(() => {
         //     setCharacterName("")
         //   }, 100);    
@@ -42,7 +44,7 @@ function SearchResultsChild() {
           <br />
           <div>Name: {characterName}</div>
           <div>Adress: {characterAdress}</div>
-          {website !== "" ? <div>Website: <a href="{website}" target="_blank">{website}</a></div> : null}
+          {website !== "" ? <div>Website: <a href={website} target="_blank">{website}</a></div> : null}
           <br />
            <button onClick={() => goInterrogate()}>
            {characterAdress !== "unknown" ?

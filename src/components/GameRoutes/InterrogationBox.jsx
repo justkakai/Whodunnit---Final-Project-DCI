@@ -95,7 +95,7 @@ function InterrogationBox() {
     const [textArray, setTextArray] = useState([]); 
     const [isInterrogating, setIsInterrogating] = useState(false);
     const [displayImage, setDisplayImage] = useState(false);
-    // const [displayPassword, setdisplayPassword] = useState(false);
+    const [displayScreenshots, setDisplayScreenshots] = useState(false);
 
     const navigate = useNavigate();
 
@@ -154,15 +154,16 @@ function InterrogationBox() {
 
     const displayImg = function() {
         setDisplayImage(true);
+        if (dialogueId === 'Harry Neeson') {
+            setDisplayScreenshots(true);
+        }
     }
 
     const closeImg = function() {
         setDisplayImage(false);
-        // setdisplayPassword(false);
+        setDisplayScreenshots(false);
     }
 
-
-    
     return ( 
         <motion.section className='interrogation-page'
             variants={containerVariants}
@@ -191,13 +192,13 @@ function InterrogationBox() {
                                 // Display Buffy's messages 
                                 if (e === "Ugh! Here!") {
                                     return <Bubble className='right' key={i}>{e}
-                                        <button onClick={() => displayImg()}>Show Messages</button>
+                                        <button onClick={() => displayImg()} className='displayImg-btn'>Show Messages</button>
                                     </Bubble>
                                 }  
                                 // Display encoded password on picture 
                                 else if (e == "Let me take a picture of it really quick."){
                                    return <Bubble className='right' key={i}>{e}
-                                       <button onClick={() => displayImg()}>Show Picture</button>
+                                       <button onClick={() => displayImg()} className='displayImg-btn'>Show Picture</button>
                                    </Bubble>
                                 }
                                 else if (i % 2 === 0) {
@@ -215,7 +216,12 @@ function InterrogationBox() {
                             <button onClick={() => closeImg()}  className='close-img-btn'>
                                 <FontAwesomeIcon  icon={faTimes}  className='close-icon' />
                             </button>
-                            <img src="./images/numbers_photo.jpeg" />
+                            { 
+                                displayScreenshots ?
+                                    <img src="./images/screenshots_buffy.png" />
+                                    :
+                                    <img src="./images/numbers_photo.jpeg" />
+                            }
                          </div>  
                     </div>
                     }
