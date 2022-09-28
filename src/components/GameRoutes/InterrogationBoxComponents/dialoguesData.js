@@ -42,7 +42,7 @@ export const dialogues = [
             "Did she tell you what he said?",
             "You know what? I’ll show you her texts if you agree to leave me out of it.  *rubbing his nose*",
             "You don't get to bargain here, Harry! But If the messages are any good, I’ll think about it.",
-            "Ugh! Here! *shows the messages*",
+            "Ugh! Here!",
             "Well, that wasn’t so hard, was it Harry? Now tell me where I can find Buffy and I’ll leave you be. For now. Don’t even think of leaving the city!",
             "*writes down the address on a piece of paper and gives it to you*"
         ]
@@ -78,7 +78,25 @@ export const dialogues = [
               "Sorry, I have to go. I'm late. But you can find Piotr in Bar 66. That's all I know.",
               "Thanks, Buffy. In case I have more questions later I will call you.",
               "No problem at all, nice to meet you. Bye.",
-        ]
+        ],
+        secondText: [
+            "Hello, nice to see you again, investigator.",
+            "Hi Buffy, I hope you are well today!!",
+            "I’m good, thanks. So you asked to meet me again. Are there any updates on Jimmy’s case?",
+            "Not much, I'm afraid, but I did go to Bar 66 and talked to Piotr. Found out something interesting while I was there. Maybe you can help me figure it out.",
+            "Ha! I was sure he knew something. Well, what did that son of a bitch tell you?",
+            "He mentioned someone called Honey-Bunny. Have you ever heard of that name before?",
+            "Honey-Bunny? No, It doesn't ring a bell. That's a weird name, though. Maybe it's some sort of a code word between them. Did he say something else??",
+            "No, it’s not a code word. Honey-Bunny is a woman. Piotr described her as this hot Asian chick.",
+            "What?! A hot Asian chick??!! I knew it. That bastard was a deceitful cheater.",
+            "Errr.. Sorry that you had to find out this way. I thought maybe you know something about her.",
+            "Don't worry, I don't care about this cheater at all. I'm the one who’s sorry because I don't know anything about this bitch.",
+            "Don't worry about it! We'll continue with the investigation and we won't stop until we get to the perpetrator. Thanks anyway for your time.",
+            "Yeah, sure... Wait a minute, I think you should ask Jimmy's mom, Iris. He really trusted her and visited her constantly. Maybe she knows who this Honey-Bunny is.",
+            "Oh, thanks for the tip! I was already planning to visit her anyway, so now is probably the right time to do it.",
+            "I guess it's time for me to leave. It was nice meeting you again. I hope you keep me updated. Bye!",
+            "Alright, I'll get in touch again if there are any new leads, and in case I need more information. Bye!"
+         ]
     },
     {
         // Piotr Ivanovich VS Private Investigator
@@ -101,39 +119,53 @@ export const dialogues = [
         ]
     },
     {
-        // Buffy VS Private Investigator (2nd time)
-        id: 5,
-        leftImg: 'buffy',
-        rightImg: 'detective',
-        texts: [
-           "Hello, nice to see you again, investigator.",
-           "Hi Buffy, I hope you are well today!!",
-           "I’m good, thanks. So you asked to meet me again. Are there any updates on Jimmy’s case?",
-           "Not much, I'm afraid, but I did go to Bar 66 and talked to Piotr. Found out something interesting while I was there. Maybe you can help me figure it out.",
-           "Ha! I was sure he knew something. Well, what did that son of a bitch tell you?",
-           "He mentioned someone called Honey-Bunny. Have you ever heard of that name before?",
-           "Honey-Bunny? No, It doesn't ring a bell. That's a weird name, though. Maybe it's some sort of a code word between them. Did he say something else??",
-           "No, it’s not a code word. Honey-Bunny is a woman. Piotr described her as this hot Asian chick.",
-           "What?! A hot Asian chick??!! I knew it. That bastard was a deceitful cheater.",
-           "Errr.. Sorry that you had to find out this way. I thought maybe you know something about her.",
-           "Don't worry, I don't care about this cheater at all. I'm the one who’s sorry because I don't know anything about this bitch.",
-           "Don't worry about it! We'll continue with the investigation and we won't stop until we get to the perpetrator. Thanks anyway for your time.",
-           "Yeah, sure... Wait a minute, I think you should ask Jimmy's mom, Iris. He really trusted her and visited her constantly. Maybe she knows who this Honey-Bunny is.",
-           "Oh, thanks for the tip! I was already planning to visit her anyway, so now is probably the right time to do it.",
-           "I guess it's time for me to leave. It was nice meeting you again. I hope you keep me updated. Bye!",
-           "Alright, I'll get in touch again if there are any new leads, and in case I need more information. Bye!"
-        ]
-    },
-    {
         id: 'Iris Brandson',
         leftImg: './images/iris.jpg',
         rightImg: './images/detective.jpg',
         texts: [
             "Hello, who is it?",
-            ""
+            "Hello Mrs. Brandson, I’m an investigator. May I take a little bit of your time?",
+            "Definitely, come on in.",
+            "Thank you, I hope I didn't come at the wrong time?",
+            "Don’t you worry, I like having company. It gets quite lonely after losing both of my sons.",
+            "I’m sorry for what happened, but I didn't know Jimmy had a brother!!",
+            "It's a long story. I'll tell you after I get you something to drink.",
+            "That's nice of you, thank you. May I sit here?",
+            "Yes, of course. Do you prefer coffee or tea?",
+            "Oh, just a cup of water would be great.",
+            "Well, yes Jimmy had a twin brother, Jacob, but I lost him a long time ago.",
+            "Well, this is interesting, but how did you lose Jacob? Did he die, too ?",
+            "He disappeared back in 2007 and we haven’t heard from him since.", 
+            "Okay, but how do you know he died?",
+            "I’m sure Jacob is dead. If he was alive, he would've visited me. I'm his mother.",
+            "I'm really sorry. I came to ask about Jimmy but there seems to be a lot that I don't know.",
+            "Come on, I want to show you something.",
+            "What is it?",
+            "I took it from Jimmy's apartment without the knowledge of the police. So please, don’t tell on me.",
+            "Don't worry, Mrs. Brandson! It’ll stay between us. Now, let’s see what you got there.",
+            "Look at this picture we took together in 2006, a year before Jacob disappeared.",
+            "Can I take a closer look?",
+            "Of course, but be careful not to drop it. This is the last thing I have of my children.",
+            "Oh my God, I can't tell them apart!!",
+            "Yes, they were identical twins. Look how precious they look.",
+            "Oh, what’s on the back of the picture? Did you write these numbers?",
+            "I don't know what you're talking about. Maybe Jimmy wrote it. Do you think this could be important?",
+            "Let me take a picture of it really quick.",
+            "Okay, sure.",
+            "By the way, did Jimmy ever mention something about an Asian woman or Honey Bunny",
+            "Honey Bunny?? I’ve never heard about her before. Maybe you mean Buffy?",
+            "No, it's not Buffy. Looks like there was another girl in Jimmy's life, but no one knows about her.",
+            "Jimmy didn't tell me anything about this girl, but I'm sure she's a bad girl. She stole him from poor Buffy.",
+            "We don't know yet who she is and whether she is good or bad.",
+            "Well, I hope you find her and find my son's killer",
+            "I will, Mrs. Brandson and you will be the first to know if anything new happens in the case.",
+            "Thank you investigator. Would you like to have another drink?",
+            "No, thank you. I'm sorry, Mrs. Brandson, but I have to go now. We'll keep in touch.",
+            "Well don't worry, I know you have a lot to do, but please keep me up to date.",
+            "I promise you. Now take care of yourself. Bye…",
+            "May the Lord protect you. See you soon…."
         ]
     }
 ];
-
 
 

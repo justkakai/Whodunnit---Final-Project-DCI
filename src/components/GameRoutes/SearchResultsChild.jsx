@@ -13,12 +13,14 @@ function SearchResultsChild() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    
     basicSearchValues.map((indexNumber) => {
       if (indexNumber.name === searchTermFinal || searchTermFinal.includes(indexNumber.street)) {
         // const valuesInfo = Object.values(basicSearchValues[indexNumber.id -1]);
         setCharacterName(basicSearchValues[indexNumber.id - 1].name);
         setCharacterAdress(basicSearchValues[indexNumber.id - 1].address);
         setWebsite(basicSearchValues[indexNumber.id - 1].website);
+        
         // setTimeout(() => {
         //     setCharacterName("")
         //   }, 100);    
