@@ -15,7 +15,7 @@ function CallPoliceBtn() {
     const location = useLocation();
 
     return (
-        <motion.button className={location.pathname === "/call-police" ? "call-police-btn-active" : "call-police-btn"}
+        <motion.button title="call police" className={location.pathname === "/call-police" ? "call-police-btn-active" : "call-police-btn"}
             onClick={() => {
                 setInteraction(false);
                 setDetectiveWords("");
