@@ -46,7 +46,7 @@ function PoliceCallPageProvider({ children }) {
             setShowClarkson(true);
           }
           if (object.showCrowdmail === true) {
-            setShowCrowdmail(true);
+            setShowCrowdmail(true); 
             setCrowdmailWebsite(object.crowdmailAdress);
           }
         }
