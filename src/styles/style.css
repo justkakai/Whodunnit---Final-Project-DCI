@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap"); /*-----------FONTS-----------*/
 /*-----------COLORS-----------*/
 * {
@@ -1198,4 +1199,50 @@ li {
 .clarksonresult-page .clarkson-results button {
   margin-top: 2em;
   padding: 0.5em;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100%;
+  background-color: wheat;
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.landing-page h1 {
+  font-size: 4rem;
+}
+.landing-page .wrapper {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing-page .wrapper p {
+  width: 80%;
+  color: rgb(114, 56, 56);
+  outline: black;
+  text-align: center;
+}
+.landing-page .wrapper ul {
+  width: 80%;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+.landing-page .wrapper ul li {
+  margin-top: 0.5rem;
+  margin-left: -38px;
+}
+.landing-page .wrapper ul li:before {
+  content: "✔ ";
+}
+.landing-page h2 {
+  font-size: 3.5rem;
 }/*# sourceMappingURL=style.css.map */
