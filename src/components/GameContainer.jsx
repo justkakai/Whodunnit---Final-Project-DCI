@@ -15,11 +15,11 @@ import PoliceFirstConversation from './PoliceFirstConversation';
 /* import SearchBarMobile from './LeftBarComponents/SearchBarMobile'; */
 import InterrogationBox from './GameRoutes/InterrogationBox';
 
+
 function GameContainer() {
 
     const location = useLocation();
  
-
     return (
         <section className="game-container">
             <TopBar />

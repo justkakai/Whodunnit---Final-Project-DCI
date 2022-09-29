@@ -7,10 +7,7 @@ import LeftBar from './components/LeftBar';
 import RightBar from './components/RightBar';
 import GameContainer from './components/GameContainer';
 
-
-
 function App() {
-
 
   return (
     <IntroPageProvider>
@@ -19,9 +16,9 @@ function App() {
           <SearchSectionProvider>
             <BurgerMenuProvider>
               <div className="App">
-                {/* <LeftBar /> */}
+                <LeftBar />
                 <GameContainer />
-             <RightBar /> 
+                <RightBar />
               </div>
             </BurgerMenuProvider>
           </SearchSectionProvider>
