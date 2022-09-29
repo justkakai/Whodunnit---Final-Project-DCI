@@ -17,8 +17,8 @@ function BurgerMenuProvider({ children }) {
         { text: "Call Police", route: "/call-police", class: "burger-call-police" },
         { text: "View Police Report", route: "/police-report", class: "burger-police-report" },
         { text: "View Evidence", route: "/evidence", class: "burger-view-evidence" },
-        { text: "Recorded Conversations", route: undefined, class: "burger-recorded-conversations" },
-        { text: "Visited Addresses", route: undefined, class: "burger-visited-addresses" }
+        // { text: "Recorded Conversations", route: undefined, class: "burger-recorded-conversations" },
+        // { text: "Visited Addresses", route: undefined, class: "burger-visited-addresses" }
     ];
 
     function handleClick(route) {
