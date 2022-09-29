@@ -10,8 +10,8 @@ function LeftBar() {
 
     return (
         <section className="left-bar">
-            {(location.pathname !== "/") ? <ConversationsBtn /> : null}
-            {(location.pathname !== "/") ? <VisitedAddressesBtn /> : null}
+            {/* {(location.pathname !== "/") ? <ConversationsBtn /> : null}
+            {(location.pathname !== "/") ? <VisitedAddressesBtn /> : null} */}
             {(location.pathname !== "/") ? <SearchBarMobile /> : null}
             {(location.pathname !== "/") ? <BurgerMenu /> : null}
         </section>
