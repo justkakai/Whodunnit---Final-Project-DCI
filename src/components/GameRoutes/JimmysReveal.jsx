@@ -23,9 +23,15 @@ function JimmysReveal() {
   };
 
   return (
-    <div>
-      {show ? (
-        <div className="jimmysreveal">
+    <motion.section className='jimmysreveal-page'
+            variants={containerVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+        >
+
+        {show ? (
+          <div className="jimmysreveal">
           You have found Anna-Mae and Jimmy. Jimmy now tells you his side of the
           story:
           <br />
@@ -45,12 +51,12 @@ function JimmysReveal() {
             to the police.
           </div>{" "}
           <br />
-          He then took out a gun. Placed it on the table. I asked him in
-          disbelief: "You are killing people now?" He didn't respond, but his
-          hand started reaching out to the gun. Out of reflex I jumped on him
-          and tried to get the gun off of him. We wrestled and all of a sudden a
-          bullet came shooting out of that thing, straight into his head. It was
-          god awful. You have to believe me.
+            He then took out a gun. Placed it on the table. I asked him in
+            disbelief: "You are killing people now?" He didn't respond, but his
+            hand started reaching out to the gun. Out of reflex I jumped on him
+            and tried to get the gun off of him. We wrestled and all of a sudden a
+            bullet came shooting out of that thing, straight into his head. It was
+            god awful. You have to believe me.
           <div>
             I panicked. I called my girlfriend Anna-Mae and she came right away.
             I have been in some trouble myself lately. I see my mistake. I
@@ -145,7 +151,7 @@ function JimmysReveal() {
           </div>
         </div>
       ) : null}
-    </div>
+    </motion.section>
   );
 }
 
