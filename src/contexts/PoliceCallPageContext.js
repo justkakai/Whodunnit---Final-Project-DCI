@@ -11,7 +11,6 @@ function PoliceCallPageProvider({ children }) {
   const { playerName } = useContext(IntroPageContext);
   const [counterPoliceWords, setCounterPoliceWords] = useState(0);
 
-  
   const init = JSON.parse(localStorage.getItem("policeWords"));
 
   const [policeWords, setPoliceWords] = useState("");
@@ -20,7 +19,9 @@ function PoliceCallPageProvider({ children }) {
   const [navigationInteraction, setNavigationInteraction] = useState("");
   const [requestDnaResult, setRequestDnaResult] = useState(false);
   const [showDnaResult, setShowDnaResult] = useState(false);
-
+  const [showClarkson, setShowClarkson] = useState(false);
+  const [showCrowdmail, setShowCrowdmail] = useState(false);
+  const [crowdMailWebsite, setCrowdmailWebsite] = useState("");
 
   useEffect(() => {
     localStorage.setItem("policeWords", JSON.stringify(policeWords));
@@ -33,18 +34,34 @@ function PoliceCallPageProvider({ children }) {
       for (const object of triggerWords) {
         if (detectiveWords.toLowerCase().includes(object.question)) {
           setPoliceWords(object.answer);
-if (object.interaction === true) {setInteraction(true); setNavigationInteraction(object.navigation)}
+          if (object.interaction === true) {
+            setInteraction(true);
+            setNavigationInteraction(object.navigation);
+          }
 
-if (object.showDnaResult === true) {setRequestDnaResult(true);
-
+          if (object.showDnaResult === true) {
+            setRequestDnaResult(true);
+          }
+          if (object.showClarkson === true) {
+            setShowClarkson(true);
+          }
+          if (object.showCrowdmail === true) {
+            setShowCrowdmail(true);
+            setCrowdmailWebsite(object.crowdmailAdress);
+          }
         }
-      }}
+      }
     }
   };
 
   return (
     <PoliceCallPageContext.Provider
       value={{
+        crowdMailWebsite,
+        showCrowdmail,
+        setShowCrowdmail,
+        showClarkson,
+        setShowClarkson,
         showDnaResult,
         setShowDnaResult,
         requestDnaResult,
@@ -57,8 +74,8 @@ if (object.showDnaResult === true) {setRequestDnaResult(true);
         detectiveWords,
         setDetectiveWords,
         handleKeyPress,
-        counterPoliceWords, 
-        setCounterPoliceWords
+        counterPoliceWords,
+        setCounterPoliceWords,
       }}
     >
       {children}

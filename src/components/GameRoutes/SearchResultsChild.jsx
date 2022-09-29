@@ -44,12 +44,14 @@ function SearchResultsChild() {
           <br />
           <div>Name: {characterName}</div>
           <div>Adress: {characterAdress}</div>
-          {website !== "" ? <div>Website: <a href={website} target="_blank">{website}</a></div> : null}
+          {website !== "" ? <div>Website: <a href={website} target="_blank">{(website === "https://gilded-kitsune-b0f958.netlify.app") ? <div>www.crowdmail.com</div> : website}</a></div> : null}
           <br />
+          { characterAdress !== "digital" ? 
            <button onClick={() => goInterrogate()}>
-           {characterAdress !== "unknown" ?
-            'Visit address' : 'Make a Call'}
+           {characterAdress === "unknown" ?
+            'Make a Call' : 'Visit address'}
             </button>
+            : null}
         </div>}
     </>
   );

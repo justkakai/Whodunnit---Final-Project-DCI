@@ -8,7 +8,7 @@ const basicSearchValues = [
         name: "Reverand Laurence",
         address: "unknown",
         organisationName: "",
-        website: "https://reverend-laurence.webflow.io",
+        website: "https://reverend-laurence.webflow.io/",
     },
     {
         id: 2,
@@ -42,6 +42,14 @@ const basicSearchValues = [
         organisationName: "",
         website: ""
     },
+    {
+        id: 6, 
+        name: "Crowdmail", 
+        street: "Street Corner 5", 
+        address: "digital",
+        organisationName: "",
+        website: "https://gilded-kitsune-b0f958.netlify.app"
+    },
 ];
 
 function SearchSectionProvider({ children }) {
@@ -54,6 +62,7 @@ function SearchSectionProvider({ children }) {
     const [website, setWebsite] = useState("");
     // To keep track pf which Buffy dialogue to show
     const [visitedBuffy, setVisitedBuffy] = useState(true);
+
 
     useEffect(() => {
         basicSearchValues.map((item) => {

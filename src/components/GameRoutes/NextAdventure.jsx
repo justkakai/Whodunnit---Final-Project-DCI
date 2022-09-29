@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { IntroPageContext } from "../../contexts/IntroPageContext";
-import reportItself from '../../images/policeReport.png';
+import NextAdventurePic from "../../images/nextAdventurePic.jpg";
 
-function PoliceReport() {
+
+function NextAdventure() {
+
 
     const { containerVariants } = useContext(IntroPageContext);
 
@@ -15,10 +17,10 @@ function PoliceReport() {
             exit="exit"
         >
             <div className="police-report-container">
-                <img src={reportItself} alt="Police report" />
+                <img src={NextAdventurePic} alt="DNA results" />
             </div>
         </motion.section>
     )
 }
 
-export default PoliceReport;
+export default NextAdventure;

@@ -1,27 +1,27 @@
 import { useContext } from "react";
 import { EvidencePageContext } from "../../../contexts/EvidenceContext";
 import { BsArrowUpRight } from 'react-icons/bs';
-import laurence from '../../../images/Flyer3.png';
+import SuicideNotePic from '../../../images/suicideNote.jpeg'
 
-function LaurenceContainer() {
+function SuicideNote() {
 
     const { setDisplayEvidencePopup, setActiveImage } = useContext(EvidencePageContext);
 
     return (
         <div>
-            <img src={laurence} alt="Laurence the clown-hating religious guy" />
+            <img src={SuicideNotePic} alt="Letter from Buffy" />
             <p>
                 <button onClick={() => {
                     setDisplayEvidencePopup(true);
-                    setActiveImage(laurence);
+                    setActiveImage(SuicideNotePic);
                 }
                 }>
                     <span>Expand</span>
                     <BsArrowUpRight style={{ fontSize: "1.45em", color: "white" }} />
                 </button>
             </p>
-        </div>
+        </div >
     )
 }
 
-export default LaurenceContainer;
+export default SuicideNote;

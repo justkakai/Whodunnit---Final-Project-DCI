@@ -112,10 +112,6 @@ function InterrogationBox() {
         if (characterName === 'Buffy Silvara') {
             setVisitedBuffy(prevVisitedBuffy => !prevVisitedBuffy)
         }
-        // show the right image
-        // if (characterName === 'Iris Brandson') {
-        //     setdisplayPassword(true);
-        // }
     }, [characterName]);
 
     const showDialogue = function(dialogueId) {
@@ -183,10 +179,8 @@ function InterrogationBox() {
                         { isInterrogating ? 'Tap to Continue' : 'Start' }
                     </button>
                 </div>
-                
                 <div className='frames-conta'>
                     <div className='bubbles-conta'>
-        
                         {
                             textArray.map((e, i) => {
                                 // Display Buffy's messages 
@@ -206,30 +200,27 @@ function InterrogationBox() {
                                 } else return <Bubble className='right' key={i}>{e}</Bubble>
                             })
                         }
-
                     </div>
                     {
                         displayImage &&
                         <div className='display-img-conta'>
-                        <div className='overlay'></div>
-                        <div className='img-conta'>
-                            <button onClick={() => closeImg()}  className='close-img-btn'>
-                                <FontAwesomeIcon  icon={faTimes}  className='close-icon' />
-                            </button>
-                            { 
-                                displayScreenshots ?
+                            <div className='overlay'></div>
+                            <div className='img-conta'>
+                                <button onClick={() => closeImg()}  className='close-img-btn'>
+                                    <FontAwesomeIcon  icon={faTimes}  className='close-icon' />
+                                </button>
+                                { 
+                                    displayScreenshots ?
                                     <img src="./images/screenshots_buffy.png" />
                                     :
                                     <img src="./images/numbers_photo.jpeg" />
-                            }
-                         </div>  
-                    </div>
+                                 }
+                            </div>  
+                        </div>
                     }
                     <div className='leftFrame' style={{backgroundImage: `url(${imgLeftFrame})`}}></div>
                     <div className='rightFrame' style={{backgroundImage: `url(${imgRightFrame})`}}></div>
                 </div>
-              
-
             </section>
         </motion.section>
      );
