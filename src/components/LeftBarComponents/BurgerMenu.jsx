@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { BurgerMenuContext } from '../../contexts/BurgerMenuContext';
 import burgerMenuIcon from '../../images/burger-menu-icon.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmarkCircle} from '@fortawesome/free-solid-svg-icons';
 
 function BurgerMenu() {
 
@@ -9,7 +11,13 @@ function BurgerMenu() {
     return (
         <section className='burger-menu-container'>
             <button className="burger-menu-btn" onClick={() => setDisplayBurgerDropdown(!displayBurgerDropdown)}>
-                <img src={burgerMenuIcon} alt="Burger Menu" />
+                {
+                    displayBurgerDropdown ?
+                    <FontAwesomeIcon  icon={faXmarkCircle} className="close-burger-menu-icon" />
+                    :
+                    <img src={burgerMenuIcon} alt="Burger Menu" />
+                }
+               
             </button>
             <ul
                 className="burger-menu-dropdown"
