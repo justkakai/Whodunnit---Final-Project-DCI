@@ -50,6 +50,13 @@ const basicSearchValues = [
         organisationName: "",
         website: "https://gilded-kitsune-b0f958.netlify.app"
     },
+    {
+        id: 7,
+        name: "Reverend Laurence",
+        address: "unknown",
+        organisationName: "",
+        website: "https://reverend-laurence.webflow.io/",
+    },
 ];
 
 function SearchSectionProvider({ children }) {

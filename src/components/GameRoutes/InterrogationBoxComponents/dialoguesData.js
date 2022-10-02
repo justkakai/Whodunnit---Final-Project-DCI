@@ -20,6 +20,26 @@ export const dialogues = [
         ]
     },
     {
+        // Reverend Laurence VS Private Investigator
+        id: 'Reverend Laurence',
+        leftImg: './images/laurence.jpg',
+        rightImg: './images/detective.jpg',
+        texts: [
+            'Hello dear child of God, here’s Reverand Laurence, how may I help you ??',
+            'Hello Reverand Laurence, I’m a private investigator and I am not calling you out of religious reasons.',
+            'Don’t worry, my child, I’ll help you anyway. So now tell me, for what reason are you calling me. Do you need some advice ??',
+            'Thanks for being kind. Actually, I am currently investigating Jimmy’s case.',
+            'Okay, but who’s Jimmy, and what should that mean to me ??',
+            ' I think you know him. His name is Jimmy Brandson and he used to work as a clown.',
+            'Ah yes, of course. I know this evil. I read about his suicide in the papers. That clown deserves to die and he will face his mistakes in hell. I wish I could have killed him myself instead of him killing himself.',
+            'Wow, how passionately you hate him, Reverand Laurence. Is that enough reason to kill somebody?',
+            'What do you mean? He was murdered ?! How !!!!????',
+            'Yes, and we all know you hate clowns and you just told me that you wished him dead. Where were you on September 29th?',
+            'First of all, I’m not a killer so be careful of what you say! Second, I was in Abuja, the capital of Nigeria. You can see the pictures I posted on my homepage, and now I have to end this call. Bye!',
+            'Sorry, if i bothered you, and I’ll check your homepage, and thank you again for being cooperative.Bye…..'
+        ]
+    },
+    {
         // Harry Neeson VS Private Investigator
         id: 'Harry Neeson',
         leftImg: './images/detective.jpg',
