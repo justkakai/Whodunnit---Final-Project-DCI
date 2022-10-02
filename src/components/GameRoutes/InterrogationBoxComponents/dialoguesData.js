@@ -36,7 +36,7 @@ export const dialogues = [
             "Rrright... Ok, listen closely here, pal. I saw your tweets, so I know that you’ve been getting your “allergy medicine” from Jimmy.",
             "What tweets? I don't know what you're talking about.",
             "You better talk! Right Now! Or I’m arresting you for drug possession.",
-            "Ok, look! I’ve been seeing this girl. Her name’s Buffy. She’s Jimmy’s ex. She came over to my place that night, so I was with her the whole time. She might know something about the murder. Why don’t you ask her?",
+            "Ok, look! I’ve been seeing this girl. Her name’s Buffy Silvara. She’s Jimmy’s ex. She came over to my place that night, so I was with her the whole time. She might know something about the murder. Why don’t you ask her?",
             "You’re not in the position to hide things from me, Harry. You're a coke head and you just told me you have a mistress. What will your wife do if she finds out about all this, huh?",
             "Son of a bitch! Fine! She wrote me last Saturday saying that Jimmy texted her out of the blue and asked her to go over to his place.",
             "Did she tell you what he said?",

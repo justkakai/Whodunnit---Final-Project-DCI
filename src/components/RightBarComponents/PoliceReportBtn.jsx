@@ -7,7 +7,7 @@ function PoliceReportBtn() {
     const location = useLocation();
 
     return (
-        <button className={location.pathname === "/police-report" ? "police-report-btn-active" : "police-report-btn"} onClick={() => { navigate("/police-report") }}>
+        <button title="police report" className={location.pathname === "/police-report" ? "police-report-btn-active" : "police-report-btn"} onClick={() => { navigate("/police-report") }}>
             <img src={policeReport} alt="View Police Report" />
         </button>
     )

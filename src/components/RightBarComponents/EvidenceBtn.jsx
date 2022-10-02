@@ -7,7 +7,7 @@ function EvidenceBtn() {
     const location = useLocation();
 
     return (
-        <button className={location.pathname === "/evidence" ? "view-evidence-btn-active" : "view-evidence-btn"} onClick={() => { navigate("/evidence") }}>
+        <button title="evidence room" className={location.pathname === "/evidence" ? "view-evidence-btn-active" : "view-evidence-btn"} onClick={() => { navigate("/evidence") }}>
             <img src={viewEvidence} alt="View Evidence" />
         </button>
     )

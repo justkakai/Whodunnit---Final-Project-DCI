@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import BurgerMenu from './LeftBarComponents/BurgerMenu';
-import ConversationsBtn from './LeftBarComponents/ConversationsBtn';
+// import ConversationsBtn from './LeftBarComponents/ConversationsBtn';
 import SearchBarMobile from './LeftBarComponents/SearchBarMobile';
-import VisitedAddressesBtn from './LeftBarComponents/VisitedAddressesBtn';
+// import VisitedAddressesBtn from './LeftBarComponents/VisitedAddressesBtn';
 
 function LeftBar() {
 

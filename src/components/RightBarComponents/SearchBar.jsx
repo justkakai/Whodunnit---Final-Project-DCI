@@ -7,7 +7,7 @@ function SearchBar() {
 
     return (
         <>
-            <input className="search-btn" type="text" spellCheck="false" onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={handleKeyDown} value={searchTerm} />
+            <input title="search" className="search-btn" type="text" spellCheck="false" onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={handleKeyDown} value={searchTerm} />
         </>
     )
 }
