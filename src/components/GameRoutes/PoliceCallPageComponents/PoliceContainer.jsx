@@ -46,6 +46,7 @@ function PoliceContainer() {
 
           {requestDnaResult ? (
             <button
+            className='dnaRequestBtn'
               onClick={() => {
                 setShowDnaResult(true);
                 setRequestDnaResult(false);

@@ -91,32 +91,33 @@ li {
     height: 13%;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
   }
   .dna-analysis-progress-bar {
     position: relative;
-    height: 30%;
-    width: 20%;
+    height: 3rem;
+    width: 42vw;
     background-color: rgb(24, 24, 24);
-    border-radius: 16px;
+    border-radius: 30px;
     overflow: hidden;
   }
   .dna-analysis-progress-bar::before {
     content: "";
     position: absolute;
+    height: 3rem;
+    width: 42vw;
     top: 0;
     left: 0;
     /* background-color: rgb(145, 255, 0); */
     background-color: wheat;
     border: none;
-    height: 100%;
     border-radius: inherit;
     /******* animation *******/
     -webkit-animation-name: progress-bar;
             animation-name: progress-bar;
-    -webkit-animation-duration: 20s;
-            animation-duration: 20s;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
     -webkit-animation-fill-mode: forwards;
@@ -223,8 +224,8 @@ li {
     font-family: "Covered By Your Grace", cursive;
     font-size: 1.2em;
     border: none;
-    height: 40%;
-    width: 15%;
+    height: 3rem;
+    width: 42vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -568,6 +569,26 @@ li {
   font-size: 4vw;
   background-color: whitesmoke;
   width: 95%;
+}
+
+.dnaRequestBtn, .dnaRequestBtn:link, .dnaRequestBtn:visited {
+  padding: 5px 10px;
+  background-color: #BE8F8F;
+  border: none;
+  border-radius: 15px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dnaRequestBtn:hover {
+  background: #333;
+  border: 1px solid #333;
+  color: #FEFEFE;
+  border-radius: 30px;
 }
 
 .dialog-box-detective input {

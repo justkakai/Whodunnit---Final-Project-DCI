@@ -53,6 +53,27 @@ $detectiveInputBgColor: black;
   font-size: 4vw;
   background-color: $dialogBoxBgColor;
   width: 95%;
+
+}
+
+.dnaRequestBtn, .dnaRequestBtn:link, .dnaRequestBtn:visited {
+  padding: 5px 10px;
+  background-color: #BE8F8F;
+  border: none;
+  border-radius: 15px; ;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  transition: all .2s ease-in-out;
+}
+
+.dnaRequestBtn:hover {
+  background: #333;
+  border: 1px solid #333;
+  color: #FEFEFE;
+  border-radius: 30px;
 }
 
 .dialog-box-detective {
