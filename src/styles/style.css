@@ -87,158 +87,6 @@ li {
     height: 80%;
     width: 80%;
   }
-  .top-bar {
-    height: 13%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .dna-analysis-progress-bar {
-    position: relative;
-    height: 3rem;
-    width: 42vw;
-    background-color: rgb(24, 24, 24);
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  .dna-analysis-progress-bar::before {
-    content: "";
-    position: absolute;
-    height: 3rem;
-    width: 42vw;
-    top: 0;
-    left: 0;
-    /* background-color: rgb(145, 255, 0); */
-    background-color: wheat;
-    border: none;
-    border-radius: inherit;
-    /******* animation *******/
-    -webkit-animation-name: progress-bar;
-            animation-name: progress-bar;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
-  @-webkit-keyframes progress-bar {
-    from {
-      width: 0%;
-    }
-    2% {
-      width: 5%;
-    }
-    9% {
-      width: 11%;
-    }
-    14% {
-      width: 19%;
-    }
-    27% {
-      width: 27%;
-    }
-    33% {
-      width: 31%;
-    }
-    39% {
-      width: 43%;
-    }
-    47% {
-      width: 46%;
-    }
-    55% {
-      width: 50%;
-    }
-    61% {
-      width: 60%;
-    }
-    70% {
-      width: 65%;
-    }
-    77% {
-      width: 73%;
-    }
-    88% {
-      width: 85%;
-    }
-    94% {
-      width: 95%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  @keyframes progress-bar {
-    from {
-      width: 0%;
-    }
-    2% {
-      width: 5%;
-    }
-    9% {
-      width: 11%;
-    }
-    14% {
-      width: 19%;
-    }
-    27% {
-      width: 27%;
-    }
-    33% {
-      width: 31%;
-    }
-    39% {
-      width: 43%;
-    }
-    47% {
-      width: 46%;
-    }
-    55% {
-      width: 50%;
-    }
-    61% {
-      width: 60%;
-    }
-    70% {
-      width: 65%;
-    }
-    77% {
-      width: 73%;
-    }
-    88% {
-      width: 85%;
-    }
-    94% {
-      width: 95%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  .dna-analysis-ready-container {
-    position: relative;
-    font-family: "Covered By Your Grace", cursive;
-    font-size: 1.2em;
-    border: none;
-    height: 3rem;
-    width: 42vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: wheat;
-    background-color: rgb(24, 24, 24);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: color 0.3s;
-  }
-  .dna-analysis-ready-container:hover {
-    color: whitesmoke;
-    transition: color 0.3s;
-  }
   .recorded-conversations-btn,
 .visited-addresses-btn {
     display: initial;
@@ -937,6 +785,27 @@ li {
   transition: all 0.5s;
 }
 
+.dna-analysis-ready-container {
+  position: relative;
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 1.2em;
+  border: none;
+  height: 3rem;
+  width: 42vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  background-color: rgb(24, 24, 24);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+.dna-analysis-ready-container:hover {
+  color: whitesmoke;
+  transition: color 0.3s;
+}
+
 /* .search-bar-mobile {
   font-family: $mainFont;
   position: absolute;
@@ -964,6 +833,140 @@ li {
 } */
 /*------------------------------MEDIA QUERIES------------------------------*/
 /*-----------WIDTH-----------*/
+@media (min-width: 200px) {
+  .top-bar {
+    height: 13%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .dna-analysis-progress-bar {
+    position: relative;
+    height: 3rem;
+    width: 42vw;
+    background-color: #181818;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .dna-analysis-progress-bar::before {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    width: 42vw;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(145, 255, 0); */
+    background-color: wheat;
+    border: none;
+    border-radius: inherit;
+    /******* animation *******/
+    -webkit-animation-name: progress-bar;
+            animation-name: progress-bar;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  @-webkit-keyframes progress-bar {
+    from {
+      width: 0%;
+    }
+    2% {
+      width: 5%;
+    }
+    9% {
+      width: 11%;
+    }
+    14% {
+      width: 19%;
+    }
+    27% {
+      width: 27%;
+    }
+    33% {
+      width: 31%;
+    }
+    39% {
+      width: 43%;
+    }
+    47% {
+      width: 46%;
+    }
+    55% {
+      width: 50%;
+    }
+    61% {
+      width: 60%;
+    }
+    70% {
+      width: 65%;
+    }
+    77% {
+      width: 73%;
+    }
+    88% {
+      width: 85%;
+    }
+    94% {
+      width: 95%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes progress-bar {
+    from {
+      width: 0%;
+    }
+    2% {
+      width: 5%;
+    }
+    9% {
+      width: 11%;
+    }
+    14% {
+      width: 19%;
+    }
+    27% {
+      width: 27%;
+    }
+    33% {
+      width: 31%;
+    }
+    39% {
+      width: 43%;
+    }
+    47% {
+      width: 46%;
+    }
+    55% {
+      width: 50%;
+    }
+    61% {
+      width: 60%;
+    }
+    70% {
+      width: 65%;
+    }
+    77% {
+      width: 73%;
+    }
+    88% {
+      width: 85%;
+    }
+    94% {
+      width: 95%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
 @media (max-width: 300px) {
   .burger-menu-dropdown {
     width: 200px;

@@ -71,120 +71,120 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
     width: 80%;
   }
 
-  .top-bar {
-    height: 13%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  // .top-bar {
+  //   height: 13%;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   align-items: center;
   
-  }
+  // }
 
-  .dna-analysis-progress-bar {
-    position: relative;
-    height: 3rem;
-    width: 42vw;
-    background-color: rgb(24, 24, 24);
-    border-radius: 30px;
-    overflow: hidden;
-    &::before {
-      content: "";
-      position: absolute;
-      height: 3rem;
-      width: 42vw;
-      top: 0;
-      left: 0;
-      /* background-color: rgb(145, 255, 0); */
-      background-color: wheat;
-      border: none;
-      border-radius: inherit;
-      /******* animation *******/
-      animation-name: progress-bar;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-fill-mode: forwards;
-      animation-delay: 0s;
-    }
-  }
+  // .dna-analysis-progress-bar {
+  //   position: relative;
+  //   height: 3rem;
+  //   width: 42vw;
+  //   background-color: rgb(24, 24, 24);
+  //   border-radius: 30px;
+  //   overflow: hidden;
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     height: 3rem;
+  //     width: 42vw;
+  //     top: 0;
+  //     left: 0;
+  //     /* background-color: rgb(145, 255, 0); */
+  //     background-color: wheat;
+  //     border: none;
+  //     border-radius: inherit;
+  //     /******* animation *******/
+  //     animation-name: progress-bar;
+  //     animation-duration: 10s;
+  //     animation-timing-function: linear;
+  //     animation-fill-mode: forwards;
+  //     animation-delay: 0s;
+  //   }
+  // }
 
-  @keyframes progress-bar {
-    from {
-      width: 0%;
-    }
+  // @keyframes progress-bar {
+  //   from {
+  //     width: 0%;
+  //   }
 
-    2% {
-      width: 5%;
-    }
+  //   2% {
+  //     width: 5%;
+  //   }
 
-    9% {
-      width: 11%;
-    }
-    14% {
-      width: 19%;
-    }
+  //   9% {
+  //     width: 11%;
+  //   }
+  //   14% {
+  //     width: 19%;
+  //   }
 
-    27% {
-      width: 27%;
-    }
+  //   27% {
+  //     width: 27%;
+  //   }
 
-    33% {
-      width: 31%;
-    }
-    39% {
-      width: 43%;
-    }
+  //   33% {
+  //     width: 31%;
+  //   }
+  //   39% {
+  //     width: 43%;
+  //   }
 
-    47% {
-      width: 46%;
-    }
+  //   47% {
+  //     width: 46%;
+  //   }
 
-    55% {
-      width: 50%;
-    }
-    61% {
-      width: 60%;
-    }
+  //   55% {
+  //     width: 50%;
+  //   }
+  //   61% {
+  //     width: 60%;
+  //   }
 
-    70% {
-      width: 65%;
-    }
+  //   70% {
+  //     width: 65%;
+  //   }
 
-    77% {
-      width: 73%;
-    }
-    88% {
-      width: 85%;
-    }
+  //   77% {
+  //     width: 73%;
+  //   }
+  //   88% {
+  //     width: 85%;
+  //   }
 
-    94% {
-      width: 95%;
-    }
+  //   94% {
+  //     width: 95%;
+  //   }
 
-    100% {
-      width: 100%;
-    }
-  }
+  //   100% {
+  //     width: 100%;
+  //   }
+  // }
 
-  .dna-analysis-ready-container {
-    position: relative;
-    font-family: $mainFont;
-    font-size: 1.2em;
-    border: none;
-    height: 3rem;
-    width: 42vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: wheat;
-    background-color: rgb(24, 24, 24);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: color 0.3s;
-    &:hover {
-      color: whitesmoke;
-      transition: color 0.3s;
-    }
-  }
+  // .dna-analysis-ready-container {
+  //   position: relative;
+  //   font-family: $mainFont;
+  //   font-size: 1.2em;
+  //   border: none;
+  //   height: 3rem;
+  //   width: 42vw;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   color: wheat;
+  //   background-color: rgb(24, 24, 24);
+  //   border-radius: 16px;
+  //   overflow: hidden;
+  //   transition: color 0.3s;
+  //   &:hover {
+  //     color: whitesmoke;
+  //     transition: color 0.3s;
+  //   }
+  // }
 
   .recorded-conversations-btn,
   .visited-addresses-btn {
