@@ -1,12 +1,13 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import viewEvidence from '../../images/viewEvidence.svg';
 
 function EvidenceBtn() {
 
-    let navigate = useNavigate();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     return (
-        <button className="view-evidence-btn" onClick={() => { navigate("/evidence") }}>
+        <button title="evidence room" className={location.pathname === "/evidence" ? "view-evidence-btn-active" : "view-evidence-btn"} onClick={() => { navigate("/evidence") }}>
             <img src={viewEvidence} alt="View Evidence" />
         </button>
     )

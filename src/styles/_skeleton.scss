@@ -5,8 +5,9 @@ $leftBarBtnBgColor: rgba(35, 31, 32, 1);
 $leftBarBtnBgColorHover: rgba(0, 0, 0, 0.3);
 $rightBarBtnBgColor: #231f20;
 $rightBarBtnBgColorHover: rgba(35, 31, 32, 0.8);
-$searchBtnBgColor: white;
-$searchBtnBgColorHover: rgba(255, 255, 255, 0.8);
+$searchBtnBgColor: wheat;
+$searchBtnBgColorHover: wheat;
+$searchBtnBgColorFocus: whitesmoke;
 $callPoliceBtnBgColor: wheat;
 $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
 
@@ -65,9 +66,125 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
   }
 
   .game-container {
+    align-self: flex-start;
     height: 80%;
     width: 80%;
   }
+
+  // .top-bar {
+  //   height: 13%;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   align-items: center;
+  
+  // }
+
+  // .dna-analysis-progress-bar {
+  //   position: relative;
+  //   height: 3rem;
+  //   width: 42vw;
+  //   background-color: rgb(24, 24, 24);
+  //   border-radius: 30px;
+  //   overflow: hidden;
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     height: 3rem;
+  //     width: 42vw;
+  //     top: 0;
+  //     left: 0;
+  //     /* background-color: rgb(145, 255, 0); */
+  //     background-color: wheat;
+  //     border: none;
+  //     border-radius: inherit;
+  //     /******* animation *******/
+  //     animation-name: progress-bar;
+  //     animation-duration: 10s;
+  //     animation-timing-function: linear;
+  //     animation-fill-mode: forwards;
+  //     animation-delay: 0s;
+  //   }
+  // }
+
+  // @keyframes progress-bar {
+  //   from {
+  //     width: 0%;
+  //   }
+
+  //   2% {
+  //     width: 5%;
+  //   }
+
+  //   9% {
+  //     width: 11%;
+  //   }
+  //   14% {
+  //     width: 19%;
+  //   }
+
+  //   27% {
+  //     width: 27%;
+  //   }
+
+  //   33% {
+  //     width: 31%;
+  //   }
+  //   39% {
+  //     width: 43%;
+  //   }
+
+  //   47% {
+  //     width: 46%;
+  //   }
+
+  //   55% {
+  //     width: 50%;
+  //   }
+  //   61% {
+  //     width: 60%;
+  //   }
+
+  //   70% {
+  //     width: 65%;
+  //   }
+
+  //   77% {
+  //     width: 73%;
+  //   }
+  //   88% {
+  //     width: 85%;
+  //   }
+
+  //   94% {
+  //     width: 95%;
+  //   }
+
+  //   100% {
+  //     width: 100%;
+  //   }
+  // }
+
+  // .dna-analysis-ready-container {
+  //   position: relative;
+  //   font-family: $mainFont;
+  //   font-size: 1.2em;
+  //   border: none;
+  //   height: 3rem;
+  //   width: 42vw;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   color: wheat;
+  //   background-color: rgb(24, 24, 24);
+  //   border-radius: 16px;
+  //   overflow: hidden;
+  //   transition: color 0.3s;
+  //   &:hover {
+  //     color: whitesmoke;
+  //     transition: color 0.3s;
+  //   }
+  // }
 
   .recorded-conversations-btn,
   .visited-addresses-btn {
@@ -125,25 +242,42 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
     height: 10vh;
     overflow: hidden;
     background-color: $rightBarBtnBgColor;
-    transition: all 0.5s;
+    transition: width 0.3s, height 0.3s;
     &:hover {
       cursor: pointer;
       background-color: $rightBarBtnBgColorHover;
-      width: 6vw;
-      height: 11vh;
-      transition: all 0.5s;
+      width: 5.5vw;
+      height: 10.5vh;
+      transition: width 0.3s, height 0.3s;
     }
     img {
       width: 100%;
       height: 100%;
+      }
     }
-  }
+  
 
+  /*   
   .call-police-btn {
     background-color: $callPoliceBtnBgColor;
     &:hover {
       background-color: $callPoliceBtnBgColorHover;
     }
+  } 
+
+  .call-police-btn-active {
+    @extend .call-police-btn;
+    box-shadow: 0 0 10px 1px #fff, 0 0 10px 1px #f5deb3,
+      0 0 10px 1px rgb(255, 255, 255);
+  }
+  */
+
+  .call-police-btn-active,
+  .police-report-btn-active,
+  .view-evidence-btn-active {
+    @extend .view-evidence-btn;
+    box-shadow: 0 0 10px 1px rgb(207, 207, 207), 0 0 10px 1px #f5deb3,
+      0 0 10px 1px rgb(255, 255, 255);
   }
 
   .search-btn {
@@ -155,10 +289,12 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 1.1em;
+    transition: all 0.5s;
     &:hover {
       width: 5vw;
       height: 10vh;
       background-color: $searchBtnBgColorHover;
+      transition: all 0.5s;
     }
     &:focus {
       cursor: initial;
@@ -168,8 +304,8 @@ $callPoliceBtnBgColorHover: rgba(245, 222, 179, 0.8);
       border-radius: 2px;
       margin-right: 20vw;
       width: 25vw;
-      border: 2px solid rgb(70, 70, 70);
-      background-color: $searchBtnBgColor;
+      background-color: $searchBtnBgColorFocus;
+      transition: all 0.5s;
     }
   }
 }

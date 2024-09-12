@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { EvidencePageContext } from "../../../contexts/EvidenceContext";
 import { BsArrowUpRight } from 'react-icons/bs';
-import laurence from '../../../images/laurence.jpg';
+import laurence from '../../../images/Flyer3.png';
 
 function LaurenceContainer() {
 

@@ -18,7 +18,7 @@ function SearchResultsContainer() {
                 </section>
                 :
                 null
-            }
+             }
 
         </>
     )

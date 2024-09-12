@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { IntroPageContext } from "../../contexts/IntroPageContext";
-import reportItself from '../../images/reportItself.png';
+import reportItself from '../../images/policeReport.png';
 
 function PoliceReport() {
 

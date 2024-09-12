@@ -41,7 +41,7 @@ function IntroPageProvider({ children }) {
             setTimeout(() => {
                 navigate("/police-first-conversation");
             }, 2000);
-        };
+        }; 
     }
 
     return (

@@ -1,0 +1,242 @@
+.interrogation-page {
+    width:100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    .interrogation-top-bar {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        text-align: left;
+        position: relative;
+    
+        .top-bar-content {
+            position: relative;
+            background-color: red;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 100px 0 105px;
+            display:inline-block;
+        }
+    
+        .top-bar-content::after {
+            position: absolute;
+            right: -50px;
+            content: "";
+            border-bottom: 25px solid red;
+            border-left: 25px solid red;
+            border-top: 25px solid transparent;
+            border-right: 25px solid transparent;
+        }
+
+        .close-btn {
+            border: 0;
+            background: none;
+            font-size: 22px;
+            margin-right: 0.5rem;
+            cursor: pointer;
+
+            .close-icon {
+                color: wheat;
+            }
+        }
+    }
+
+    .main-frames-conta {
+        width: 100%;
+        height: 95%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/public/images/interrogationRoom.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .dialogue-btn-conta {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .start-btn {
+                width: 150px;
+                padding: 10px 12px;
+                border-radius: 5px;
+                border: 0;
+                background-color: black;
+                color: rgb(169, 165, 165);
+                outline: 2.5px solid rgb(169, 165, 165);
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    
+        .frames-conta{
+            width: 100%;
+            height: 90%;
+            position: relative;
+            z-index: 0;
+
+            .bubbles-conta {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+                .displayImg-btn {
+                    width: 120px;
+                    padding: 2px 0;
+                    margin-left: 5px;
+                    border-radius: 5px;
+                    border: 0;
+                    background-color: black;
+                    color: rgb(169, 165, 165);
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+
+            .display-img-conta {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background:rgba(0,0,0,0.8);
+                    opacity: 0.85;
+                    z-index: 2;
+                }
+                
+                .img-conta {
+                    width: 80%;
+                    height: auto;
+                    z-index: 3;
+
+                    .close-img-btn {
+                        border: 0;
+                        background: none;
+                        font-size: 40px;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 2.5%;
+                        top: 0.5%;
+            
+                        .close-icon {
+                            color: wheat;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 1;
+                        overflow-y: scroll;
+                        scrollbar-width: thin;
+                    }
+                }
+            }
+    
+            .leftFrame {
+                clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+                width: 50%;
+                height: 50%;
+                margin-left: 1rem;
+                position: relative ;
+                background-repeat: no-repeat;
+                background-size: 400px;
+                background-position: top center;
+            }
+        
+            .rightFrame {
+                clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+                width: 50%;
+                height: 50%;
+                margin-left: auto;
+                margin-right: 1rem;
+                position: relative;
+                transform: translateY(-5%);
+                background-repeat: no-repeat;
+                background-size: 400px;
+                background-position: top center;
+            }
+        }
+
+       
+    }
+}
+
+@media (min-width: 700px) {
+    .interrogation-page {
+      
+        .main-frames-conta {
+         
+            .frames-conta {
+                display: flex;
+                justify-content: center;
+
+                .bubbles-conta {
+                    max-width: 350px;
+                }
+
+                .display-img-conta {
+
+                    .img-conta {
+                        max-width: 600px;
+                    }
+                }
+        
+                .leftFrame {
+                    margin-left: 0;
+                    max-width: 350px; 
+                    height: 95%;
+                    background-size: cover;
+                } 
+        
+                .rightFrame{
+                    margin-left: 0;
+                    transform: translateY(0);
+                    margin-right: 0;
+                    max-width: 350px; 
+                    height: 95%;
+                    background-size: cover;
+                }
+            }
+
+        } 
+
+    }
+}
+
+@media (min-width: 1180px) {
+    .interrogation-page {
+
+        .main-frames-conta {
+
+                .frames-conta {
+                .bubbles-conta, .leftFrame,  .rightFrame{
+                    max-width: 400px;
+                }
+            }
+
+        } 
+
+    }  
+}

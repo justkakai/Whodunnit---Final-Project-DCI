@@ -6,6 +6,7 @@ import BuffyLetterContainer from "./EvidencePageComponents/BuffyLetter";
 import LaurenceContainer from "./EvidencePageComponents/Laurence";
 import CocaineContainer from "./EvidencePageComponents/CocaineBag";
 import EvidencePopup from "./EvidencePageComponents/EvidencePopup";
+import SuicideNote from "./EvidencePageComponents/SuicideNote";
 
 function EvidencePage() {
 
@@ -24,6 +25,7 @@ function EvidencePage() {
                 <LaurenceContainer />
                 <CocaineContainer />
                 <EvidencePopup />
+                <SuicideNote />
             </div>
         </motion.section>
     )
